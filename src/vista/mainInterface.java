@@ -26,91 +26,129 @@ public class mainInterface extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        productionEditor = new javax.swing.JPanel();
+        menuBar3 = new javax.swing.JPanel();
+        personEditorReturnBtn1 = new javax.swing.JButton();
+        personEditorClearBtn1 = new javax.swing.JButton();
+        personEditorSubmitBtn1 = new javax.swing.JButton();
+        personEditorUsernameTag1 = new javax.swing.JLabel();
+        jLabel20 = new javax.swing.JLabel();
+        personEditorName1 = new javax.swing.JTextField();
+        jLabel22 = new javax.swing.JLabel();
+        personEditorMidName1 = new javax.swing.JTextField();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel25 = new javax.swing.JLabel();
+        personEditorHeight1 = new javax.swing.JTextField();
+        personEditorGenderCB1 = new javax.swing.JComboBox<>();
+        jLabel26 = new javax.swing.JLabel();
+        personEditorBirthdate1 = new javax.swing.JFormattedTextField();
+        jLabel34 = new javax.swing.JLabel();
+        jLabel35 = new javax.swing.JLabel();
+        personEditorNationCB1 = new javax.swing.JComboBox<>();
+        personEditorBirthplaceCB1 = new javax.swing.JComboBox<>();
+        jLabel36 = new javax.swing.JLabel();
+        jLabel37 = new javax.swing.JLabel();
+        personEditorRegionCB1 = new javax.swing.JComboBox<>();
+        personEditorDistrictCB1 = new javax.swing.JComboBox<>();
+        jLabel38 = new javax.swing.JLabel();
+        jLabel39 = new javax.swing.JLabel();
+        jScrollPane4 = new javax.swing.JScrollPane();
+        personEditorAddress1 = new javax.swing.JTextArea();
+        personEditorLastNames1 = new javax.swing.JTextField();
+        jScrollPane5 = new javax.swing.JScrollPane();
+        personEditorBio1 = new javax.swing.JTextArea();
+        jLabel40 = new javax.swing.JLabel();
+        personEditorSelectBtn1 = new javax.swing.JButton();
+        personEditorClearPicBtn1 = new javax.swing.JButton();
+        personEditorAddP1 = new javax.swing.JButton();
+        personEditorAddRel1 = new javax.swing.JButton();
+        personEditorAddTrivia1 = new javax.swing.JButton();
+        filmPic1 = new javax.swing.JPanel();
         personEditor = new javax.swing.JPanel();
         menuBar2 = new javax.swing.JPanel();
-        jButton7 = new javax.swing.JButton();
-        jButton8 = new javax.swing.JButton();
-        jButton9 = new javax.swing.JButton();
-        mainPanelTitle3 = new javax.swing.JLabel();
+        personEditorReturnBtn = new javax.swing.JButton();
+        personEditorClearBtn = new javax.swing.JButton();
+        personEditorSubmitBtn = new javax.swing.JButton();
+        personEditorUsernameTag = new javax.swing.JLabel();
         jLabel17 = new javax.swing.JLabel();
-        jTextField8 = new javax.swing.JTextField();
+        personEditorName = new javax.swing.JTextField();
         jLabel18 = new javax.swing.JLabel();
-        jTextField9 = new javax.swing.JTextField();
+        personEditorMidName = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
         jLabel21 = new javax.swing.JLabel();
-        jTextField10 = new javax.swing.JTextField();
-        jComboBox4 = new javax.swing.JComboBox<>();
+        personEditorHeight = new javax.swing.JTextField();
+        personEditorGenderCB = new javax.swing.JComboBox<>();
         jLabel23 = new javax.swing.JLabel();
-        jFormattedTextField2 = new javax.swing.JFormattedTextField();
+        personEditorBirthdate = new javax.swing.JFormattedTextField();
         jLabel27 = new javax.swing.JLabel();
         jLabel28 = new javax.swing.JLabel();
-        jComboBox8 = new javax.swing.JComboBox<>();
-        jComboBox9 = new javax.swing.JComboBox<>();
+        personEditorNationCB = new javax.swing.JComboBox<>();
+        personEditorBirthplaceCB = new javax.swing.JComboBox<>();
         jLabel29 = new javax.swing.JLabel();
         jLabel30 = new javax.swing.JLabel();
-        jComboBox10 = new javax.swing.JComboBox<>();
-        jComboBox11 = new javax.swing.JComboBox<>();
+        personEditorRegionCB = new javax.swing.JComboBox<>();
+        personEditorDistrictCB = new javax.swing.JComboBox<>();
         jLabel31 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea2 = new javax.swing.JTextArea();
-        jTextField14 = new javax.swing.JTextField();
+        personEditorAddress = new javax.swing.JTextArea();
+        personEditorLastNames = new javax.swing.JTextField();
         jScrollPane3 = new javax.swing.JScrollPane();
-        jTextArea3 = new javax.swing.JTextArea();
+        personEditorBio = new javax.swing.JTextArea();
         jLabel33 = new javax.swing.JLabel();
         jPanel2 = new javax.swing.JPanel();
-        jButton10 = new javax.swing.JButton();
-        jButton11 = new javax.swing.JButton();
-        jButton12 = new javax.swing.JButton();
-        jButton13 = new javax.swing.JButton();
-        jButton14 = new javax.swing.JButton();
+        personEditorSelectBtn = new javax.swing.JButton();
+        personEditorClearPicBtn = new javax.swing.JButton();
+        personEditorAddP = new javax.swing.JButton();
+        personEditorAddRel = new javax.swing.JButton();
+        personEditorAddTrivia = new javax.swing.JButton();
         userEditor = new javax.swing.JPanel();
         menuBar1 = new javax.swing.JPanel();
-        jButton4 = new javax.swing.JButton();
-        jButton5 = new javax.swing.JButton();
-        jButton6 = new javax.swing.JButton();
-        mainPanelTitle2 = new javax.swing.JLabel();
+        userEditorReturnBtn = new javax.swing.JButton();
+        userEditorClearBtn = new javax.swing.JButton();
+        userEditorSubmitBtn = new javax.swing.JButton();
+        userEditorUsernameTag = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
+        userEditorUsername = new javax.swing.JTextField();
         jLabel4 = new javax.swing.JLabel();
-        jTextField3 = new javax.swing.JTextField();
+        userEditorEmail = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
-        jPasswordField1 = new javax.swing.JPasswordField();
+        userEditorPassword = new javax.swing.JPasswordField();
         jLabel3 = new javax.swing.JLabel();
-        jPasswordField2 = new javax.swing.JPasswordField();
+        userEditorPasswordConf = new javax.swing.JPasswordField();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        userEditorName = new javax.swing.JTextField();
+        userEditorLastNames = new javax.swing.JTextField();
+        userEditorGenderCB = new javax.swing.JComboBox<>();
         jLabel12 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField6 = new javax.swing.JTextField();
+        userEditorPhone = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
         jLabel9 = new javax.swing.JLabel();
-        jTextField7 = new javax.swing.JTextField();
-        jFormattedTextField1 = new javax.swing.JFormattedTextField();
+        userEditorIdNum = new javax.swing.JTextField();
+        userEditorBirthdate = new javax.swing.JFormattedTextField();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
-        jComboBox3 = new javax.swing.JComboBox<>();
-        jComboBox5 = new javax.swing.JComboBox<>();
+        userEditorNationalityCB = new javax.swing.JComboBox<>();
+        userEditorCountryCB = new javax.swing.JComboBox<>();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jComboBox6 = new javax.swing.JComboBox<>();
-        jComboBox7 = new javax.swing.JComboBox<>();
+        userEditorRegionCB = new javax.swing.JComboBox<>();
+        userEditorDistrictCB = new javax.swing.JComboBox<>();
         jLabel15 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jScrollPane1 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jButton15 = new javax.swing.JButton();
+        userEditorAddress = new javax.swing.JTextArea();
+        userEditorIdTypeCB = new javax.swing.JComboBox<>();
+        userEditorClearPicBtn = new javax.swing.JButton();
         jPanel8 = new javax.swing.JPanel();
-        jButton16 = new javax.swing.JButton();
+        userEditorSelectPicBtn = new javax.swing.JButton();
         mainPanel = new javax.swing.JPanel();
         menuBar = new javax.swing.JPanel();
-        jTextField1 = new javax.swing.JTextField();
-        jButton1 = new javax.swing.JButton();
-        jButton2 = new javax.swing.JButton();
+        mainSearch = new javax.swing.JTextField();
+        mainSearchButton = new javax.swing.JButton();
+        mainLogin = new javax.swing.JButton();
         mainPanelTitle1 = new javax.swing.JLabel();
         jPanel7 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
@@ -157,32 +195,439 @@ public class mainInterface extends javax.swing.JFrame {
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
 
+        productionEditor.setBackground(new java.awt.Color(226, 121, 59));
+
+        menuBar3.setBackground(new java.awt.Color(68, 51, 41));
+
+        personEditorReturnBtn1.setBackground(new java.awt.Color(68, 51, 41));
+        personEditorReturnBtn1.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        personEditorReturnBtn1.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorReturnBtn1.setText("Return");
+        personEditorReturnBtn1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        personEditorClearBtn1.setBackground(new java.awt.Color(68, 51, 41));
+        personEditorClearBtn1.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        personEditorClearBtn1.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorClearBtn1.setText("Clear");
+        personEditorClearBtn1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        personEditorSubmitBtn1.setBackground(new java.awt.Color(68, 51, 41));
+        personEditorSubmitBtn1.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        personEditorSubmitBtn1.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorSubmitBtn1.setText("Submit");
+        personEditorSubmitBtn1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        personEditorUsernameTag1.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        personEditorUsernameTag1.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorUsernameTag1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        personEditorUsernameTag1.setText("Username");
+
+        javax.swing.GroupLayout menuBar3Layout = new javax.swing.GroupLayout(menuBar3);
+        menuBar3.setLayout(menuBar3Layout);
+        menuBar3Layout.setHorizontalGroup(
+            menuBar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menuBar3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(personEditorReturnBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(personEditorClearBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(personEditorSubmitBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
+                .addGap(198, 198, 198)
+                .addComponent(personEditorUsernameTag1, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap())
+        );
+        menuBar3Layout.setVerticalGroup(
+            menuBar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuBar3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(menuBar3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(personEditorReturnBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(personEditorClearBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(personEditorSubmitBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(personEditorUsernameTag1))
+                .addContainerGap())
+        );
+
+        jLabel20.setBackground(new java.awt.Color(254, 249, 217));
+        jLabel20.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(254, 249, 217));
+        jLabel20.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel20.setText("Name");
+
+        personEditorName1.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorName1.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorName1.setForeground(new java.awt.Color(68, 51, 41));
+        personEditorName1.setToolTipText("");
+        personEditorName1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+
+        jLabel22.setBackground(new java.awt.Color(254, 249, 217));
+        jLabel22.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(254, 249, 217));
+        jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel22.setText("Middle Name");
+
+        personEditorMidName1.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorMidName1.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorMidName1.setForeground(new java.awt.Color(68, 51, 41));
+        personEditorMidName1.setToolTipText("");
+        personEditorMidName1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+
+        jLabel24.setBackground(new java.awt.Color(254, 249, 217));
+        jLabel24.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(254, 249, 217));
+        jLabel24.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel24.setText("Last Names");
+
+        jLabel25.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel25.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(254, 249, 217));
+        jLabel25.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel25.setText("Height");
+
+        personEditorHeight1.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorHeight1.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorHeight1.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorHeight1.setToolTipText("");
+        personEditorHeight1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+
+        personEditorGenderCB1.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorGenderCB1.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorGenderCB1.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorGenderCB1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        personEditorGenderCB1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+
+        jLabel26.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel26.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(254, 249, 217));
+        jLabel26.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel26.setText("Gender");
+
+        personEditorBirthdate1.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorBirthdate1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        personEditorBirthdate1.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorBirthdate1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
+        personEditorBirthdate1.setToolTipText("DD/MM/YYYY");
+
+        jLabel34.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel34.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel34.setForeground(new java.awt.Color(254, 249, 217));
+        jLabel34.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel34.setText("Birthdate");
+
+        jLabel35.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel35.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel35.setForeground(new java.awt.Color(254, 249, 217));
+        jLabel35.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel35.setText("Nationality");
+
+        personEditorNationCB1.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorNationCB1.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorNationCB1.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorNationCB1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        personEditorNationCB1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+
+        personEditorBirthplaceCB1.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorBirthplaceCB1.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorBirthplaceCB1.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorBirthplaceCB1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        personEditorBirthplaceCB1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+
+        jLabel36.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel36.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel36.setForeground(new java.awt.Color(254, 249, 217));
+        jLabel36.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel36.setText("Birthplace");
+
+        jLabel37.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel37.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel37.setForeground(new java.awt.Color(254, 249, 217));
+        jLabel37.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel37.setText("Region");
+
+        personEditorRegionCB1.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorRegionCB1.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorRegionCB1.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorRegionCB1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        personEditorRegionCB1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+
+        personEditorDistrictCB1.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorDistrictCB1.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorDistrictCB1.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorDistrictCB1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        personEditorDistrictCB1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+
+        jLabel38.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel38.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel38.setForeground(new java.awt.Color(254, 249, 217));
+        jLabel38.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel38.setText("District");
+
+        jLabel39.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel39.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel39.setForeground(new java.awt.Color(254, 249, 217));
+        jLabel39.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel39.setText("Address");
+
+        personEditorAddress1.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorAddress1.setColumns(20);
+        personEditorAddress1.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorAddress1.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorAddress1.setLineWrap(true);
+        personEditorAddress1.setRows(5);
+        personEditorAddress1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        jScrollPane4.setViewportView(personEditorAddress1);
+
+        personEditorLastNames1.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorLastNames1.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorLastNames1.setForeground(new java.awt.Color(68, 51, 41));
+        personEditorLastNames1.setToolTipText("");
+        personEditorLastNames1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+
+        personEditorBio1.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorBio1.setColumns(20);
+        personEditorBio1.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorBio1.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorBio1.setLineWrap(true);
+        personEditorBio1.setRows(5);
+        personEditorBio1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        jScrollPane5.setViewportView(personEditorBio1);
+
+        jLabel40.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel40.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel40.setForeground(new java.awt.Color(254, 249, 217));
+        jLabel40.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel40.setText("Biography");
+
+        personEditorSelectBtn1.setBackground(new java.awt.Color(68, 51, 41));
+        personEditorSelectBtn1.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        personEditorSelectBtn1.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorSelectBtn1.setText("Select Picture");
+        personEditorSelectBtn1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        personEditorSelectBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                personEditorSelectBtn1ActionPerformed(evt);
+            }
+        });
+
+        personEditorClearPicBtn1.setBackground(new java.awt.Color(68, 51, 41));
+        personEditorClearPicBtn1.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        personEditorClearPicBtn1.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorClearPicBtn1.setText("Clear Picture");
+        personEditorClearPicBtn1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        personEditorClearPicBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                personEditorClearPicBtn1ActionPerformed(evt);
+            }
+        });
+
+        personEditorAddP1.setBackground(new java.awt.Color(68, 51, 41));
+        personEditorAddP1.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        personEditorAddP1.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorAddP1.setText("Add Production");
+        personEditorAddP1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        personEditorAddRel1.setBackground(new java.awt.Color(68, 51, 41));
+        personEditorAddRel1.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        personEditorAddRel1.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorAddRel1.setText("Add Relative");
+        personEditorAddRel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        personEditorAddTrivia1.setBackground(new java.awt.Color(68, 51, 41));
+        personEditorAddTrivia1.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        personEditorAddTrivia1.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorAddTrivia1.setText("Add Trivia");
+        personEditorAddTrivia1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+
+        filmPic1.setBackground(new java.awt.Color(68, 51, 41));
+
+        javax.swing.GroupLayout filmPic1Layout = new javax.swing.GroupLayout(filmPic1);
+        filmPic1.setLayout(filmPic1Layout);
+        filmPic1Layout.setHorizontalGroup(
+            filmPic1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        filmPic1Layout.setVerticalGroup(
+            filmPic1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 296, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout productionEditorLayout = new javax.swing.GroupLayout(productionEditor);
+        productionEditor.setLayout(productionEditorLayout);
+        productionEditorLayout.setHorizontalGroup(
+            productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(menuBar3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(productionEditorLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addGroup(productionEditorLayout.createSequentialGroup()
+                        .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(jScrollPane4))
+                    .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                        .addComponent(personEditorDistrictCB1, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(productionEditorLayout.createSequentialGroup()
+                                .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(personEditorRegionCB1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(productionEditorLayout.createSequentialGroup()
+                                .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(personEditorBirthplaceCB1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(productionEditorLayout.createSequentialGroup()
+                                .addComponent(jLabel34, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(personEditorBirthdate1))
+                            .addGroup(productionEditorLayout.createSequentialGroup()
+                                .addComponent(jLabel26, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(personEditorGenderCB1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(productionEditorLayout.createSequentialGroup()
+                                .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(personEditorName1, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(productionEditorLayout.createSequentialGroup()
+                                .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(personEditorHeight1))
+                            .addGroup(productionEditorLayout.createSequentialGroup()
+                                .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(personEditorNationCB1, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(productionEditorLayout.createSequentialGroup()
+                                .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(personEditorMidName1)
+                                    .addComponent(personEditorLastNames1))))))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jScrollPane5)
+                    .addComponent(personEditorAddP1, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE)
+                    .addComponent(personEditorAddRel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(personEditorAddTrivia1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(productionEditorLayout.createSequentialGroup()
+                        .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addComponent(personEditorSelectBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, 267, Short.MAX_VALUE)
+                            .addComponent(personEditorClearPicBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addGap(18, 18, 18)
+                        .addComponent(filmPic1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        productionEditorLayout.setVerticalGroup(
+            productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(productionEditorLayout.createSequentialGroup()
+                .addComponent(menuBar3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(18, 18, 18)
+                .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(productionEditorLayout.createSequentialGroup()
+                        .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(productionEditorLayout.createSequentialGroup()
+                                .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(personEditorName1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel20, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(7, 7, 7)
+                                .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(personEditorMidName1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel22, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel24, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(personEditorLastNames1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(personEditorSelectBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(productionEditorLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel34, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(personEditorBirthdate1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(personEditorHeight1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel25, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(jLabel26, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                    .addComponent(personEditorGenderCB1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, productionEditorLayout.createSequentialGroup()
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addComponent(personEditorClearPicBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(productionEditorLayout.createSequentialGroup()
+                                .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel35, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(personEditorNationCB1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                                .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(personEditorBirthplaceCB1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(jLabel40, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                            .addComponent(jLabel37, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(personEditorRegionCB1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addGroup(productionEditorLayout.createSequentialGroup()
+                                .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel38, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(personEditorDistrictCB1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addGap(0, 0, Short.MAX_VALUE))
+                            .addGroup(productionEditorLayout.createSequentialGroup()
+                                .addGap(38, 38, 38)
+                                .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addGroup(productionEditorLayout.createSequentialGroup()
+                                        .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 95, Short.MAX_VALUE))
+                                    .addComponent(jScrollPane4)))))
+                    .addGroup(productionEditorLayout.createSequentialGroup()
+                        .addComponent(filmPic1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(jScrollPane5, javax.swing.GroupLayout.PREFERRED_SIZE, 63, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(personEditorAddP1, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(personEditorAddRel1, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(personEditorAddTrivia1, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)))
+                .addGap(26, 26, 26))
+        );
+
+        getContentPane().add(productionEditor, "card3");
+
         personEditor.setBackground(new java.awt.Color(226, 121, 59));
 
         menuBar2.setBackground(new java.awt.Color(68, 51, 41));
 
-        jButton7.setBackground(new java.awt.Color(68, 51, 41));
-        jButton7.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
-        jButton7.setForeground(new java.awt.Color(254, 249, 217));
-        jButton7.setText("Return");
-        jButton7.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        personEditorReturnBtn.setBackground(new java.awt.Color(68, 51, 41));
+        personEditorReturnBtn.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        personEditorReturnBtn.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorReturnBtn.setText("Return");
+        personEditorReturnBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton8.setBackground(new java.awt.Color(68, 51, 41));
-        jButton8.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
-        jButton8.setForeground(new java.awt.Color(254, 249, 217));
-        jButton8.setText("Clear");
-        jButton8.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        personEditorClearBtn.setBackground(new java.awt.Color(68, 51, 41));
+        personEditorClearBtn.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        personEditorClearBtn.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorClearBtn.setText("Clear");
+        personEditorClearBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton9.setBackground(new java.awt.Color(68, 51, 41));
-        jButton9.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
-        jButton9.setForeground(new java.awt.Color(254, 249, 217));
-        jButton9.setText("Submit");
-        jButton9.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        personEditorSubmitBtn.setBackground(new java.awt.Color(68, 51, 41));
+        personEditorSubmitBtn.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        personEditorSubmitBtn.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorSubmitBtn.setText("Submit");
+        personEditorSubmitBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        mainPanelTitle3.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        mainPanelTitle3.setForeground(new java.awt.Color(254, 249, 217));
-        mainPanelTitle3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        mainPanelTitle3.setText("Username");
+        personEditorUsernameTag.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        personEditorUsernameTag.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorUsernameTag.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        personEditorUsernameTag.setText("Username");
 
         javax.swing.GroupLayout menuBar2Layout = new javax.swing.GroupLayout(menuBar2);
         menuBar2.setLayout(menuBar2Layout);
@@ -190,13 +635,13 @@ public class mainInterface extends javax.swing.JFrame {
             menuBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menuBar2Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
+                .addComponent(personEditorReturnBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 198, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
+                .addComponent(personEditorClearBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 182, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
+                .addComponent(personEditorSubmitBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 202, Short.MAX_VALUE)
                 .addGap(198, 198, 198)
-                .addComponent(mainPanelTitle3, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(personEditorUsernameTag, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         menuBar2Layout.setVerticalGroup(
@@ -204,10 +649,10 @@ public class mainInterface extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuBar2Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(menuBar2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton7, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addComponent(jButton8, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addComponent(jButton9, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addComponent(mainPanelTitle3))
+                    .addComponent(personEditorReturnBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(personEditorClearBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(personEditorSubmitBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(personEditorUsernameTag))
                 .addContainerGap())
         );
 
@@ -217,11 +662,11 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel17.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel17.setText("Name");
 
-        jTextField8.setBackground(new java.awt.Color(254, 249, 217));
-        jTextField8.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jTextField8.setForeground(new java.awt.Color(68, 51, 41));
-        jTextField8.setToolTipText("");
-        jTextField8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        personEditorName.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorName.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorName.setForeground(new java.awt.Color(68, 51, 41));
+        personEditorName.setToolTipText("");
+        personEditorName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
         jLabel18.setBackground(new java.awt.Color(254, 249, 217));
         jLabel18.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -229,11 +674,11 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel18.setText("Middle Name");
 
-        jTextField9.setBackground(new java.awt.Color(254, 249, 217));
-        jTextField9.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jTextField9.setForeground(new java.awt.Color(68, 51, 41));
-        jTextField9.setToolTipText("");
-        jTextField9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        personEditorMidName.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorMidName.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorMidName.setForeground(new java.awt.Color(68, 51, 41));
+        personEditorMidName.setToolTipText("");
+        personEditorMidName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
         jLabel19.setBackground(new java.awt.Color(254, 249, 217));
         jLabel19.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -247,17 +692,17 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel21.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel21.setText("Height");
 
-        jTextField10.setBackground(new java.awt.Color(254, 249, 217));
-        jTextField10.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jTextField10.setForeground(new java.awt.Color(201, 198, 145));
-        jTextField10.setToolTipText("");
-        jTextField10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        personEditorHeight.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorHeight.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorHeight.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorHeight.setToolTipText("");
+        personEditorHeight.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
-        jComboBox4.setBackground(new java.awt.Color(254, 249, 217));
-        jComboBox4.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jComboBox4.setForeground(new java.awt.Color(201, 198, 145));
-        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        personEditorGenderCB.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorGenderCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorGenderCB.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorGenderCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        personEditorGenderCB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
         jLabel23.setBackground(new java.awt.Color(210, 235, 255));
         jLabel23.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -265,11 +710,11 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel23.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel23.setText("Gender");
 
-        jFormattedTextField2.setBackground(new java.awt.Color(254, 249, 217));
-        jFormattedTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
-        jFormattedTextField2.setForeground(new java.awt.Color(201, 198, 145));
-        jFormattedTextField2.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
-        jFormattedTextField2.setToolTipText("DD/MM/YYYY");
+        personEditorBirthdate.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorBirthdate.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        personEditorBirthdate.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorBirthdate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
+        personEditorBirthdate.setToolTipText("DD/MM/YYYY");
 
         jLabel27.setBackground(new java.awt.Color(210, 235, 255));
         jLabel27.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -283,17 +728,17 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel28.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel28.setText("Nationality");
 
-        jComboBox8.setBackground(new java.awt.Color(254, 249, 217));
-        jComboBox8.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jComboBox8.setForeground(new java.awt.Color(201, 198, 145));
-        jComboBox8.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox8.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        personEditorNationCB.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorNationCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorNationCB.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorNationCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        personEditorNationCB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
-        jComboBox9.setBackground(new java.awt.Color(254, 249, 217));
-        jComboBox9.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jComboBox9.setForeground(new java.awt.Color(201, 198, 145));
-        jComboBox9.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox9.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        personEditorBirthplaceCB.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorBirthplaceCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorBirthplaceCB.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorBirthplaceCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        personEditorBirthplaceCB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
         jLabel29.setBackground(new java.awt.Color(210, 235, 255));
         jLabel29.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -307,17 +752,17 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel30.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel30.setText("Region");
 
-        jComboBox10.setBackground(new java.awt.Color(254, 249, 217));
-        jComboBox10.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jComboBox10.setForeground(new java.awt.Color(201, 198, 145));
-        jComboBox10.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox10.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        personEditorRegionCB.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorRegionCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorRegionCB.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorRegionCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        personEditorRegionCB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
-        jComboBox11.setBackground(new java.awt.Color(254, 249, 217));
-        jComboBox11.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jComboBox11.setForeground(new java.awt.Color(201, 198, 145));
-        jComboBox11.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox11.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        personEditorDistrictCB.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorDistrictCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorDistrictCB.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorDistrictCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        personEditorDistrictCB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
         jLabel31.setBackground(new java.awt.Color(210, 235, 255));
         jLabel31.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -331,29 +776,29 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel32.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel32.setText("Address");
 
-        jTextArea2.setBackground(new java.awt.Color(254, 249, 217));
-        jTextArea2.setColumns(20);
-        jTextArea2.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jTextArea2.setForeground(new java.awt.Color(201, 198, 145));
-        jTextArea2.setLineWrap(true);
-        jTextArea2.setRows(5);
-        jTextArea2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
-        jScrollPane2.setViewportView(jTextArea2);
+        personEditorAddress.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorAddress.setColumns(20);
+        personEditorAddress.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorAddress.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorAddress.setLineWrap(true);
+        personEditorAddress.setRows(5);
+        personEditorAddress.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        jScrollPane2.setViewportView(personEditorAddress);
 
-        jTextField14.setBackground(new java.awt.Color(254, 249, 217));
-        jTextField14.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jTextField14.setForeground(new java.awt.Color(68, 51, 41));
-        jTextField14.setToolTipText("");
-        jTextField14.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        personEditorLastNames.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorLastNames.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorLastNames.setForeground(new java.awt.Color(68, 51, 41));
+        personEditorLastNames.setToolTipText("");
+        personEditorLastNames.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
-        jTextArea3.setBackground(new java.awt.Color(254, 249, 217));
-        jTextArea3.setColumns(20);
-        jTextArea3.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jTextArea3.setForeground(new java.awt.Color(201, 198, 145));
-        jTextArea3.setLineWrap(true);
-        jTextArea3.setRows(5);
-        jTextArea3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
-        jScrollPane3.setViewportView(jTextArea3);
+        personEditorBio.setBackground(new java.awt.Color(254, 249, 217));
+        personEditorBio.setColumns(20);
+        personEditorBio.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        personEditorBio.setForeground(new java.awt.Color(201, 198, 145));
+        personEditorBio.setLineWrap(true);
+        personEditorBio.setRows(5);
+        personEditorBio.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        jScrollPane3.setViewportView(personEditorBio);
 
         jLabel33.setBackground(new java.awt.Color(210, 235, 255));
         jLabel33.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -372,45 +817,45 @@ public class mainInterface extends javax.swing.JFrame {
             .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        jButton10.setBackground(new java.awt.Color(68, 51, 41));
-        jButton10.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
-        jButton10.setForeground(new java.awt.Color(254, 249, 217));
-        jButton10.setText("Select Picture");
-        jButton10.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton10.addActionListener(new java.awt.event.ActionListener() {
+        personEditorSelectBtn.setBackground(new java.awt.Color(68, 51, 41));
+        personEditorSelectBtn.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        personEditorSelectBtn.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorSelectBtn.setText("Select Picture");
+        personEditorSelectBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        personEditorSelectBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton10ActionPerformed(evt);
+                personEditorSelectBtnActionPerformed(evt);
             }
         });
 
-        jButton11.setBackground(new java.awt.Color(68, 51, 41));
-        jButton11.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
-        jButton11.setForeground(new java.awt.Color(254, 249, 217));
-        jButton11.setText("Clear Picture");
-        jButton11.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton11.addActionListener(new java.awt.event.ActionListener() {
+        personEditorClearPicBtn.setBackground(new java.awt.Color(68, 51, 41));
+        personEditorClearPicBtn.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        personEditorClearPicBtn.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorClearPicBtn.setText("Clear Picture");
+        personEditorClearPicBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        personEditorClearPicBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton11ActionPerformed(evt);
+                personEditorClearPicBtnActionPerformed(evt);
             }
         });
 
-        jButton12.setBackground(new java.awt.Color(68, 51, 41));
-        jButton12.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
-        jButton12.setForeground(new java.awt.Color(254, 249, 217));
-        jButton12.setText("Add Production");
-        jButton12.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        personEditorAddP.setBackground(new java.awt.Color(68, 51, 41));
+        personEditorAddP.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        personEditorAddP.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorAddP.setText("Add Production");
+        personEditorAddP.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton13.setBackground(new java.awt.Color(68, 51, 41));
-        jButton13.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
-        jButton13.setForeground(new java.awt.Color(254, 249, 217));
-        jButton13.setText("Add Relative");
-        jButton13.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        personEditorAddRel.setBackground(new java.awt.Color(68, 51, 41));
+        personEditorAddRel.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        personEditorAddRel.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorAddRel.setText("Add Relative");
+        personEditorAddRel.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton14.setBackground(new java.awt.Color(68, 51, 41));
-        jButton14.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
-        jButton14.setForeground(new java.awt.Color(254, 249, 217));
-        jButton14.setText("Add Trivia");
-        jButton14.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        personEditorAddTrivia.setBackground(new java.awt.Color(68, 51, 41));
+        personEditorAddTrivia.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        personEditorAddTrivia.setForeground(new java.awt.Color(254, 249, 217));
+        personEditorAddTrivia.setText("Add Trivia");
+        personEditorAddTrivia.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
         javax.swing.GroupLayout personEditorLayout = new javax.swing.GroupLayout(personEditor);
         personEditor.setLayout(personEditorLayout);
@@ -426,58 +871,58 @@ public class mainInterface extends javax.swing.JFrame {
                         .addComponent(jScrollPane2))
                     .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                        .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(personEditorDistrictCB, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(personEditorLayout.createSequentialGroup()
                                 .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox10, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(personEditorRegionCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(personEditorLayout.createSequentialGroup()
                                 .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox9, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                                .addComponent(personEditorBirthplaceCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(personEditorLayout.createSequentialGroup()
                                 .addComponent(jLabel27, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jFormattedTextField2))
+                                .addComponent(personEditorBirthdate))
                             .addGroup(personEditorLayout.createSequentialGroup()
                                 .addComponent(jLabel23, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox4, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                            .addGroup(personEditorLayout.createSequentialGroup()
-                                .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addGap(12, 12, 12)
-                                .addComponent(jTextField14))
+                                .addComponent(personEditorGenderCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                             .addGroup(personEditorLayout.createSequentialGroup()
                                 .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addGroup(personEditorLayout.createSequentialGroup()
-                                .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField9))
+                                .addComponent(personEditorName, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(personEditorLayout.createSequentialGroup()
                                 .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jTextField10))
+                                .addComponent(personEditorHeight))
                             .addGroup(personEditorLayout.createSequentialGroup()
                                 .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                                .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE)))))
+                                .addComponent(personEditorNationCB, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(personEditorLayout.createSequentialGroup()
+                                .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(personEditorMidName)
+                                    .addComponent(personEditorLastNames))))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(personEditorLayout.createSequentialGroup()
                         .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(personEditorSelectBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(personEditorClearPicBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane3)
-                    .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE)
-                    .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(personEditorAddP, javax.swing.GroupLayout.DEFAULT_SIZE, 481, Short.MAX_VALUE)
+                    .addComponent(personEditorAddRel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(personEditorAddTrivia, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         personEditorLayout.setVerticalGroup(
@@ -490,34 +935,34 @@ public class mainInterface extends javax.swing.JFrame {
                         .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(personEditorLayout.createSequentialGroup()
                                 .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextField8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(personEditorName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(7, 7, 7)
                                 .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextField9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(personEditorMidName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jTextField14, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                            .addComponent(jButton10, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(personEditorLastNames, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(personEditorSelectBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(personEditorLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel27, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jFormattedTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(personEditorBirthdate, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextField10, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(personEditorHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                    .addComponent(personEditorGenderCB, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, personEditorLayout.createSequentialGroup()
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                .addComponent(jButton11, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                                .addComponent(personEditorClearPicBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -526,22 +971,22 @@ public class mainInterface extends javax.swing.JFrame {
                             .addGroup(personEditorLayout.createSequentialGroup()
                                 .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(personEditorNationCB, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                                    .addComponent(jComboBox9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(personEditorBirthplaceCB, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel29, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addComponent(jLabel33, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                             .addComponent(jLabel30, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jComboBox10, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(personEditorRegionCB, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(personEditorLayout.createSequentialGroup()
                                 .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel31, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox11, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(personEditorDistrictCB, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addGap(0, 0, Short.MAX_VALUE))
                             .addGroup(personEditorLayout.createSequentialGroup()
                                 .addGap(38, 38, 38)
@@ -553,11 +998,11 @@ public class mainInterface extends javax.swing.JFrame {
                     .addGroup(personEditorLayout.createSequentialGroup()
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton12, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                        .addComponent(personEditorAddP, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton13, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                        .addComponent(personEditorAddRel, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jButton14, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)))
+                        .addComponent(personEditorAddTrivia, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)))
                 .addGap(26, 26, 26))
         );
 
@@ -567,28 +1012,28 @@ public class mainInterface extends javax.swing.JFrame {
 
         menuBar1.setBackground(new java.awt.Color(68, 51, 41));
 
-        jButton4.setBackground(new java.awt.Color(68, 51, 41));
-        jButton4.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
-        jButton4.setForeground(new java.awt.Color(254, 249, 217));
-        jButton4.setText("Return");
-        jButton4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        userEditorReturnBtn.setBackground(new java.awt.Color(68, 51, 41));
+        userEditorReturnBtn.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        userEditorReturnBtn.setForeground(new java.awt.Color(254, 249, 217));
+        userEditorReturnBtn.setText("Return");
+        userEditorReturnBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton5.setBackground(new java.awt.Color(68, 51, 41));
-        jButton5.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
-        jButton5.setForeground(new java.awt.Color(254, 249, 217));
-        jButton5.setText("Clear");
-        jButton5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        userEditorClearBtn.setBackground(new java.awt.Color(68, 51, 41));
+        userEditorClearBtn.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        userEditorClearBtn.setForeground(new java.awt.Color(254, 249, 217));
+        userEditorClearBtn.setText("Clear");
+        userEditorClearBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        jButton6.setBackground(new java.awt.Color(68, 51, 41));
-        jButton6.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
-        jButton6.setForeground(new java.awt.Color(254, 249, 217));
-        jButton6.setText("Submit");
-        jButton6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        userEditorSubmitBtn.setBackground(new java.awt.Color(68, 51, 41));
+        userEditorSubmitBtn.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        userEditorSubmitBtn.setForeground(new java.awt.Color(254, 249, 217));
+        userEditorSubmitBtn.setText("Submit");
+        userEditorSubmitBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        mainPanelTitle2.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        mainPanelTitle2.setForeground(new java.awt.Color(254, 249, 217));
-        mainPanelTitle2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        mainPanelTitle2.setText("Username");
+        userEditorUsernameTag.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        userEditorUsernameTag.setForeground(new java.awt.Color(254, 249, 217));
+        userEditorUsernameTag.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        userEditorUsernameTag.setText("Username");
 
         javax.swing.GroupLayout menuBar1Layout = new javax.swing.GroupLayout(menuBar1);
         menuBar1.setLayout(menuBar1Layout);
@@ -596,13 +1041,13 @@ public class mainInterface extends javax.swing.JFrame {
             menuBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menuBar1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(userEditorReturnBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(userEditorClearBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(userEditorSubmitBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGap(198, 198, 198)
-                .addComponent(mainPanelTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(userEditorUsernameTag, javax.swing.GroupLayout.PREFERRED_SIZE, 390, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap())
         );
         menuBar1Layout.setVerticalGroup(
@@ -610,10 +1055,10 @@ public class mainInterface extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuBar1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(menuBar1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jButton4, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addComponent(jButton5, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addComponent(jButton6, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addComponent(mainPanelTitle2))
+                    .addComponent(userEditorReturnBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(userEditorClearBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(userEditorSubmitBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(userEditorUsernameTag))
                 .addContainerGap())
         );
 
@@ -623,11 +1068,11 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel1.setText("Username");
 
-        jTextField2.setBackground(new java.awt.Color(254, 249, 217));
-        jTextField2.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jTextField2.setForeground(new java.awt.Color(68, 51, 41));
-        jTextField2.setToolTipText("");
-        jTextField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        userEditorUsername.setBackground(new java.awt.Color(254, 249, 217));
+        userEditorUsername.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        userEditorUsername.setForeground(new java.awt.Color(68, 51, 41));
+        userEditorUsername.setToolTipText("");
+        userEditorUsername.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
         jLabel4.setBackground(new java.awt.Color(254, 249, 217));
         jLabel4.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -635,11 +1080,11 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel4.setText("E-mail address");
 
-        jTextField3.setBackground(new java.awt.Color(254, 249, 217));
-        jTextField3.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jTextField3.setForeground(new java.awt.Color(68, 51, 41));
-        jTextField3.setToolTipText("");
-        jTextField3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        userEditorEmail.setBackground(new java.awt.Color(254, 249, 217));
+        userEditorEmail.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        userEditorEmail.setForeground(new java.awt.Color(68, 51, 41));
+        userEditorEmail.setToolTipText("");
+        userEditorEmail.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
         jLabel2.setBackground(new java.awt.Color(254, 249, 217));
         jLabel2.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -647,10 +1092,10 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel2.setText("Password");
 
-        jPasswordField1.setBackground(new java.awt.Color(254, 249, 217));
-        jPasswordField1.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jPasswordField1.setForeground(new java.awt.Color(68, 51, 41));
-        jPasswordField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        userEditorPassword.setBackground(new java.awt.Color(254, 249, 217));
+        userEditorPassword.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        userEditorPassword.setForeground(new java.awt.Color(68, 51, 41));
+        userEditorPassword.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
         jLabel3.setBackground(new java.awt.Color(254, 249, 217));
         jLabel3.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -658,10 +1103,10 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel3.setText("Confirm password");
 
-        jPasswordField2.setBackground(new java.awt.Color(254, 249, 217));
-        jPasswordField2.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        jPasswordField2.setForeground(new java.awt.Color(68, 51, 41));
-        jPasswordField2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        userEditorPasswordConf.setBackground(new java.awt.Color(254, 249, 217));
+        userEditorPasswordConf.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        userEditorPasswordConf.setForeground(new java.awt.Color(68, 51, 41));
+        userEditorPasswordConf.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
         jLabel5.setBackground(new java.awt.Color(210, 235, 255));
         jLabel5.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -675,23 +1120,23 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel6.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel6.setText("Last Names");
 
-        jTextField4.setBackground(new java.awt.Color(254, 249, 217));
-        jTextField4.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jTextField4.setForeground(new java.awt.Color(201, 198, 145));
-        jTextField4.setToolTipText("");
-        jTextField4.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        userEditorName.setBackground(new java.awt.Color(254, 249, 217));
+        userEditorName.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        userEditorName.setForeground(new java.awt.Color(201, 198, 145));
+        userEditorName.setToolTipText("");
+        userEditorName.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
-        jTextField5.setBackground(new java.awt.Color(254, 249, 217));
-        jTextField5.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jTextField5.setForeground(new java.awt.Color(201, 198, 145));
-        jTextField5.setToolTipText("");
-        jTextField5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        userEditorLastNames.setBackground(new java.awt.Color(254, 249, 217));
+        userEditorLastNames.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        userEditorLastNames.setForeground(new java.awt.Color(201, 198, 145));
+        userEditorLastNames.setToolTipText("");
+        userEditorLastNames.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
-        jComboBox1.setBackground(new java.awt.Color(254, 249, 217));
-        jComboBox1.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jComboBox1.setForeground(new java.awt.Color(201, 198, 145));
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        userEditorGenderCB.setBackground(new java.awt.Color(254, 249, 217));
+        userEditorGenderCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        userEditorGenderCB.setForeground(new java.awt.Color(201, 198, 145));
+        userEditorGenderCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        userEditorGenderCB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
         jLabel12.setBackground(new java.awt.Color(210, 235, 255));
         jLabel12.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -705,11 +1150,11 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel8.setText("Phone number");
 
-        jTextField6.setBackground(new java.awt.Color(254, 249, 217));
-        jTextField6.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jTextField6.setForeground(new java.awt.Color(201, 198, 145));
-        jTextField6.setToolTipText("");
-        jTextField6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        userEditorPhone.setBackground(new java.awt.Color(254, 249, 217));
+        userEditorPhone.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        userEditorPhone.setForeground(new java.awt.Color(201, 198, 145));
+        userEditorPhone.setToolTipText("");
+        userEditorPhone.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
         jLabel7.setBackground(new java.awt.Color(210, 235, 255));
         jLabel7.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -723,17 +1168,17 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel9.setText("Id number");
 
-        jTextField7.setBackground(new java.awt.Color(254, 249, 217));
-        jTextField7.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jTextField7.setForeground(new java.awt.Color(201, 198, 145));
-        jTextField7.setToolTipText("");
-        jTextField7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        userEditorIdNum.setBackground(new java.awt.Color(254, 249, 217));
+        userEditorIdNum.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        userEditorIdNum.setForeground(new java.awt.Color(201, 198, 145));
+        userEditorIdNum.setToolTipText("");
+        userEditorIdNum.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
-        jFormattedTextField1.setBackground(new java.awt.Color(254, 249, 217));
-        jFormattedTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
-        jFormattedTextField1.setForeground(new java.awt.Color(201, 198, 145));
-        jFormattedTextField1.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
-        jFormattedTextField1.setToolTipText("DD/MM/YYYY");
+        userEditorBirthdate.setBackground(new java.awt.Color(254, 249, 217));
+        userEditorBirthdate.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        userEditorBirthdate.setForeground(new java.awt.Color(201, 198, 145));
+        userEditorBirthdate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
+        userEditorBirthdate.setToolTipText("DD/MM/YYYY");
 
         jLabel10.setBackground(new java.awt.Color(210, 235, 255));
         jLabel10.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -747,17 +1192,17 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel11.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel11.setText("Nationality");
 
-        jComboBox3.setBackground(new java.awt.Color(254, 249, 217));
-        jComboBox3.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jComboBox3.setForeground(new java.awt.Color(201, 198, 145));
-        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox3.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        userEditorNationalityCB.setBackground(new java.awt.Color(254, 249, 217));
+        userEditorNationalityCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        userEditorNationalityCB.setForeground(new java.awt.Color(201, 198, 145));
+        userEditorNationalityCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        userEditorNationalityCB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
-        jComboBox5.setBackground(new java.awt.Color(254, 249, 217));
-        jComboBox5.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jComboBox5.setForeground(new java.awt.Color(201, 198, 145));
-        jComboBox5.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox5.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        userEditorCountryCB.setBackground(new java.awt.Color(254, 249, 217));
+        userEditorCountryCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        userEditorCountryCB.setForeground(new java.awt.Color(201, 198, 145));
+        userEditorCountryCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        userEditorCountryCB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
         jLabel13.setBackground(new java.awt.Color(210, 235, 255));
         jLabel13.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -771,17 +1216,17 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel14.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel14.setText("Region");
 
-        jComboBox6.setBackground(new java.awt.Color(254, 249, 217));
-        jComboBox6.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jComboBox6.setForeground(new java.awt.Color(201, 198, 145));
-        jComboBox6.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox6.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        userEditorRegionCB.setBackground(new java.awt.Color(254, 249, 217));
+        userEditorRegionCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        userEditorRegionCB.setForeground(new java.awt.Color(201, 198, 145));
+        userEditorRegionCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        userEditorRegionCB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
-        jComboBox7.setBackground(new java.awt.Color(254, 249, 217));
-        jComboBox7.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jComboBox7.setForeground(new java.awt.Color(201, 198, 145));
-        jComboBox7.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox7.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        userEditorDistrictCB.setBackground(new java.awt.Color(254, 249, 217));
+        userEditorDistrictCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        userEditorDistrictCB.setForeground(new java.awt.Color(201, 198, 145));
+        userEditorDistrictCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        userEditorDistrictCB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
         jLabel15.setBackground(new java.awt.Color(210, 235, 255));
         jLabel15.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -795,29 +1240,29 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel16.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel16.setText("Address");
 
-        jTextArea1.setBackground(new java.awt.Color(254, 249, 217));
-        jTextArea1.setColumns(20);
-        jTextArea1.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jTextArea1.setForeground(new java.awt.Color(201, 198, 145));
-        jTextArea1.setLineWrap(true);
-        jTextArea1.setRows(5);
-        jTextArea1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
-        jScrollPane1.setViewportView(jTextArea1);
+        userEditorAddress.setBackground(new java.awt.Color(254, 249, 217));
+        userEditorAddress.setColumns(20);
+        userEditorAddress.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        userEditorAddress.setForeground(new java.awt.Color(201, 198, 145));
+        userEditorAddress.setLineWrap(true);
+        userEditorAddress.setRows(5);
+        userEditorAddress.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        jScrollPane1.setViewportView(userEditorAddress);
 
-        jComboBox2.setBackground(new java.awt.Color(254, 249, 217));
-        jComboBox2.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        jComboBox2.setForeground(new java.awt.Color(201, 198, 145));
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        jComboBox2.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
+        userEditorIdTypeCB.setBackground(new java.awt.Color(254, 249, 217));
+        userEditorIdTypeCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        userEditorIdTypeCB.setForeground(new java.awt.Color(201, 198, 145));
+        userEditorIdTypeCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        userEditorIdTypeCB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
-        jButton15.setBackground(new java.awt.Color(68, 51, 41));
-        jButton15.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
-        jButton15.setForeground(new java.awt.Color(254, 249, 217));
-        jButton15.setText("Clear Picture");
-        jButton15.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton15.addActionListener(new java.awt.event.ActionListener() {
+        userEditorClearPicBtn.setBackground(new java.awt.Color(68, 51, 41));
+        userEditorClearPicBtn.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        userEditorClearPicBtn.setForeground(new java.awt.Color(254, 249, 217));
+        userEditorClearPicBtn.setText("Clear Picture");
+        userEditorClearPicBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        userEditorClearPicBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton15ActionPerformed(evt);
+                userEditorClearPicBtnActionPerformed(evt);
             }
         });
 
@@ -832,14 +1277,14 @@ public class mainInterface extends javax.swing.JFrame {
             .addGap(0, 200, Short.MAX_VALUE)
         );
 
-        jButton16.setBackground(new java.awt.Color(68, 51, 41));
-        jButton16.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
-        jButton16.setForeground(new java.awt.Color(254, 249, 217));
-        jButton16.setText("Select Picture");
-        jButton16.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
-        jButton16.addActionListener(new java.awt.event.ActionListener() {
+        userEditorSelectPicBtn.setBackground(new java.awt.Color(68, 51, 41));
+        userEditorSelectPicBtn.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        userEditorSelectPicBtn.setForeground(new java.awt.Color(254, 249, 217));
+        userEditorSelectPicBtn.setText("Select Picture");
+        userEditorSelectPicBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        userEditorSelectPicBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jButton16ActionPerformed(evt);
+                userEditorSelectPicBtnActionPerformed(evt);
             }
         });
 
@@ -849,76 +1294,79 @@ public class mainInterface extends javax.swing.JFrame {
             userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(menuBar1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addGroup(userEditorLayout.createSequentialGroup()
-                .addContainerGap()
                 .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addGroup(userEditorLayout.createSequentialGroup()
-                        .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox6, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addContainerGap()
+                        .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(userEditorLayout.createSequentialGroup()
+                                .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(userEditorBirthdate))
+                            .addGroup(userEditorLayout.createSequentialGroup()
+                                .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(userEditorIdNum))
+                            .addGroup(userEditorLayout.createSequentialGroup()
+                                .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(userEditorGenderCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addGroup(userEditorLayout.createSequentialGroup()
+                                .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(userEditorPasswordConf))
+                            .addGroup(userEditorLayout.createSequentialGroup()
+                                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(userEditorPassword))
+                            .addGroup(userEditorLayout.createSequentialGroup()
+                                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(userEditorUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(userEditorLayout.createSequentialGroup()
+                                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addComponent(userEditorEmail))
+                            .addGroup(userEditorLayout.createSequentialGroup()
+                                .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(userEditorPhone)
+                                    .addComponent(userEditorIdTypeCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(userEditorLayout.createSequentialGroup()
+                                .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                                .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(userEditorName)
+                                    .addComponent(userEditorLastNames)))))
                     .addGroup(userEditorLayout.createSequentialGroup()
-                        .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 139, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jFormattedTextField1))
+                        .addComponent(userEditorCountryCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(userEditorLayout.createSequentialGroup()
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField7))
-                    .addGroup(userEditorLayout.createSequentialGroup()
-                        .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jComboBox1, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(userEditorLayout.createSequentialGroup()
-                        .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField5))
-                    .addGroup(userEditorLayout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPasswordField2))
-                    .addGroup(userEditorLayout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jPasswordField1))
-                    .addGroup(userEditorLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 411, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(userEditorLayout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField3))
-                    .addGroup(userEditorLayout.createSequentialGroup()
-                        .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jTextField4))
-                    .addGroup(userEditorLayout.createSequentialGroup()
-                        .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jTextField6)
-                            .addComponent(jComboBox2, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))))
-                .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addGroup(javax.swing.GroupLayout.Alignment.LEADING, userEditorLayout.createSequentialGroup()
                         .addGap(77, 77, 77)
                         .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jButton16, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
-                            .addComponent(jButton15, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                            .addComponent(userEditorSelectPicBtn, javax.swing.GroupLayout.DEFAULT_SIZE, 327, Short.MAX_VALUE)
+                            .addComponent(userEditorClearPicBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(userEditorLayout.createSequentialGroup()
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(jComboBox7, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jComboBox3, 0, 411, Short.MAX_VALUE)
-                            .addComponent(jComboBox5, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(userEditorRegionCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(userEditorDistrictCB, javax.swing.GroupLayout.Alignment.TRAILING, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(userEditorNationalityCB, 0, 411, Short.MAX_VALUE)
                             .addComponent(jScrollPane1))))
                 .addContainerGap())
         );
@@ -930,33 +1378,33 @@ public class mainInterface extends javax.swing.JFrame {
                 .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(userEditorLayout.createSequentialGroup()
                         .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userEditorUsername, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userEditorEmail, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPasswordField1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(userEditorPassword, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jPasswordField2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(userEditorPasswordConf, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userEditorName, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jTextField5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userEditorLastNames, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                         .addGroup(userEditorLayout.createSequentialGroup()
-                            .addComponent(jButton16, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(userEditorSelectPicBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(jButton15, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(userEditorClearPicBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -965,46 +1413,46 @@ public class mainInterface extends javax.swing.JFrame {
                             .addGroup(userEditorLayout.createSequentialGroup()
                                 .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(userEditorGenderCB, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextField6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(userEditorPhone, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(userEditorLayout.createSequentialGroup()
-                                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(userEditorNationalityCB, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jComboBox5, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                    .addComponent(userEditorRegionCB, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(userEditorLayout.createSequentialGroup()
                                 .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(userEditorIdTypeCB, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jTextField7, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(userEditorIdNum, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                                 .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                     .addComponent(jLabel10, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jFormattedTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                                    .addComponent(userEditorBirthdate, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jLabel14, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jComboBox6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                                .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(userEditorCountryCB, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
                             .addGroup(userEditorLayout.createSequentialGroup()
-                                .addComponent(jComboBox7, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(userEditorDistrictCB, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                                .addComponent(jScrollPane1))))
+                                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 109, javax.swing.GroupLayout.PREFERRED_SIZE))))
                     .addGroup(userEditorLayout.createSequentialGroup()
                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addGap(44, 44, 44)
                         .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(83, Short.MAX_VALUE))
+                .addContainerGap(82, Short.MAX_VALUE))
         );
 
         getContentPane().add(userEditor, "card3");
@@ -1013,21 +1461,21 @@ public class mainInterface extends javax.swing.JFrame {
 
         menuBar.setBackground(new java.awt.Color(68, 51, 41));
 
-        jTextField1.setBackground(new java.awt.Color(254, 249, 217));
-        jTextField1.setFont(new java.awt.Font("Gadugi", 0, 14)); // NOI18N
-        jTextField1.setForeground(new java.awt.Color(201, 198, 145));
-        jTextField1.setText("jTextField1");
-        jTextField1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 2));
+        mainSearch.setBackground(new java.awt.Color(254, 249, 217));
+        mainSearch.setFont(new java.awt.Font("Gadugi", 0, 14)); // NOI18N
+        mainSearch.setForeground(new java.awt.Color(201, 198, 145));
+        mainSearch.setText("jTextField1");
+        mainSearch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 2));
 
-        jButton1.setBackground(new java.awt.Color(254, 249, 217));
-        jButton1.setForeground(new java.awt.Color(201, 198, 145));
-        jButton1.setText("X");
-        jButton1.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 2));
+        mainSearchButton.setBackground(new java.awt.Color(254, 249, 217));
+        mainSearchButton.setForeground(new java.awt.Color(201, 198, 145));
+        mainSearchButton.setText("X");
+        mainSearchButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 2));
 
-        jButton2.setBackground(new java.awt.Color(68, 51, 41));
-        jButton2.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
-        jButton2.setForeground(new java.awt.Color(254, 249, 217));
-        jButton2.setText("Log in");
+        mainLogin.setBackground(new java.awt.Color(68, 51, 41));
+        mainLogin.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        mainLogin.setForeground(new java.awt.Color(254, 249, 217));
+        mainLogin.setText("Log in");
 
         javax.swing.GroupLayout menuBarLayout = new javax.swing.GroupLayout(menuBar);
         menuBar.setLayout(menuBarLayout);
@@ -1035,11 +1483,11 @@ public class mainInterface extends javax.swing.JFrame {
             menuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(menuBarLayout.createSequentialGroup()
                 .addGap(170, 170, 170)
-                .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 750, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(mainSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 750, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(mainSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
+                .addComponent(mainLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 194, Short.MAX_VALUE)
                 .addContainerGap())
         );
         menuBarLayout.setVerticalGroup(
@@ -1047,9 +1495,9 @@ public class mainInterface extends javax.swing.JFrame {
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuBarLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(menuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jTextField1, javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jButton1, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(jButton2, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE))
+                    .addComponent(mainSearch, javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(mainSearchButton, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(mainLogin, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE))
                 .addContainerGap())
         );
 
@@ -1446,21 +1894,29 @@ public class mainInterface extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void jButton10ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton10ActionPerformed
+    private void personEditorSelectBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorSelectBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton10ActionPerformed
+    }//GEN-LAST:event_personEditorSelectBtnActionPerformed
 
-    private void jButton11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton11ActionPerformed
+    private void personEditorClearPicBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorClearPicBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton11ActionPerformed
+    }//GEN-LAST:event_personEditorClearPicBtnActionPerformed
 
-    private void jButton15ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton15ActionPerformed
+    private void userEditorClearPicBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userEditorClearPicBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton15ActionPerformed
+    }//GEN-LAST:event_userEditorClearPicBtnActionPerformed
 
-    private void jButton16ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton16ActionPerformed
+    private void userEditorSelectPicBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userEditorSelectPicBtnActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_jButton16ActionPerformed
+    }//GEN-LAST:event_userEditorSelectPicBtnActionPerformed
+
+    private void personEditorSelectBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorSelectBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_personEditorSelectBtn1ActionPerformed
+
+    private void personEditorClearPicBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorClearPicBtn1ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_personEditorClearPicBtn1ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -1529,38 +1985,11 @@ public class mainInterface extends javax.swing.JFrame {
     private javax.swing.JLabel f2s8;
     private javax.swing.JLabel f2s9;
     private javax.swing.JPanel filmPic;
+    private javax.swing.JPanel filmPic1;
     private javax.swing.JPanel filmPic2;
     private javax.swing.JPanel filmPic3;
     private javax.swing.JPanel filmPic4;
     private javax.swing.JPanel filmPic5;
-    private javax.swing.JButton jButton1;
-    private javax.swing.JButton jButton10;
-    private javax.swing.JButton jButton11;
-    private javax.swing.JButton jButton12;
-    private javax.swing.JButton jButton13;
-    private javax.swing.JButton jButton14;
-    private javax.swing.JButton jButton15;
-    private javax.swing.JButton jButton16;
-    private javax.swing.JButton jButton2;
-    private javax.swing.JButton jButton4;
-    private javax.swing.JButton jButton5;
-    private javax.swing.JButton jButton6;
-    private javax.swing.JButton jButton7;
-    private javax.swing.JButton jButton8;
-    private javax.swing.JButton jButton9;
-    private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox10;
-    private javax.swing.JComboBox<String> jComboBox11;
-    private javax.swing.JComboBox<String> jComboBox2;
-    private javax.swing.JComboBox<String> jComboBox3;
-    private javax.swing.JComboBox<String> jComboBox4;
-    private javax.swing.JComboBox<String> jComboBox5;
-    private javax.swing.JComboBox<String> jComboBox6;
-    private javax.swing.JComboBox<String> jComboBox7;
-    private javax.swing.JComboBox<String> jComboBox8;
-    private javax.swing.JComboBox<String> jComboBox9;
-    private javax.swing.JFormattedTextField jFormattedTextField1;
-    private javax.swing.JFormattedTextField jFormattedTextField2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -1573,8 +2002,13 @@ public class mainInterface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel18;
     private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
     private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
     private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
@@ -1583,7 +2017,14 @@ public class mainInterface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel35;
+    private javax.swing.JLabel jLabel36;
+    private javax.swing.JLabel jLabel37;
+    private javax.swing.JLabel jLabel38;
+    private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel40;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
@@ -1597,33 +2038,86 @@ public class mainInterface extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
-    private javax.swing.JPasswordField jPasswordField1;
-    private javax.swing.JPasswordField jPasswordField2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JScrollPane jScrollPane3;
-    private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextArea jTextArea2;
-    private javax.swing.JTextArea jTextArea3;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField10;
-    private javax.swing.JTextField jTextField14;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
-    private javax.swing.JTextField jTextField9;
+    private javax.swing.JScrollPane jScrollPane4;
+    private javax.swing.JScrollPane jScrollPane5;
+    private javax.swing.JButton mainLogin;
     private javax.swing.JPanel mainPanel;
     private javax.swing.JLabel mainPanelTitle1;
-    private javax.swing.JLabel mainPanelTitle2;
-    private javax.swing.JLabel mainPanelTitle3;
+    private javax.swing.JTextField mainSearch;
+    private javax.swing.JButton mainSearchButton;
     private javax.swing.JPanel menuBar;
     private javax.swing.JPanel menuBar1;
     private javax.swing.JPanel menuBar2;
+    private javax.swing.JPanel menuBar3;
     private javax.swing.JPanel personEditor;
+    private javax.swing.JButton personEditorAddP;
+    private javax.swing.JButton personEditorAddP1;
+    private javax.swing.JButton personEditorAddRel;
+    private javax.swing.JButton personEditorAddRel1;
+    private javax.swing.JButton personEditorAddTrivia;
+    private javax.swing.JButton personEditorAddTrivia1;
+    private javax.swing.JTextArea personEditorAddress;
+    private javax.swing.JTextArea personEditorAddress1;
+    private javax.swing.JTextArea personEditorBio;
+    private javax.swing.JTextArea personEditorBio1;
+    private javax.swing.JFormattedTextField personEditorBirthdate;
+    private javax.swing.JFormattedTextField personEditorBirthdate1;
+    private javax.swing.JComboBox<String> personEditorBirthplaceCB;
+    private javax.swing.JComboBox<String> personEditorBirthplaceCB1;
+    private javax.swing.JButton personEditorClearBtn;
+    private javax.swing.JButton personEditorClearBtn1;
+    private javax.swing.JButton personEditorClearPicBtn;
+    private javax.swing.JButton personEditorClearPicBtn1;
+    private javax.swing.JComboBox<String> personEditorDistrictCB;
+    private javax.swing.JComboBox<String> personEditorDistrictCB1;
+    private javax.swing.JComboBox<String> personEditorGenderCB;
+    private javax.swing.JComboBox<String> personEditorGenderCB1;
+    private javax.swing.JTextField personEditorHeight;
+    private javax.swing.JTextField personEditorHeight1;
+    private javax.swing.JTextField personEditorLastNames;
+    private javax.swing.JTextField personEditorLastNames1;
+    private javax.swing.JTextField personEditorMidName;
+    private javax.swing.JTextField personEditorMidName1;
+    private javax.swing.JTextField personEditorName;
+    private javax.swing.JTextField personEditorName1;
+    private javax.swing.JComboBox<String> personEditorNationCB;
+    private javax.swing.JComboBox<String> personEditorNationCB1;
+    private javax.swing.JComboBox<String> personEditorRegionCB;
+    private javax.swing.JComboBox<String> personEditorRegionCB1;
+    private javax.swing.JButton personEditorReturnBtn;
+    private javax.swing.JButton personEditorReturnBtn1;
+    private javax.swing.JButton personEditorSelectBtn;
+    private javax.swing.JButton personEditorSelectBtn1;
+    private javax.swing.JButton personEditorSubmitBtn;
+    private javax.swing.JButton personEditorSubmitBtn1;
+    private javax.swing.JLabel personEditorUsernameTag;
+    private javax.swing.JLabel personEditorUsernameTag1;
+    private javax.swing.JPanel productionEditor;
     private javax.swing.JPanel userEditor;
+    private javax.swing.JTextArea userEditorAddress;
+    private javax.swing.JFormattedTextField userEditorBirthdate;
+    private javax.swing.JButton userEditorClearBtn;
+    private javax.swing.JButton userEditorClearPicBtn;
+    private javax.swing.JComboBox<String> userEditorCountryCB;
+    private javax.swing.JComboBox<String> userEditorDistrictCB;
+    private javax.swing.JTextField userEditorEmail;
+    private javax.swing.JComboBox<String> userEditorGenderCB;
+    private javax.swing.JTextField userEditorIdNum;
+    private javax.swing.JComboBox<String> userEditorIdTypeCB;
+    private javax.swing.JTextField userEditorLastNames;
+    private javax.swing.JTextField userEditorName;
+    private javax.swing.JComboBox<String> userEditorNationalityCB;
+    private javax.swing.JPasswordField userEditorPassword;
+    private javax.swing.JPasswordField userEditorPasswordConf;
+    private javax.swing.JTextField userEditorPhone;
+    private javax.swing.JComboBox<String> userEditorRegionCB;
+    private javax.swing.JButton userEditorReturnBtn;
+    private javax.swing.JButton userEditorSelectPicBtn;
+    private javax.swing.JButton userEditorSubmitBtn;
+    private javax.swing.JTextField userEditorUsername;
+    private javax.swing.JLabel userEditorUsernameTag;
     // End of variables declaration//GEN-END:variables
 }
