@@ -15,6 +15,7 @@ public class Proyecto1BD {
      */
     public static void main(String[] args) {
         // TODO code application logic here
+        new vista.mainInterface().setVisible(true);
     }
     
 }
