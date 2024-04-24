@@ -163,3 +163,31 @@ EXCEPTION
         ROLLBACK;
         RAISE;
 END VerifyUserPassword;
+
+
+--buscar producciones
+CREATE OR REPLACE PROCEDURE getProductionInfo (
+    p_ProductionName IN VARCHAR2,
+    p_Title OUT VARCHAR2,
+    p_Synopsis OUT VARCHAR2,
+    p_Category OUT VARCHAR2
+)
+AS
+BEGIN
+    SELECT p.Title, p.Synopsis, c.Name
+    INTO p_Title, p_Synopsis, p_Category
+    FROM Production p
+    INNER JOIN Category c ON p.idCategory = c.id
+    WHERE p.Title = p_ProductionName;
+
+    COMMIT;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('No se encontró la producción: ' || p_ProductionName);
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Ocurrió un error.');
+END getProductionInfo;
+
+
+SELECT * FROM Production;
+

@@ -280,6 +280,53 @@ public class ConnectDB {
 
         return result;
     }
+    
+    public static void insertProduction(int idCategory, String title, int duration, String synopsis, String trailer, int releaseYear, byte[] photo) {
+        String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
+        String uName = "proyectoDBA";
+        String uPass = "proyectoDBA";
+
+        try (Connection con = DriverManager.getConnection(host, uName, uPass)) {
+            CallableStatement stmt = con.prepareCall("{ call InsertProduction(?, ?, ?, ?, ?, ?, ?) }");
+
+            stmt.setInt(1, idCategory);
+            stmt.setString(2, title);
+            stmt.setInt(3, duration);
+            stmt.setString(4, synopsis);
+            stmt.setString(5, trailer);
+            stmt.setInt(6, releaseYear);
+            stmt.setBytes(7, photo);
+
+            stmt.execute();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+    
+    public static void getProductionInfo(String productionName) {
+        String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
+        String uName = "proyectoDBA";
+        String uPass = "proyectoDBA";
+
+        try (Connection con = DriverManager.getConnection(host, uName, uPass)) {
+            CallableStatement stmt = con.prepareCall("{call getProductionInfo(?, ?, ?, ?)}");
+
+            stmt.setString(1, productionName);
+            stmt.registerOutParameter(2, java.sql.Types.VARCHAR);
+            stmt.registerOutParameter(3, java.sql.Types.VARCHAR);
+            stmt.registerOutParameter(4, java.sql.Types.VARCHAR);
+            stmt.execute();
+            String title = stmt.getString(2);
+            String synopsis = stmt.getString(3);
+            String category = stmt.getString(4);
+
+            System.out.println("Título: " + title);
+            System.out.println("Sinopsis: " + synopsis);
+            System.out.println("Categoría: " + category);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
 }
 
 
