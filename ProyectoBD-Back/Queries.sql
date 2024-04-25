@@ -163,3 +163,98 @@ EXCEPTION
         ROLLBACK;
         RAISE;
 END VerifyUserPassword;
+
+
+CREATE OR REPLACE PROCEDURE getProductionInfo (
+    p_ProductionName IN VARCHAR2,
+    p_Title OUT VARCHAR2,
+    p_Synopsis OUT VARCHAR2,
+    p_Category OUT VARCHAR2
+)
+AS
+BEGIN
+    SELECT p.Title, p.Synopsis, c.Name
+    INTO p_Title, p_Synopsis, p_Category
+    FROM Production p
+    INNER JOIN Category c ON p.idCategory = c.id
+    WHERE p.Title = p_ProductionName;
+
+    COMMIT;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        DBMS_OUTPUT.PUT_LINE('No se encontr  la producci n: ' || p_ProductionName);
+    WHEN OTHERS THEN
+        DBMS_OUTPUT.PUT_LINE('Ocurri  un error.');
+END getProductionInfo;
+
+
+SELECT * FROM Production;
+
+
+
+--Buscar datos por nombre
+
+CREATE OR REPLACE PROCEDURE GetDistrictIDByName(
+    p_DistrictName IN VARCHAR2,
+    p_DistrictID OUT NUMBER
+) IS
+BEGIN
+    SELECT id INTO p_DistrictID
+    FROM District
+    WHERE name = p_DistrictName;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        p_DistrictID := NULL;
+    WHEN OTHERS THEN
+        RAISE;
+END GetDistrictIDByName;
+
+
+CREATE OR REPLACE PROCEDURE GetNationalityIDByName(
+    p_NationalityName IN VARCHAR2,
+    p_NationalityID OUT NUMBER
+) IS
+BEGIN
+    SELECT id INTO p_NationalityID
+    FROM Nationality
+    WHERE name = p_NationalityName;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        p_NationalityID := NULL;
+    WHEN OTHERS THEN
+        RAISE;
+END GetNationalityIDByName;
+
+
+
+CREATE OR REPLACE PROCEDURE GetGenderIDByName(
+    p_GenderName IN VARCHAR2,
+    p_GenderID OUT NUMBER
+) IS
+BEGIN
+    SELECT id INTO p_GenderID
+    FROM Gender
+    WHERE name = p_GenderName;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        p_GenderID := NULL;
+    WHEN OTHERS THEN
+        RAISE;
+END GetGenderIDByName;
+
+
+CREATE OR REPLACE PROCEDURE GetIDTypeIDByName(
+    p_IDTypeName IN VARCHAR2,
+    p_IDTypeID OUT NUMBER
+) IS
+BEGIN
+    SELECT id INTO p_IDTypeID
+    FROM IDType
+    WHERE name = p_IDTypeName;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        p_IDTypeID := NULL;
+    WHEN OTHERS THEN
+        RAISE;
+END GetIDTypeIDByName;
+

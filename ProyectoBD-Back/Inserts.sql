@@ -1,3 +1,34 @@
+-- correr esto desde sys:  GRANT EXECUTE ON SYS.DBMS_CRYPTO TO proyectoDBA;
+--codigo para encriptar contraseñas
+--confirmar contraseña
+CREATE OR REPLACE PROCEDURE ComparePasswords(
+    p_UserName IN VARCHAR2,
+    p_Password IN VARCHAR2,
+    p_Result OUT NUMBER
+) AS
+    v_StoredPassword VARCHAR2(100); 
+    v_HashedPassword VARCHAR2(32); 
+BEGIN
+    SELECT Password INTO v_StoredPassword
+    FROM UserSys
+    WHERE UserName = p_UserName;
+
+    v_HashedPassword := DBMS_OBFUSCATION_TOOLKIT.MD5(input_string => p_Password);
+
+    IF v_StoredPassword IS NOT NULL AND v_HashedPassword = v_StoredPassword THEN
+        p_Result := 1;  --si es igual
+    ELSE --no es igual
+        p_Result := 0; 
+    END IF;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        p_Result := -1; 
+    WHEN OTHERS THEN
+        p_Result := -2; 
+END ComparePasswords;
+/
+
+
 CREATE OR REPLACE PROCEDURE InsertUserSys(
     p_FirstName IN VARCHAR2,
     p_MiddleName IN VARCHAR2,
@@ -16,13 +47,20 @@ CREATE OR REPLACE PROCEDURE InsertUserSys(
     p_idType IN NUMBER
 ) IS
     v_UserID NUMBER;
+    v_EncryptedPassword RAW(2000); 
 BEGIN
+    v_EncryptedPassword := DBMS_CRYPTO.HASH(
+        src => UTL_I18N.STRING_TO_RAW(p_Password || 'salt', 'AL32UTF8'), 
+        typ => DBMS_CRYPTO.HASH_SH1
+    );
+
+    
     INSERT INTO UserSys (id, FirstName, MiddleName, LastName, SecondSurname, IDNumber,
                          Birthdate, Photo, Email, PhoneNumber, UserName, Password,
                          idDistrict, idNationality, idGender, idType)
     VALUES (s_user.NEXTVAL, p_FirstName, p_MiddleName, p_LastName, p_SecondSurname,
             p_IDNumber, p_Birthdate, p_Photo, p_Email, p_PhoneNumber, p_UserName,
-            p_Password, p_idDistrict, p_idNationality, p_idGender, p_idType)
+            v_EncryptedPassword, p_idDistrict, p_idNationality, p_idGender, p_idType)
     RETURNING id INTO v_UserID;
 
     INSERT INTO Client (id) VALUES (v_UserID);
@@ -54,15 +92,23 @@ CREATE OR REPLACE PROCEDURE InsertUserSysAdministrator(
     p_idType IN NUMBER
 ) IS
     v_UserID NUMBER;
+    v_EncryptedPassword RAW(2000); 
 BEGIN
+    v_EncryptedPassword := DBMS_CRYPTO.HASH(
+        src => UTL_I18N.STRING_TO_RAW(p_Password || 'salt', 'AL32UTF8'),
+        typ => DBMS_CRYPTO.HASH_SH1
+    );
+
+    
     INSERT INTO UserSys (id, FirstName, MiddleName, LastName, SecondSurname, IDNumber,
                          Birthdate, Photo, Email, PhoneNumber, UserName, Password,
                          idDistrict, idNationality, idGender, idType)
     VALUES (s_user.NEXTVAL, p_FirstName, p_MiddleName, p_LastName, p_SecondSurname,
             p_IDNumber, p_Birthdate, p_Photo, p_Email, p_PhoneNumber, p_UserName,
-            p_Password, p_idDistrict, p_idNationality, p_idGender, p_idType)
+            v_EncryptedPassword, p_idDistrict, p_idNationality, p_idGender, p_idType)
     RETURNING id INTO v_UserID;
 
+    
     INSERT INTO Administrator (id) VALUES (v_UserID);
 
     COMMIT;
@@ -72,6 +118,9 @@ EXCEPTION
         RAISE;
 END InsertUserSysAdministrator;
 /
+
+
+
 
 --Insertar persona
 CREATE OR REPLACE PROCEDURE InsertPerson (
