@@ -15,7 +15,7 @@ public class SigninWindow extends javax.swing.JFrame {
      * Creates new form loginWindow
      */
     // Variables containing new user data
-    public String username, password, email, name, lastNames, address, birthdate;
+    public String username, password, email, name, secondName, lastNames, secondSurname, address, birthdate;
     public int gender, phone, idType, idNum, nationality, country, region, district;
     
     // Do not touch uwu
@@ -61,23 +61,27 @@ public class SigninWindow extends javax.swing.JFrame {
         emailTxt = new javax.swing.JTextField();
         jLabel5 = new javax.swing.JLabel();
         cancel1Bttn1 = new javax.swing.JButton();
+        idNumberTxt = new javax.swing.JTextField();
+        idTypeCB = new javax.swing.JComboBox<>();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         infoSigninP = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         nameTxt = new javax.swing.JTextField();
         next2Bttn = new javax.swing.JButton();
         jLabel7 = new javax.swing.JLabel();
         lastNamesTxt = new javax.swing.JTextField();
-        jLabel8 = new javax.swing.JLabel();
-        idNumberTxt = new javax.swing.JTextField();
-        jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         phoneTxt = new javax.swing.JTextField();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         genderCB = new javax.swing.JComboBox<>();
-        idTypeCB = new javax.swing.JComboBox<>();
         birthdateFormattedTxt = new javax.swing.JFormattedTextField();
         backBttn1 = new javax.swing.JButton();
+        jLabel18 = new javax.swing.JLabel();
+        secondNameTxt = new javax.swing.JTextField();
+        jLabel19 = new javax.swing.JLabel();
+        secondSurnameTxt = new javax.swing.JTextField();
         addressSigninP = new javax.swing.JPanel();
         finishBttn = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
@@ -181,6 +185,35 @@ public class SigninWindow extends javax.swing.JFrame {
             }
         });
 
+        idNumberTxt.setBackground(new java.awt.Color(237, 204, 111));
+        idNumberTxt.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        idNumberTxt.setForeground(new java.awt.Color(48, 89, 138));
+        idNumberTxt.setToolTipText("");
+        idNumberTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+        idNumberTxt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                idNumberTxtFocusGained(evt);
+            }
+        });
+
+        idTypeCB.setBackground(new java.awt.Color(237, 204, 111));
+        idTypeCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        idTypeCB.setForeground(new java.awt.Color(48, 89, 138));
+        idTypeCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        idTypeCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+
+        jLabel9.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel9.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(210, 235, 255));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel9.setText("Id type");
+
+        jLabel8.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel8.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(210, 235, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel8.setText("Id number");
+
         javax.swing.GroupLayout userSigninPLayout = new javax.swing.GroupLayout(userSigninP);
         userSigninP.setLayout(userSigninPLayout);
         userSigninPLayout.setHorizontalGroup(
@@ -207,7 +240,15 @@ public class SigninWindow extends javax.swing.JFrame {
                         .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(confirmTxt)))
-                    .addComponent(cancel1Bttn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(cancel1Bttn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(userSigninPLayout.createSequentialGroup()
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(idTypeCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(userSigninPLayout.createSequentialGroup()
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(idNumberTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         userSigninPLayout.setVerticalGroup(
@@ -231,7 +272,15 @@ public class SigninWindow extends javax.swing.JFrame {
                     .addComponent(confirmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(idTypeCB))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(idNumberTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
                 .addComponent(next1Bttn)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(cancel1Bttn1)
@@ -274,7 +323,7 @@ public class SigninWindow extends javax.swing.JFrame {
         jLabel7.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(210, 235, 255));
         jLabel7.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel7.setText("Last Names");
+        jLabel7.setText("Surname");
 
         lastNamesTxt.setBackground(new java.awt.Color(237, 204, 111));
         lastNamesTxt.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
@@ -286,29 +335,6 @@ public class SigninWindow extends javax.swing.JFrame {
                 lastNamesTxtFocusGained(evt);
             }
         });
-
-        jLabel8.setBackground(new java.awt.Color(210, 235, 255));
-        jLabel8.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(210, 235, 255));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel8.setText("Id number");
-
-        idNumberTxt.setBackground(new java.awt.Color(237, 204, 111));
-        idNumberTxt.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        idNumberTxt.setForeground(new java.awt.Color(48, 89, 138));
-        idNumberTxt.setToolTipText("");
-        idNumberTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
-        idNumberTxt.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                idNumberTxtFocusGained(evt);
-            }
-        });
-
-        jLabel9.setBackground(new java.awt.Color(210, 235, 255));
-        jLabel9.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(210, 235, 255));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel9.setText("Id type");
 
         jLabel10.setBackground(new java.awt.Color(210, 235, 255));
         jLabel10.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -345,12 +371,6 @@ public class SigninWindow extends javax.swing.JFrame {
         genderCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         genderCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
 
-        idTypeCB.setBackground(new java.awt.Color(237, 204, 111));
-        idTypeCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        idTypeCB.setForeground(new java.awt.Color(48, 89, 138));
-        idTypeCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        idTypeCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
-
         birthdateFormattedTxt.setBackground(new java.awt.Color(237, 204, 111));
         birthdateFormattedTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
         birthdateFormattedTxt.setForeground(new java.awt.Color(48, 89, 138));
@@ -373,6 +393,40 @@ public class SigninWindow extends javax.swing.JFrame {
             }
         });
 
+        jLabel18.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel18.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(210, 235, 255));
+        jLabel18.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel18.setText("Second Name");
+
+        secondNameTxt.setBackground(new java.awt.Color(237, 204, 111));
+        secondNameTxt.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        secondNameTxt.setForeground(new java.awt.Color(48, 89, 138));
+        secondNameTxt.setToolTipText("");
+        secondNameTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+        secondNameTxt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                secondNameTxtFocusGained(evt);
+            }
+        });
+
+        jLabel19.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel19.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(210, 235, 255));
+        jLabel19.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel19.setText("Second Surname");
+
+        secondSurnameTxt.setBackground(new java.awt.Color(237, 204, 111));
+        secondSurnameTxt.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        secondSurnameTxt.setForeground(new java.awt.Color(48, 89, 138));
+        secondSurnameTxt.setToolTipText("");
+        secondSurnameTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+        secondSurnameTxt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                secondSurnameTxtFocusGained(evt);
+            }
+        });
+
         javax.swing.GroupLayout infoSigninPLayout = new javax.swing.GroupLayout(infoSigninP);
         infoSigninP.setLayout(infoSigninPLayout);
         infoSigninPLayout.setHorizontalGroup(
@@ -390,14 +444,6 @@ public class SigninWindow extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(lastNamesTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE))
                     .addGroup(infoSigninPLayout.createSequentialGroup()
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(idTypeCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(infoSigninPLayout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(idNumberTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE))
-                    .addGroup(infoSigninPLayout.createSequentialGroup()
                         .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(birthdateFormattedTxt))
@@ -409,7 +455,15 @@ public class SigninWindow extends javax.swing.JFrame {
                         .addComponent(jLabel12, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                         .addComponent(genderCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addComponent(backBttn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addComponent(backBttn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, infoSigninPLayout.createSequentialGroup()
+                        .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(secondNameTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE))
+                    .addGroup(infoSigninPLayout.createSequentialGroup()
+                        .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(secondSurnameTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)))
                 .addContainerGap())
         );
         infoSigninPLayout.setVerticalGroup(
@@ -421,24 +475,24 @@ public class SigninWindow extends javax.swing.JFrame {
                     .addComponent(jLabel6, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(infoSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(secondNameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel18, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(infoSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(lastNamesTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel7, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addGroup(infoSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(secondSurnameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel19, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(infoSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(genderCB, javax.swing.GroupLayout.DEFAULT_SIZE, 32, Short.MAX_VALUE))
+                    .addComponent(genderCB, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(infoSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(phoneTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel10, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(infoSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(idTypeCB))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(infoSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(idNumberTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(infoSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                     .addComponent(jLabel11, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -619,13 +673,21 @@ public class SigninWindow extends javax.swing.JFrame {
 
     private void next1BttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_next1BttnActionPerformed
         // Checks if passwords are the same, if not, displays error message
+        try {
+                
+                idNum = Integer.parseInt(idNumberTxt.getText());
+            } catch (Exception e) {
+                idNumberTxt.setText("Id Number field must be filled");
+        }
         if(!passwordTxt.getText().equals(confirmTxt.getText()))
         {
             jLabel5.setForeground(new java.awt.Color(226,122,55));
             jLabel5.setText("Passwords do not match ");
         } else if(passwordTxt.getText().equals("")
                 || usernameTxt.getText().equals("")
-                || emailTxt.getText().equals(""))
+                || emailTxt.getText().equals("")
+                || idNumberTxt.getText().equals("")
+                || idNumberTxt.getText().equals("Id Number field must be filled"))
         {
             jLabel5.setForeground(new java.awt.Color(226,122,55));
             jLabel5.setText("No field can be left empty ");
@@ -662,10 +724,6 @@ public class SigninWindow extends javax.swing.JFrame {
         {
             phoneTxt.setText("Phone field must be filled");
         }
-        if(idNumberTxt.getText().equals(""))
-        {
-            idNumberTxt.setText("Id Number field must be filled");
-        }
         if(!nameTxt.getText().contains("must be filled")
             && !lastNamesTxt.getText().contains("must be filled")
             && !phoneTxt.getText().contains("must be filled")
@@ -681,12 +739,6 @@ public class SigninWindow extends javax.swing.JFrame {
                 phone = Integer.parseInt(phoneTxt.getText());
             } catch (Exception e) {
                 phoneTxt.setText("Phone field must be filled");
-            }
-            try {
-                
-                idNum = Integer.parseInt(idNumberTxt.getText());
-            } catch (Exception e) {
-                idNumberTxt.setText("Id Number field must be filled");
             }
             if(!phoneTxt.getText().contains("must be filled")
             && !idNumberTxt.getText().contains("must be filled"))
@@ -773,6 +825,14 @@ public class SigninWindow extends javax.swing.JFrame {
         new mainInterface().setVisible(true);
     }//GEN-LAST:event_formWindowClosing
 
+    private void secondNameTxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_secondNameTxtFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_secondNameTxtFocusGained
+
+    private void secondSurnameTxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_secondSurnameTxtFocusGained
+        // TODO add your handling code here:
+    }//GEN-LAST:event_secondSurnameTxtFocusGained
+
     /**
      * @param args the command line arguments
      */
@@ -834,6 +894,8 @@ public class SigninWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -851,6 +913,8 @@ public class SigninWindow extends javax.swing.JFrame {
     private javax.swing.JPasswordField passwordTxt;
     private javax.swing.JTextField phoneTxt;
     private javax.swing.JComboBox<String> regionCB;
+    private javax.swing.JTextField secondNameTxt;
+    private javax.swing.JTextField secondSurnameTxt;
     private javax.swing.JPanel userSigninP;
     private javax.swing.JTextField usernameTxt;
     // End of variables declaration//GEN-END:variables
