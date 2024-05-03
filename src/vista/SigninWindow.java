@@ -23,7 +23,7 @@ public class SigninWindow extends javax.swing.JFrame {
      * Creates new form loginWindow
      */
     // Variables containing new user data
-    public String username, password, email, name, lastNames, address, birthdate, 
+    public String username, password, email, name, secondName, lastNames, secondLastNames, address, birthdate, 
                   gender ,idType, nationality, country, region, district;
     public int phone, idNum, realgender, realidtype, realidDistrict, realidnationality;
     
@@ -445,6 +445,11 @@ public class SigninWindow extends javax.swing.JFrame {
         genderCB.setForeground(new java.awt.Color(48, 89, 138));
         genderCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         genderCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+        genderCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                genderCBActionPerformed(evt);
+            }
+        });
 
         birthdateFormattedTxt.setBackground(new java.awt.Color(237, 204, 111));
         birthdateFormattedTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
@@ -755,7 +760,6 @@ public class SigninWindow extends javax.swing.JFrame {
     private void next1BttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_next1BttnActionPerformed
         // Checks if passwords are the same, if not, displays error message
         try {
-
             idNum = Integer.parseInt(idNumberTxt.getText());
         } catch (Exception e) {
             idNumberTxt.setText("Id Number field must be filled");
@@ -779,16 +783,16 @@ public class SigninWindow extends javax.swing.JFrame {
                 jLabel5.setForeground(new java.awt.Color(226,122,55));
                 jLabel5.setText("Username already taken ");
                 username = "";
-            }
+            } 
         } catch (Exception e) {
             jLabel5.setForeground(new java.awt.Color(226,122,55));
                 jLabel5.setText("Username already taken ");
         }
         // The data is valid, and can be stored
+        username = usernameTxt.getText();
         if(!username.equals(""))
         {
             jLabel5.setForeground(new java.awt.Color(48, 89, 138));
-            username = usernameTxt.getText();
             password = passwordTxt.getText();
             email = emailTxt.getText();
             mainLayout.next(mainContainer);
@@ -838,10 +842,22 @@ public class SigninWindow extends javax.swing.JFrame {
             && !birthdateFormattedTxt.getText().contains("Plz"))
         {
             name = nameTxt.getText();
+            secondName = secondNameTxt.getText();
             lastNames = lastNamesTxt.getText();
+            secondLastNames = secondSurnameTxt.getText();
             birthdate = birthdateFormattedTxt.getText();
             gender = (String)genderCB.getSelectedItem();
             idType = (String)idTypeCB.getSelectedItem();
+            
+            
+            realgender = (int) genderCB.getSelectedIndex();
+            realgender = realgender + 1;
+            System.out.println("el genero es" + realgender);
+
+            realidtype = (int) idTypeCB.getSelectedIndex();
+            realidtype = realidtype + 1;
+            System.out.println("el tipo es" + realidtype);
+            
             try {
                 phone = Integer.parseInt(phoneTxt.getText());
             } catch (Exception e) {
@@ -893,12 +909,27 @@ public class SigninWindow extends javax.swing.JFrame {
         {
             addressTxt.setText("Address must be provided");
         } else {
-            nationality = (String)nationCB.getSelectedItem();
-            country = (String)countryCB.getSelectedItem();
-            region = (String)regionCB.getSelectedItem();
-            district = (String)districtCB.getSelectedItem();
+            nationality = (String) nationCB.getSelectedItem();
+            country = (String) countryCB.getSelectedItem();
+            region = (String) regionCB.getSelectedItem();
+            district = (String) districtCB.getSelectedItem();
             address = addressTxt.getText();
-            registerNewUser(); // TODO FUNCTION
+            
+           realidDistrict = (int) districtCB.getSelectedIndex();
+           realidDistrict = realidDistrict + 1;
+           System.out.println("La distrito es" + realidDistrict);
+
+           realidnationality = (int) nationCB.getSelectedIndex();
+           realidnationality = realidnationality + 1;
+           System.out.println("La nacionanlidad es" + realidnationality);
+           
+        try {
+            ConnectDB.InsertUserSys(name, secondName, lastNames, secondLastNames, idNum, email, phone, username, password,
+                    realidDistrict, realidnationality, realgender, realidtype);
+        } catch (SQLException ex) {
+            Logger.getLogger(SigninWindow.class.getName()).log(Level.SEVERE, null, ex);
+            System.err.println("Error al insertar el usuario en la base de datos: " + ex.getMessage());
+        }       
             this.setVisible(false);
             new loginWindow().setVisible(true);
         }
@@ -914,6 +945,10 @@ public class SigninWindow extends javax.swing.JFrame {
     private void backBttn2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBttn2ActionPerformed
         mainLayout.previous(mainContainer);
     }//GEN-LAST:event_backBttn2ActionPerformed
+
+    private void genderCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genderCBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_genderCBActionPerformed
 
     /**
      * @param args the command line arguments

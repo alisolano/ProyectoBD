@@ -3,13 +3,18 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package vista;
-
+import Connect.ConnectDB;
+import java.sql.SQLException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author Leo
  */
 public class mainInterface extends javax.swing.JFrame {
 
+    public String firstName, middleName, lastName, secondSurname, biography, trivia;
+    public int birthdate, Height, idDistrict;
     /**
      * Creates new form mainInterface
      */
@@ -1529,8 +1534,7 @@ public class mainInterface extends javax.swing.JFrame {
                                 .addComponent(jLabel39, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                             .addGroup(productionEditorLayout.createSequentialGroup()
                                 .addGap(6, 6, 6)
-                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(0, 0, Short.MAX_VALUE)))
+                                .addComponent(jScrollPane4, javax.swing.GroupLayout.PREFERRED_SIZE, 275, javax.swing.GroupLayout.PREFERRED_SIZE)))))
                 .addGap(26, 26, 26))
         );
 
@@ -1914,7 +1918,6 @@ public class mainInterface extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(userEditorLayout.createSequentialGroup()
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -2044,6 +2047,11 @@ public class mainInterface extends javax.swing.JFrame {
         personEditorSubmitBtn.setForeground(new java.awt.Color(254, 249, 217));
         personEditorSubmitBtn.setText("Submit");
         personEditorSubmitBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        personEditorSubmitBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                personEditorSubmitBtnActionPerformed(evt);
+            }
+        });
 
         personEditorUsernameTag.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         personEditorUsernameTag.setForeground(new java.awt.Color(254, 249, 217));
@@ -3382,6 +3390,26 @@ public class mainInterface extends javax.swing.JFrame {
     private void releaseDateFormattedTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_releaseDateFormattedTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_releaseDateFormattedTxtActionPerformed
+
+    private void personEditorSubmitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorSubmitBtnActionPerformed
+    firstName = personEditorName.getText();
+    middleName = personEditorMidName.getText();
+    lastName = personEditorSurname.getText();
+    secondSurname = personEditorSecondSurname.getText();
+    biography = personEditorName.getText();
+    trivia = personEditorName.getText();
+    birthdate = Integer.parseInt(personEditorBirthdate.getText());
+    Height = Integer.parseInt(personEditorHeight.getText());
+    idDistrict = (int) personEditorDistrictCB.getSelectedIndex();
+    idDistrict = idDistrict + 1;
+    System.out.println("La distrito es" + idDistrict);
+    
+        try {     
+            ConnectDB.InsertPerson(firstName, middleName, lastName, secondSurname, biography, Height, trivia, idDistrict);
+        } catch (SQLException ex) {
+            Logger.getLogger(mainInterface.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_personEditorSubmitBtnActionPerformed
 
     /**
      * @param args the command line arguments
