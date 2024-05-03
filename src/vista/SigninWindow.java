@@ -124,6 +124,22 @@ public class SigninWindow extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        userSigninP = new javax.swing.JPanel();
+        jLabel1 = new javax.swing.JLabel();
+        usernameTxt = new javax.swing.JTextField();
+        jLabel2 = new javax.swing.JLabel();
+        passwordTxt = new javax.swing.JPasswordField();
+        next1Bttn = new javax.swing.JButton();
+        jLabel3 = new javax.swing.JLabel();
+        confirmTxt = new javax.swing.JPasswordField();
+        jLabel4 = new javax.swing.JLabel();
+        emailTxt = new javax.swing.JTextField();
+        jLabel5 = new javax.swing.JLabel();
+        cancel1Bttn1 = new javax.swing.JButton();
+        idNumberTxt = new javax.swing.JTextField();
+        idTypeCB = new javax.swing.JComboBox<>();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         infoSigninP = new javax.swing.JPanel();
         jLabel6 = new javax.swing.JLabel();
         nameTxt = new javax.swing.JTextField();
@@ -141,22 +157,6 @@ public class SigninWindow extends javax.swing.JFrame {
         secondNameTxt = new javax.swing.JTextField();
         jLabel19 = new javax.swing.JLabel();
         secondSurnameTxt = new javax.swing.JTextField();
-        userSigninP = new javax.swing.JPanel();
-        jLabel1 = new javax.swing.JLabel();
-        usernameTxt = new javax.swing.JTextField();
-        jLabel2 = new javax.swing.JLabel();
-        passwordTxt = new javax.swing.JPasswordField();
-        next1Bttn = new javax.swing.JButton();
-        jLabel3 = new javax.swing.JLabel();
-        confirmTxt = new javax.swing.JPasswordField();
-        jLabel4 = new javax.swing.JLabel();
-        emailTxt = new javax.swing.JTextField();
-        jLabel5 = new javax.swing.JLabel();
-        cancel1Bttn1 = new javax.swing.JButton();
-        idNumberTxt = new javax.swing.JTextField();
-        idTypeCB = new javax.swing.JComboBox<>();
-        jLabel9 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         addressSigninP = new javax.swing.JPanel();
         finishBttn = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
@@ -184,6 +184,185 @@ public class SigninWindow extends javax.swing.JFrame {
             }
         });
         getContentPane().setLayout(new java.awt.CardLayout());
+
+        userSigninP.setBackground(new java.awt.Color(48, 89, 138));
+
+        jLabel1.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel1.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel1.setForeground(new java.awt.Color(210, 235, 255));
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel1.setText("Username");
+
+        usernameTxt.setBackground(new java.awt.Color(237, 204, 111));
+        usernameTxt.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        usernameTxt.setForeground(new java.awt.Color(48, 89, 138));
+        usernameTxt.setToolTipText("");
+        usernameTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+
+        jLabel2.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel2.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(210, 235, 255));
+        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel2.setText("Password");
+
+        passwordTxt.setBackground(new java.awt.Color(237, 204, 111));
+        passwordTxt.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        passwordTxt.setForeground(new java.awt.Color(48, 89, 138));
+        passwordTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+
+        next1Bttn.setBackground(new java.awt.Color(237, 204, 111));
+        next1Bttn.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
+        next1Bttn.setForeground(new java.awt.Color(48, 89, 138));
+        next1Bttn.setText("Next");
+        next1Bttn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+        next1Bttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                next1BttnActionPerformed(evt);
+            }
+        });
+
+        jLabel3.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel3.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel3.setForeground(new java.awt.Color(210, 235, 255));
+        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel3.setText("Confirm password");
+
+        confirmTxt.setBackground(new java.awt.Color(237, 204, 111));
+        confirmTxt.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
+        confirmTxt.setForeground(new java.awt.Color(48, 89, 138));
+        confirmTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+
+        jLabel4.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel4.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(210, 235, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel4.setText("E-mail address");
+
+        emailTxt.setBackground(new java.awt.Color(237, 204, 111));
+        emailTxt.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        emailTxt.setForeground(new java.awt.Color(48, 89, 138));
+        emailTxt.setToolTipText("");
+        emailTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+
+        jLabel5.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel5.setFont(new java.awt.Font("Gadugi", 1, 10)); // NOI18N
+        jLabel5.setForeground(new java.awt.Color(48, 89, 138));
+        jLabel5.setText("Passwords do not match ");
+
+        cancel1Bttn1.setBackground(new java.awt.Color(237, 204, 111));
+        cancel1Bttn1.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
+        cancel1Bttn1.setForeground(new java.awt.Color(48, 89, 138));
+        cancel1Bttn1.setText("Cancel");
+        cancel1Bttn1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+        cancel1Bttn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cancel1Bttn1ActionPerformed(evt);
+            }
+        });
+
+        idNumberTxt.setBackground(new java.awt.Color(237, 204, 111));
+        idNumberTxt.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        idNumberTxt.setForeground(new java.awt.Color(48, 89, 138));
+        idNumberTxt.setToolTipText("");
+        idNumberTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+        idNumberTxt.addFocusListener(new java.awt.event.FocusAdapter() {
+            public void focusGained(java.awt.event.FocusEvent evt) {
+                idNumberTxtFocusGained(evt);
+            }
+        });
+
+        idTypeCB.setBackground(new java.awt.Color(237, 204, 111));
+        idTypeCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
+        idTypeCB.setForeground(new java.awt.Color(48, 89, 138));
+        idTypeCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        idTypeCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+
+        jLabel9.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel9.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel9.setForeground(new java.awt.Color(210, 235, 255));
+        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel9.setText("Id type");
+
+        jLabel8.setBackground(new java.awt.Color(210, 235, 255));
+        jLabel8.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
+        jLabel8.setForeground(new java.awt.Color(210, 235, 255));
+        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
+        jLabel8.setText("Id number");
+
+        javax.swing.GroupLayout userSigninPLayout = new javax.swing.GroupLayout(userSigninP);
+        userSigninP.setLayout(userSigninPLayout);
+        userSigninPLayout.setHorizontalGroup(
+            userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(userSigninPLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(userSigninPLayout.createSequentialGroup()
+                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(usernameTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE))
+                    .addGroup(userSigninPLayout.createSequentialGroup()
+                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(passwordTxt))
+                    .addComponent(next1Bttn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(userSigninPLayout.createSequentialGroup()
+                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(emailTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE))
+                    .addGroup(userSigninPLayout.createSequentialGroup()
+                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(confirmTxt)))
+                    .addComponent(cancel1Bttn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(userSigninPLayout.createSequentialGroup()
+                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(idTypeCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                    .addGroup(userSigninPLayout.createSequentialGroup()
+                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addComponent(idNumberTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)))
+                .addContainerGap())
+        );
+        userSigninPLayout.setVerticalGroup(
+            userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(userSigninPLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(usernameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(passwordTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(confirmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(idTypeCB))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                    .addComponent(idNumberTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(9, 9, 9)
+                .addComponent(next1Bttn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(cancel1Bttn1)
+                .addContainerGap())
+        );
+
+        getContentPane().add(userSigninP, "card2");
 
         infoSigninP.setBackground(new java.awt.Color(48, 89, 138));
 
@@ -401,185 +580,6 @@ public class SigninWindow extends javax.swing.JFrame {
         );
 
         getContentPane().add(infoSigninP, "card3");
-
-        userSigninP.setBackground(new java.awt.Color(48, 89, 138));
-
-        jLabel1.setBackground(new java.awt.Color(210, 235, 255));
-        jLabel1.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(210, 235, 255));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel1.setText("Username");
-
-        usernameTxt.setBackground(new java.awt.Color(237, 204, 111));
-        usernameTxt.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        usernameTxt.setForeground(new java.awt.Color(48, 89, 138));
-        usernameTxt.setToolTipText("");
-        usernameTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
-
-        jLabel2.setBackground(new java.awt.Color(210, 235, 255));
-        jLabel2.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(210, 235, 255));
-        jLabel2.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel2.setText("Password");
-
-        passwordTxt.setBackground(new java.awt.Color(237, 204, 111));
-        passwordTxt.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        passwordTxt.setForeground(new java.awt.Color(48, 89, 138));
-        passwordTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
-
-        next1Bttn.setBackground(new java.awt.Color(237, 204, 111));
-        next1Bttn.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
-        next1Bttn.setForeground(new java.awt.Color(48, 89, 138));
-        next1Bttn.setText("Next");
-        next1Bttn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
-        next1Bttn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                next1BttnActionPerformed(evt);
-            }
-        });
-
-        jLabel3.setBackground(new java.awt.Color(210, 235, 255));
-        jLabel3.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jLabel3.setForeground(new java.awt.Color(210, 235, 255));
-        jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel3.setText("Confirm password");
-
-        confirmTxt.setBackground(new java.awt.Color(237, 204, 111));
-        confirmTxt.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
-        confirmTxt.setForeground(new java.awt.Color(48, 89, 138));
-        confirmTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
-
-        jLabel4.setBackground(new java.awt.Color(210, 235, 255));
-        jLabel4.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(210, 235, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel4.setText("E-mail address");
-
-        emailTxt.setBackground(new java.awt.Color(237, 204, 111));
-        emailTxt.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        emailTxt.setForeground(new java.awt.Color(48, 89, 138));
-        emailTxt.setToolTipText("");
-        emailTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
-
-        jLabel5.setBackground(new java.awt.Color(210, 235, 255));
-        jLabel5.setFont(new java.awt.Font("Gadugi", 1, 10)); // NOI18N
-        jLabel5.setForeground(new java.awt.Color(48, 89, 138));
-        jLabel5.setText("Passwords do not match ");
-
-        cancel1Bttn1.setBackground(new java.awt.Color(237, 204, 111));
-        cancel1Bttn1.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
-        cancel1Bttn1.setForeground(new java.awt.Color(48, 89, 138));
-        cancel1Bttn1.setText("Cancel");
-        cancel1Bttn1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
-        cancel1Bttn1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                cancel1Bttn1ActionPerformed(evt);
-            }
-        });
-
-        idNumberTxt.setBackground(new java.awt.Color(237, 204, 111));
-        idNumberTxt.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        idNumberTxt.setForeground(new java.awt.Color(48, 89, 138));
-        idNumberTxt.setToolTipText("");
-        idNumberTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
-        idNumberTxt.addFocusListener(new java.awt.event.FocusAdapter() {
-            public void focusGained(java.awt.event.FocusEvent evt) {
-                idNumberTxtFocusGained(evt);
-            }
-        });
-
-        idTypeCB.setBackground(new java.awt.Color(237, 204, 111));
-        idTypeCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
-        idTypeCB.setForeground(new java.awt.Color(48, 89, 138));
-        idTypeCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
-        idTypeCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
-
-        jLabel9.setBackground(new java.awt.Color(210, 235, 255));
-        jLabel9.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jLabel9.setForeground(new java.awt.Color(210, 235, 255));
-        jLabel9.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel9.setText("Id type");
-
-        jLabel8.setBackground(new java.awt.Color(210, 235, 255));
-        jLabel8.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
-        jLabel8.setForeground(new java.awt.Color(210, 235, 255));
-        jLabel8.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
-        jLabel8.setText("Id number");
-
-        javax.swing.GroupLayout userSigninPLayout = new javax.swing.GroupLayout(userSigninP);
-        userSigninP.setLayout(userSigninPLayout);
-        userSigninPLayout.setHorizontalGroup(
-            userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(userSigninPLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(userSigninPLayout.createSequentialGroup()
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(usernameTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE))
-                    .addGroup(userSigninPLayout.createSequentialGroup()
-                        .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(passwordTxt))
-                    .addComponent(next1Bttn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(userSigninPLayout.createSequentialGroup()
-                        .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(emailTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE))
-                    .addGroup(userSigninPLayout.createSequentialGroup()
-                        .addComponent(jLabel3, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel5, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(confirmTxt)))
-                    .addComponent(cancel1Bttn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addGroup(userSigninPLayout.createSequentialGroup()
-                        .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(idTypeCB, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                    .addGroup(userSigninPLayout.createSequentialGroup()
-                        .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(idNumberTxt, javax.swing.GroupLayout.DEFAULT_SIZE, 193, Short.MAX_VALUE)))
-                .addContainerGap())
-        );
-        userSigninPLayout.setVerticalGroup(
-            userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(userSigninPLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(usernameTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(emailTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(passwordTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(jLabel3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(confirmTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel5, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel9, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(idTypeCB))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(userSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(idNumberTxt, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(jLabel8, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(9, 9, 9)
-                .addComponent(next1Bttn)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(cancel1Bttn1)
-                .addContainerGap())
-        );
-
-        getContentPane().add(userSigninP, "card2");
 
         addressSigninP.setBackground(new java.awt.Color(48, 89, 138));
 
