@@ -231,6 +231,11 @@ public class SigninWindow extends javax.swing.JFrame {
         confirmTxt.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         confirmTxt.setForeground(new java.awt.Color(48, 89, 138));
         confirmTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+        confirmTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                confirmTxtActionPerformed(evt);
+            }
+        });
 
         jLabel4.setBackground(new java.awt.Color(210, 235, 255));
         jLabel4.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -949,6 +954,10 @@ public class SigninWindow extends javax.swing.JFrame {
     private void genderCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genderCBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_genderCBActionPerformed
+
+    private void confirmTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_confirmTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_confirmTxtActionPerformed
 
     /**
      * @param args the command line arguments

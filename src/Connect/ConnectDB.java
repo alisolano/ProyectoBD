@@ -86,7 +86,43 @@ public class ConnectDB {
         stmt.execute();
         stmt.getMoreResults();
         
+    }   
+    
+    public static void updateUserSys(int id, String firstName, String middleName, String lastName, String secondSurname,
+                                     String idNumber, String birthdate, byte[] photo, String email, String phoneNumber,
+                                     String userName, String password, int idDistrict, int idNationality, int idGender,
+                                     int idType) {
+        String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
+        String uName = "proyectoDBA";
+        String uPass = "proyectoDBA";
+
+        try (Connection con = DriverManager.getConnection(host, uName, uPass)) {
+            CallableStatement stmt = con.prepareCall("{ call UpdateUserSys(?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?) }");
+
+            stmt.setInt(1, id);
+            stmt.setString(2, firstName);
+            stmt.setString(3, middleName);
+            stmt.setString(4, lastName);
+            stmt.setString(5, secondSurname);
+            stmt.setString(6, idNumber);
+            stmt.setString(7, birthdate);
+            ByteArrayInputStream inputStream = new ByteArrayInputStream(photo);
+            stmt.setBinaryStream(8, inputStream, photo.length);
+            stmt.setString(9, email);
+            stmt.setString(10, phoneNumber);
+            stmt.setString(11, userName);
+            stmt.setString(12, password);
+            stmt.setInt(13, idDistrict);
+            stmt.setInt(14, idNationality);
+            stmt.setInt(15, idGender);
+            stmt.setInt(16, idType);
+
+            stmt.execute();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
     }
+    
     
     public static void InsertPerson(String p_FirstName, String p_MiddleName, String p_LastName,
                                     String p_SecondSurname, String p_Biography, int p_Height,
@@ -494,6 +530,23 @@ public class ConnectDB {
             return false;
         }
     }
+        
+    public static void insertWishlist(int idClient) {
+        String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
+        String uName = "proyectoDBA";
+        String uPass = "proyectoDBA";
+
+        try (Connection con = DriverManager.getConnection(host, uName, uPass)) {
+            CallableStatement stmt = con.prepareCall("{ call InsertWishlist(?) }");
+
+            stmt.setInt(1, idClient);
+
+            stmt.execute();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+        
 
 }
 

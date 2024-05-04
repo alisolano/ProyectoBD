@@ -120,6 +120,58 @@ END InsertUserSysAdministrator;
 /
 
 
+CREATE OR REPLACE PROCEDURE UpdateUserSys (
+    p_id IN NUMBER,
+    p_FirstName IN VARCHAR2,
+    p_MiddleName IN VARCHAR2,
+    p_LastName IN VARCHAR2,
+    p_SecondSurname IN VARCHAR2,
+    p_IDNumber IN VARCHAR2,
+    p_Birthdate IN DATE,
+    p_Photo IN BLOB,
+    p_Email IN VARCHAR2,
+    p_PhoneNumber IN VARCHAR2,
+    p_UserName IN VARCHAR2,
+    p_Password IN VARCHAR2,
+    p_idDistrict IN NUMBER,
+    p_idNationality IN NUMBER,
+    p_idGender IN NUMBER,
+    p_idType IN NUMBER
+) AS
+    v_EncryptedPassword RAW(2000);
+BEGIN
+    v_EncryptedPassword := DBMS_CRYPTO.HASH(
+        src => UTL_I18N.STRING_TO_RAW(p_Password || 'salt', 'AL32UTF8'),
+        typ => DBMS_CRYPTO.HASH_SH1
+    );
+
+    UPDATE UserSys
+    SET
+        FirstName = p_FirstName,
+        MiddleName = p_MiddleName,
+        LastName = p_LastName,
+        SecondSurname = p_SecondSurname,
+        IDNumber = p_IDNumber,
+        Birthdate = p_Birthdate,
+        Photo = p_Photo,
+        Email = p_Email,
+        PhoneNumber = p_PhoneNumber,
+        UserName = p_UserName,
+        Password = v_EncryptedPassword,
+        idDistrict = p_idDistrict,
+        idNationality = p_idNationality,
+        idGender = p_idGender,
+        idType = p_idType
+    WHERE id = p_id;
+
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        RAISE;
+END UpdateUserSys;
+/
+
 
 
 --Insertar persona
@@ -234,3 +286,17 @@ EXCEPTION
         RAISE;
 END UpdateProduction;
 
+
+
+CREATE OR REPLACE PROCEDURE InsertWishlist (
+    p_idClient IN NUMBER
+) AS
+BEGIN
+    INSERT INTO Wishlist (id, idClient)
+    VALUES (s_wishlist.NEXTVAL, p_idClient);
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        RAISE;
+END InsertWishlist;
