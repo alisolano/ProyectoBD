@@ -158,7 +158,6 @@ public class SigninWindow extends javax.swing.JFrame {
         jLabel19 = new javax.swing.JLabel();
         secondSurnameTxt = new javax.swing.JTextField();
         addressSigninP = new javax.swing.JPanel();
-        finishBttn = new javax.swing.JButton();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         nationCB = new javax.swing.JComboBox<>();
@@ -171,6 +170,14 @@ public class SigninWindow extends javax.swing.JFrame {
         regionCB = new javax.swing.JComboBox<>();
         districtCB = new javax.swing.JComboBox<>();
         backBttn2 = new javax.swing.JButton();
+        next1Bttn1 = new javax.swing.JButton();
+        pfpSelection = new javax.swing.JPanel();
+        finishBttn = new javax.swing.JButton();
+        backBttn3 = new javax.swing.JButton();
+        jPanel1 = new javax.swing.JPanel();
+        pfpLbl = new javax.swing.JLabel();
+        chooseBttn = new javax.swing.JButton();
+        deleteBttn = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.DO_NOTHING_ON_CLOSE);
         setTitle("Sign in Window");
@@ -588,17 +595,6 @@ public class SigninWindow extends javax.swing.JFrame {
 
         addressSigninP.setBackground(new java.awt.Color(48, 89, 138));
 
-        finishBttn.setBackground(new java.awt.Color(237, 204, 111));
-        finishBttn.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
-        finishBttn.setForeground(new java.awt.Color(48, 89, 138));
-        finishBttn.setText("Finish");
-        finishBttn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
-        finishBttn.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                finishBttnActionPerformed(evt);
-            }
-        });
-
         jLabel13.setBackground(new java.awt.Color(210, 235, 255));
         jLabel13.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jLabel13.setForeground(new java.awt.Color(210, 235, 255));
@@ -678,6 +674,17 @@ public class SigninWindow extends javax.swing.JFrame {
             }
         });
 
+        next1Bttn1.setBackground(new java.awt.Color(237, 204, 111));
+        next1Bttn1.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
+        next1Bttn1.setForeground(new java.awt.Color(48, 89, 138));
+        next1Bttn1.setText("Next");
+        next1Bttn1.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+        next1Bttn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                next1Bttn1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout addressSigninPLayout = new javax.swing.GroupLayout(addressSigninP);
         addressSigninP.setLayout(addressSigninPLayout);
         addressSigninPLayout.setHorizontalGroup(
@@ -685,7 +692,6 @@ public class SigninWindow extends javax.swing.JFrame {
             .addGroup(addressSigninPLayout.createSequentialGroup()
                 .addContainerGap()
                 .addGroup(addressSigninPLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(finishBttn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, addressSigninPLayout.createSequentialGroup()
                         .addComponent(jLabel13, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
@@ -706,7 +712,8 @@ public class SigninWindow extends javax.swing.JFrame {
                     .addGroup(addressSigninPLayout.createSequentialGroup()
                         .addComponent(jLabel17, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE)))
+                        .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 0, Short.MAX_VALUE))
+                    .addComponent(next1Bttn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
         addressSigninPLayout.setVerticalGroup(
@@ -736,13 +743,109 @@ public class SigninWindow extends javax.swing.JFrame {
                         .addGap(0, 0, Short.MAX_VALUE))
                     .addComponent(jScrollPane1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(finishBttn)
+                .addComponent(next1Bttn1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(backBttn2)
                 .addContainerGap())
         );
 
         getContentPane().add(addressSigninP, "card4");
+
+        pfpSelection.setBackground(new java.awt.Color(48, 89, 138));
+
+        finishBttn.setBackground(new java.awt.Color(237, 204, 111));
+        finishBttn.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
+        finishBttn.setForeground(new java.awt.Color(48, 89, 138));
+        finishBttn.setText("Finish");
+        finishBttn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+        finishBttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                finishBttnActionPerformed(evt);
+            }
+        });
+
+        backBttn3.setBackground(new java.awt.Color(237, 204, 111));
+        backBttn3.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
+        backBttn3.setForeground(new java.awt.Color(48, 89, 138));
+        backBttn3.setText("Back");
+        backBttn3.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+        backBttn3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                backBttn3ActionPerformed(evt);
+            }
+        });
+
+        pfpLbl.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pfpLbl.setText("jLabel20");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pfpLbl, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(pfpLbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 175, Short.MAX_VALUE)
+        );
+
+        chooseBttn.setBackground(new java.awt.Color(237, 204, 111));
+        chooseBttn.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
+        chooseBttn.setForeground(new java.awt.Color(48, 89, 138));
+        chooseBttn.setText("Choose image");
+        chooseBttn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+        chooseBttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                chooseBttnActionPerformed(evt);
+            }
+        });
+
+        deleteBttn.setBackground(new java.awt.Color(237, 204, 111));
+        deleteBttn.setFont(new java.awt.Font("Gadugi", 1, 18)); // NOI18N
+        deleteBttn.setForeground(new java.awt.Color(48, 89, 138));
+        deleteBttn.setText("Delete image");
+        deleteBttn.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+        deleteBttn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                deleteBttnActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout pfpSelectionLayout = new javax.swing.GroupLayout(pfpSelection);
+        pfpSelection.setLayout(pfpSelectionLayout);
+        pfpSelectionLayout.setHorizontalGroup(
+            pfpSelectionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pfpSelectionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pfpSelectionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(finishBttn, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 338, Short.MAX_VALUE)
+                    .addComponent(backBttn3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pfpSelectionLayout.createSequentialGroup()
+                        .addGroup(pfpSelectionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(chooseBttn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(deleteBttn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        pfpSelectionLayout.setVerticalGroup(
+            pfpSelectionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(pfpSelectionLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(pfpSelectionLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                    .addComponent(jPanel1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addGroup(pfpSelectionLayout.createSequentialGroup()
+                        .addComponent(chooseBttn, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(deleteBttn, javax.swing.GroupLayout.PREFERRED_SIZE, 78, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 91, Short.MAX_VALUE)
+                .addComponent(finishBttn)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(backBttn3)
+                .addContainerGap())
+        );
+
+        getContentPane().add(pfpSelection, "card4");
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
@@ -904,37 +1007,6 @@ public class SigninWindow extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_secondSurnameTxtFocusGained
 
-    private void finishBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finishBttnActionPerformed
-        if(addressTxt.getText().equals(""))
-        {
-            addressTxt.setText("Address must be provided");
-        } else {
-            nationality = (String) nationCB.getSelectedItem();
-            country = (String) countryCB.getSelectedItem();
-            region = (String) regionCB.getSelectedItem();
-            district = (String) districtCB.getSelectedItem();
-            address = addressTxt.getText();
-            
-           realidDistrict = (int) districtCB.getSelectedIndex();
-           realidDistrict = realidDistrict + 1;
-           System.out.println("La distrito es" + realidDistrict);
-
-           realidnationality = (int) nationCB.getSelectedIndex();
-           realidnationality = realidnationality + 1;
-           System.out.println("La nacionanlidad es" + realidnationality);
-           
-        try {
-            ConnectDB.InsertUserSys(name, secondName, lastNames, secondLastNames, idNum, email, phone, username, password,
-                    realidDistrict, realidnationality, realgender, realidtype);
-        } catch (SQLException ex) {
-            Logger.getLogger(SigninWindow.class.getName()).log(Level.SEVERE, null, ex);
-            System.err.println("Error al insertar el usuario en la base de datos: " + ex.getMessage());
-        }       
-            this.setVisible(false);
-            new loginWindow().setVisible(true);
-        }
-    }//GEN-LAST:event_finishBttnActionPerformed
-
     private void addressTxtFocusGained(java.awt.event.FocusEvent evt) {//GEN-FIRST:event_addressTxtFocusGained
         if(addressTxt.getText().equals("Address must be provided"))
         {
@@ -949,6 +1021,53 @@ public class SigninWindow extends javax.swing.JFrame {
     private void genderCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_genderCBActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_genderCBActionPerformed
+
+    private void finishBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_finishBttnActionPerformed
+        if(addressTxt.getText().equals(""))
+        {
+            addressTxt.setText("Address must be provided");
+        } else {
+            nationality = (String) nationCB.getSelectedItem();
+            country = (String) countryCB.getSelectedItem();
+            region = (String) regionCB.getSelectedItem();
+            district = (String) districtCB.getSelectedItem();
+            address = addressTxt.getText();
+
+            realidDistrict = (int) districtCB.getSelectedIndex();
+            realidDistrict = realidDistrict + 1;
+            System.out.println("La distrito es" + realidDistrict);
+
+            realidnationality = (int) nationCB.getSelectedIndex();
+            realidnationality = realidnationality + 1;
+            System.out.println("La nacionanlidad es" + realidnationality);
+
+            try {
+                ConnectDB.InsertUserSys(name, secondName, lastNames, secondLastNames, idNum, email, phone, username, password,
+                    realidDistrict, realidnationality, realgender, realidtype);
+            } catch (SQLException ex) {
+                Logger.getLogger(SigninWindow.class.getName()).log(Level.SEVERE, null, ex);
+                System.err.println("Error al insertar el usuario en la base de datos: " + ex.getMessage());
+            }
+            this.setVisible(false);
+            new loginWindow().setVisible(true);
+        }
+    }//GEN-LAST:event_finishBttnActionPerformed
+
+    private void backBttn3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_backBttn3ActionPerformed
+        mainLayout.previous(mainContainer);
+    }//GEN-LAST:event_backBttn3ActionPerformed
+
+    private void next1Bttn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_next1Bttn1ActionPerformed
+        mainLayout.next(mainContainer);
+    }//GEN-LAST:event_next1Bttn1ActionPerformed
+
+    private void chooseBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseBttnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_chooseBttnActionPerformed
+
+    private void deleteBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBttnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_deleteBttnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -993,10 +1112,13 @@ public class SigninWindow extends javax.swing.JFrame {
     private javax.swing.JTextArea addressTxt;
     private javax.swing.JButton backBttn1;
     private javax.swing.JButton backBttn2;
+    private javax.swing.JButton backBttn3;
     private javax.swing.JFormattedTextField birthdateFormattedTxt;
     private javax.swing.JButton cancel1Bttn1;
+    private javax.swing.JButton chooseBttn;
     private javax.swing.JPasswordField confirmTxt;
     private javax.swing.JComboBox<String> countryCB;
+    private javax.swing.JButton deleteBttn;
     private javax.swing.JComboBox<String> districtCB;
     private javax.swing.JTextField emailTxt;
     private javax.swing.JButton finishBttn;
@@ -1023,13 +1145,17 @@ public class SigninWindow extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTextField lastNamesTxt;
     private javax.swing.JTextField nameTxt;
     private javax.swing.JComboBox<String> nationCB;
     private javax.swing.JButton next1Bttn;
+    private javax.swing.JButton next1Bttn1;
     private javax.swing.JButton next2Bttn;
     private javax.swing.JPasswordField passwordTxt;
+    private javax.swing.JLabel pfpLbl;
+    private javax.swing.JPanel pfpSelection;
     private javax.swing.JTextField phoneTxt;
     private javax.swing.JComboBox<String> regionCB;
     private javax.swing.JTextField secondNameTxt;
