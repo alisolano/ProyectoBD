@@ -191,3 +191,103 @@ END getProductionInfo;
 
 SELECT * FROM Production;
 
+
+--Buscar datos por nombre
+
+CREATE OR REPLACE PROCEDURE GetDistrictIDByName(
+    p_DistrictName IN VARCHAR2,
+    p_DistrictID OUT NUMBER
+) IS
+BEGIN
+    SELECT id INTO p_DistrictID
+    FROM District
+    WHERE name = p_DistrictName;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        p_DistrictID := NULL;
+    WHEN OTHERS THEN
+        RAISE;
+END GetDistrictIDByName;
+
+
+CREATE OR REPLACE PROCEDURE GetNationalityIDByName(
+    p_NationalityName IN VARCHAR2,
+    p_NationalityID OUT NUMBER
+) IS
+BEGIN
+    SELECT id INTO p_NationalityID
+    FROM Nationality
+    WHERE name = p_NationalityName;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        p_NationalityID := NULL;
+    WHEN OTHERS THEN
+        RAISE;
+END GetNationalityIDByName;
+
+
+
+CREATE OR REPLACE PROCEDURE GetGenderIDByName(
+    p_GenderName IN VARCHAR2,
+    p_GenderID OUT NUMBER
+) IS
+BEGIN
+    SELECT id INTO p_GenderID
+    FROM Gender
+    WHERE name = p_GenderName;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        p_GenderID := NULL;
+    WHEN OTHERS THEN
+        RAISE;
+END GetGenderIDByName;
+
+
+CREATE OR REPLACE PROCEDURE GetIDTypeIDByName(
+    p_IDTypeName IN VARCHAR2,
+    p_IDTypeID OUT NUMBER
+) IS
+BEGIN
+    SELECT id INTO p_IDTypeID
+    FROM IDType
+    WHERE name = p_IDTypeName;
+EXCEPTION
+    WHEN NO_DATA_FOUND THEN
+        p_IDTypeID := NULL;
+    WHEN OTHERS THEN
+        RAISE;
+END GetIDTypeIDByName;
+
+
+--Verificar el tipo de usuario
+CREATE OR REPLACE PROCEDURE CheckUserType(
+    p_UserName IN VARCHAR2,
+    p_UserType OUT VARCHAR2
+)
+AS
+    v_UserID NUMBER;
+    v_AdministratorCount NUMBER;
+    v_ClientCount NUMBER;
+BEGIN
+    SELECT ID INTO v_UserID
+    FROM UserSys
+    WHERE UserName = p_UserName;
+
+    SELECT COUNT(*) INTO v_AdministratorCount
+    FROM Administrator
+    WHERE Id = v_UserID;
+
+    SELECT COUNT(*) INTO v_ClientCount
+    FROM Client
+    WHERE Id = v_UserID;
+
+    IF v_AdministratorCount > 0 THEN
+        p_UserType := 'Administrator';
+    ELSIF v_ClientCount > 0 THEN
+        p_UserType := 'Client';
+    ELSE
+        p_UserType := 'Unknown';
+    END IF;
+END CheckUserType;
+
+
