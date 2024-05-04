@@ -3,9 +3,14 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
+<<<<<<< Updated upstream:ProyectoBD-JoseTest/nbproject/private/private.xml
             <file>file:/C:/Users/Alison/Downloads/ProyectoBD-JoseTest/src/vista/mainInterface.java</file>
             <file>file:/C:/Users/Alison/Downloads/ProyectoBD-JoseTest/src/Connect/ConnectDB.java</file>
             <file>file:/C:/Users/Alison/Downloads/ProyectoBD-JoseTest/src/vista/SigninWindow.java</file>
+=======
+            <file>file:/C:/Users/Alison/Documents/GitHub/ProyectoBD/src/vista/mainInterface.java</file>
+            <file>file:/C:/Users/Alison/Documents/GitHub/ProyectoBD/src/vista/SigninWindow.java</file>
+>>>>>>> Stashed changes:nbproject/private/private.xml
         </group>
     </open-files>
 </project-private>
