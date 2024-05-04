@@ -5,14 +5,16 @@
 package vista;
 import Connect.ConnectDB;
 import java.sql.SQLException;
+import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 /**
  *
  * @author Leo
  */
-public class mainInterface extends javax.swing.JFrame {
 
+public class mainInterface extends javax.swing.JFrame {
+    final String CARD2 = "adminGUI";
     public String firstName, middleName, lastName, secondSurname, biography, trivia;
     public int birthdate, Height, idDistrict;
     /**
@@ -20,6 +22,14 @@ public class mainInterface extends javax.swing.JFrame {
      */
     public mainInterface() {
         initComponents();
+        try {
+       ArrayList<String> categories = ConnectDB.getCategory();
+       for (String category : categories) {
+           productionEditorGenreCB.addItem(category);
+            }
+        } catch (SQLException ex) {
+            Logger.getLogger(InfoWindow.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 
     /**
@@ -362,7 +372,6 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel34 = new javax.swing.JLabel();
 
         personPopUp.setTitle("Person selector");
-        personPopUp.setMaximumSize(new java.awt.Dimension(500, 300));
         personPopUp.setMinimumSize(new java.awt.Dimension(500, 300));
         personPopUp.setResizable(false);
 
@@ -463,7 +472,6 @@ public class mainInterface extends javax.swing.JFrame {
 
         imageChooser.setTitle("Person selector");
         imageChooser.setMinimumSize(new java.awt.Dimension(630, 450));
-        imageChooser.setPreferredSize(new java.awt.Dimension(630, 450));
 
         jPanel17.setBackground(new java.awt.Color(136, 202, 252));
 
@@ -1432,6 +1440,11 @@ public class mainInterface extends javax.swing.JFrame {
         personEditorSubmitBtn1.setForeground(new java.awt.Color(254, 249, 217));
         personEditorSubmitBtn1.setText("Submit");
         personEditorSubmitBtn1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        personEditorSubmitBtn1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                personEditorSubmitBtn1ActionPerformed(evt);
+            }
+        });
 
         personEditorUsernameTag1.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         personEditorUsernameTag1.setForeground(new java.awt.Color(254, 249, 217));
@@ -1559,13 +1572,12 @@ public class mainInterface extends javax.swing.JFrame {
         productionEditorCategoryCB.setBackground(new java.awt.Color(254, 249, 217));
         productionEditorCategoryCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
         productionEditorCategoryCB.setForeground(new java.awt.Color(201, 198, 145));
-        productionEditorCategoryCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        productionEditorCategoryCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Movie", "Series", "Documentary", "Other" }));
         productionEditorCategoryCB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
         productionEditorGenreCB.setBackground(new java.awt.Color(254, 249, 217));
         productionEditorGenreCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
         productionEditorGenreCB.setForeground(new java.awt.Color(201, 198, 145));
-        productionEditorGenreCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         productionEditorGenreCB.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
         jLabel42.setBackground(new java.awt.Color(210, 235, 255));
@@ -3818,6 +3830,22 @@ public class mainInterface extends javax.swing.JFrame {
         mainLayout.show(this.getContentPane(), "adminGUI");
 
     }//GEN-LAST:event_adminPanelBttnActionPerformed
+
+    private void personEditorSubmitBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorSubmitBtn1ActionPerformed
+        String productionType, title, synopsis;
+        int idCategory, duration, releaseYear;
+        
+        productionType = (String) productionEditorCategoryCB.getSelectedItem();
+        title = productionEditorName.getText();
+        synopsis = personEditorAddress1.getText();
+        idCategory = (int) productionEditorGenreCB.getSelectedIndex() + 1;
+        String durationText = personEditorName3.getText();
+        duration = Integer.parseInt(durationText);
+        String releaseText = releaseDateFormattedTxt.getText();
+        releaseYear = Integer.parseInt(releaseText);
+        ConnectDB.insertProduction(productionType, idCategory, title, duration, synopsis, null, releaseYear, null);
+        System.out.println("ingresado");
+    }//GEN-LAST:event_personEditorSubmitBtn1ActionPerformed
 
     /**
      * @param args the command line arguments

@@ -4,6 +4,7 @@
  */
 package Connect;
 
+import java.io.ByteArrayInputStream;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -167,7 +168,8 @@ public class ConnectDB {
         stmt.close();
     }
     
-    public static void getCategory() throws SQLException {
+    public static ArrayList<String> getCategory() throws SQLException {
+        ArrayList<String> categories = new ArrayList<>();
         String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
         String uName = "proyectoDBA";
         String uPass = "proyectoDBA";
@@ -183,8 +185,9 @@ public class ConnectDB {
         ResultSet rs = (ResultSet) stmt.getObject(1);
 
         while (rs.next()) {
-            System.out.println(rs.getInt("id") + " " + rs.getString("Name"));
+            categories.add(rs.getString("Name"));
         }
+        return categories;
     }
     
     public static ArrayList<String> getGender() throws SQLException {
@@ -398,27 +401,30 @@ public class ConnectDB {
         return result;
     }
     
-    public static void insertProduction(int idCategory, String title, int duration, String synopsis, String trailer, int releaseYear, byte[] photo) {
+    public static void insertProduction(String productionType, int idCategory, String title, int duration, String synopsis, String trailer, int releaseYear, byte[] photo) {
         String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
         String uName = "proyectoDBA";
         String uPass = "proyectoDBA";
 
         try (Connection con = DriverManager.getConnection(host, uName, uPass)) {
-            CallableStatement stmt = con.prepareCall("{ call InsertProduction(?, ?, ?, ?, ?, ?, ?) }");
+            CallableStatement stmt = con.prepareCall("{ call InsertProduction(?, ?, ?, ?, ?, ?, ?, ?) }");
 
-            stmt.setInt(1, idCategory);
-            stmt.setString(2, title);
-            stmt.setInt(3, duration);
-            stmt.setString(4, synopsis);
-            stmt.setString(5, trailer);
-            stmt.setInt(6, releaseYear);
-            stmt.setBytes(7, photo);
+            stmt.setString(1, productionType);
+            stmt.setInt(2, idCategory);
+            stmt.setString(3, title);
+            stmt.setInt(4, duration);
+            stmt.setString(5, synopsis);
+            stmt.setString(6, trailer);
+            stmt.setInt(7, releaseYear);
+            ByteArrayInputStream inputStream = new ByteArrayInputStream(photo);
+            stmt.setBinaryStream(8, inputStream, photo.length);
 
             stmt.execute();
         } catch (SQLException ex) {
             ex.printStackTrace();
         }
     }
+
     
     public static void getProductionInfo(String productionName) {
         String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
@@ -465,6 +471,28 @@ public class ConnectDB {
         }
 
         return genderID; 
+    }
+    
+        public static boolean checkUserType(String username) {
+        String userType = null;
+        String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
+        String uName = "proyectoDBA";
+        String uPass = "proyectoDBA";
+
+        try (Connection con = DriverManager.getConnection(host, uName, uPass)) {
+            CallableStatement stmt = con.prepareCall("{call CheckUserType(?, ?)}");
+            stmt.setString(1, username);
+            stmt.registerOutParameter(2, java.sql.Types.VARCHAR);
+            stmt.execute();
+            userType = stmt.getString(2);
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        if (userType.equals("Administrator")){
+            return true;
+        } else {
+            return false;
+        }
     }
 
 }
