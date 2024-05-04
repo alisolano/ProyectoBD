@@ -87,6 +87,84 @@ public class ConnectDB {
         stmt.getMoreResults();
         
     }
+    
+    public static void InsertPerson(String p_FirstName, String p_MiddleName, String p_LastName,
+                                    String p_SecondSurname, String p_Biography, int p_Height,
+                                    String p_Trivia, int p_idDistrict) throws SQLException {
+            
+        String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
+        String uName = "proyectoDBA";
+        String uPass = "proyectoDBA";
+
+        Connection con = DriverManager.getConnection(host, uName, uPass);
+        CallableStatement stmt = con.prepareCall("{ call InsertPerson(?,?,?,?,?,?,?,?,?,?,?) }");
+
+        stmt.setString(1, p_FirstName);
+        stmt.setString(2, p_MiddleName);
+        stmt.setString(3, p_LastName);
+        stmt.setString(4, p_SecondSurname);
+        stmt.setString(5, p_Biography);
+        stmt.setNull(6, java.sql.Types.DATE); 
+        stmt.setFloat(7, p_Height);
+        stmt.setNull(8, java.sql.Types.BLOB); 
+        stmt.setString(9, p_Trivia);
+        stmt.setInt(10, p_idDistrict);
+
+        stmt.execute();
+        stmt.close();
+    }
+    
+        public static void updatePerson(int p_id, String p_FirstName, String p_MiddleName, 
+                                    String p_LastName, String p_SecondSurname, String p_Biography, 
+                                    Float p_Height, String p_Trivia, 
+                                    int p_idDistrict) throws SQLException {
+        
+        String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
+        String uName = "proyectoDBA";
+        String uPass = "proyectoDBA";
+
+        Connection con = DriverManager.getConnection(host, uName, uPass);
+        CallableStatement stmt = con.prepareCall("{ call UpdatePerson(?,?,?,?,?,?,?,?,?,?,?) }");
+
+        stmt.setInt(1, p_id);
+        stmt.setString(2, p_FirstName);
+        stmt.setString(3, p_MiddleName);
+        stmt.setString(4, p_LastName);
+        stmt.setString(5, p_SecondSurname);
+        stmt.setString(6, p_Biography);
+        stmt.setNull(7, java.sql.Types.DATE); 
+        stmt.setFloat(8, p_Height);
+        stmt.setNull(9, java.sql.Types.BLOB); 
+        stmt.setString(10, p_Trivia);
+        stmt.setInt(11, p_idDistrict);
+
+        stmt.execute();
+        stmt.close();
+    }
+        
+        public static void updateProduction(int p_id, int p_idCategory, String p_Title, 
+                                         int p_Duration, String p_Synopsis, String p_Trailer, 
+                                         int p_ReleaseYear) throws SQLException {
+        
+        String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
+        String uName = "proyectoDBA";
+        String uPass = "proyectoDBA";
+
+        Connection con = DriverManager.getConnection(host, uName, uPass);
+        CallableStatement stmt = con.prepareCall("{ call UpdateProduction(?,?,?,?,?,?,?,?) }");
+
+        stmt.setInt(1, p_id);
+        stmt.setInt(2, p_idCategory);
+        stmt.setString(3, p_Title);
+        stmt.setInt(4, p_Duration);
+        stmt.setString(5, p_Synopsis);
+        stmt.setString(6, p_Trailer);
+        stmt.setInt(7, p_ReleaseYear);
+        stmt.setNull(8, java.sql.Types.BLOB); 
+
+        stmt.execute();
+        stmt.close();
+    }
         
     
     public static ArrayList<String> getCategory() throws SQLException {
@@ -415,6 +493,23 @@ public class ConnectDB {
             return false;
         }
     }
+    
+    public static void insertWishlist(int idClient) {
+        String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
+        String uName = "proyectoDBA";
+        String uPass = "proyectoDBA";
+
+        try (Connection con = DriverManager.getConnection(host, uName, uPass)) {
+            CallableStatement stmt = con.prepareCall("{ call InsertWishlist(?) }");
+
+            stmt.setInt(1, idClient);
+
+            stmt.execute();
+        } catch (SQLException ex) {
+            ex.printStackTrace();
+        }
+    }
+    
 }
 
 
