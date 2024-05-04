@@ -165,7 +165,6 @@ EXCEPTION
 END VerifyUserPassword;
 
 
---buscar producciones
 CREATE OR REPLACE PROCEDURE getProductionInfo (
     p_ProductionName IN VARCHAR2,
     p_Title OUT VARCHAR2,
@@ -183,13 +182,14 @@ BEGIN
     COMMIT;
 EXCEPTION
     WHEN NO_DATA_FOUND THEN
-        DBMS_OUTPUT.PUT_LINE('No se encontró la producción: ' || p_ProductionName);
+        DBMS_OUTPUT.PUT_LINE('No se encontr  la producci n: ' || p_ProductionName);
     WHEN OTHERS THEN
-        DBMS_OUTPUT.PUT_LINE('Ocurrió un error.');
+        DBMS_OUTPUT.PUT_LINE('Ocurri  un error.');
 END getProductionInfo;
 
 
 SELECT * FROM Production;
+
 
 
 --Buscar datos por nombre
@@ -257,37 +257,4 @@ EXCEPTION
     WHEN OTHERS THEN
         RAISE;
 END GetIDTypeIDByName;
-
-
---Verificar el tipo de usuario
-CREATE OR REPLACE PROCEDURE CheckUserType(
-    p_UserName IN VARCHAR2,
-    p_UserType OUT VARCHAR2
-)
-AS
-    v_UserID NUMBER;
-    v_AdministratorCount NUMBER;
-    v_ClientCount NUMBER;
-BEGIN
-    SELECT ID INTO v_UserID
-    FROM UserSys
-    WHERE UserName = p_UserName;
-
-    SELECT COUNT(*) INTO v_AdministratorCount
-    FROM Administrator
-    WHERE Id = v_UserID;
-
-    SELECT COUNT(*) INTO v_ClientCount
-    FROM Client
-    WHERE Id = v_UserID;
-
-    IF v_AdministratorCount > 0 THEN
-        p_UserType := 'Administrator';
-    ELSIF v_ClientCount > 0 THEN
-        p_UserType := 'Client';
-    ELSE
-        p_UserType := 'Unknown';
-    END IF;
-END CheckUserType;
-
 

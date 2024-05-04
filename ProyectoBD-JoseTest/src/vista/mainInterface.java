@@ -2067,12 +2067,22 @@ public class mainInterface extends javax.swing.JFrame {
         personEditorClearBtn.setForeground(new java.awt.Color(254, 249, 217));
         personEditorClearBtn.setText("Clear");
         personEditorClearBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        personEditorClearBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                personEditorClearBtnActionPerformed(evt);
+            }
+        });
 
         personEditorSubmitBtn.setBackground(new java.awt.Color(68, 51, 41));
         personEditorSubmitBtn.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
         personEditorSubmitBtn.setForeground(new java.awt.Color(254, 249, 217));
         personEditorSubmitBtn.setText("Submit");
         personEditorSubmitBtn.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        personEditorSubmitBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                personEditorSubmitBtnActionPerformed(evt);
+            }
+        });
 
         personEditorUsernameTag.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
         personEditorUsernameTag.setForeground(new java.awt.Color(254, 249, 217));
@@ -2294,6 +2304,11 @@ public class mainInterface extends javax.swing.JFrame {
         personEditorAddP.setForeground(new java.awt.Color(254, 249, 217));
         personEditorAddP.setText("Add Production");
         personEditorAddP.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        personEditorAddP.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                personEditorAddPActionPerformed(evt);
+            }
+        });
 
         personEditorAddRel.setBackground(new java.awt.Color(68, 51, 41));
         personEditorAddRel.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
@@ -3389,8 +3404,14 @@ public class mainInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_personEditorAddP1ActionPerformed
 
     private void personEditorSelectBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorSelectBtnActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_personEditorSelectBtnActionPerformed
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setFileFilter(new FileNameExtensionFilter("Image Files", "jpg", "png", "gif", "jpeg"));
+        int returnValue = fileChooser.showOpenDialog(this);
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            ImageIcon imageIcon = new ImageIcon(selectedFile.getAbsolutePath());
+            personEditorClearPicBtn1.setIcon(imageIcon);
+        }    }//GEN-LAST:event_personEditorSelectBtnActionPerformed
 
     private void personEditorClearPicBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorClearPicBtnActionPerformed
         // TODO add your handling code here:
@@ -3456,6 +3477,51 @@ public class mainInterface extends javax.swing.JFrame {
         ConnectDB.insertProduction(productionType, idCategory, title, duration, synopsis, null, releaseYear, photo);
         System.out.println("ingresado");
     }//GEN-LAST:event_personEditorSubmitBtn1ActionPerformed
+
+    private void personEditorSubmitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorSubmitBtnActionPerformed
+        String productionType, title, synopsis;
+        int idCategory, duration, releaseYear;
+        
+        productionType = (String) productionEditorCategoryCB.getSelectedItem();
+        title = productionEditorName.getText();
+        synopsis = personEditorAddress1.getText();
+        idCategory = (int) productionEditorGenreCB.getSelectedIndex() + 1;
+        String durationText = personEditorName3.getText();
+        duration = Integer.parseInt(durationText);
+        //String releaseText = releaseDateFormattedTxt.getText();
+        //releaseYear = Integer.parseInt(releaseText);
+        releaseYear = 2008;
+
+        // Obtener la imagen del botón y convertirla a un arreglo de bytes
+        Icon icon = personEditorClearPicBtn1.getIcon();
+        byte[] photo = null;
+        if (icon instanceof ImageIcon) {
+            BufferedImage bufferedImage = new BufferedImage(icon.getIconWidth(), icon.getIconHeight(), BufferedImage.TYPE_INT_RGB);
+            Graphics g = bufferedImage.createGraphics();
+            // Dibujar el icono en la imagen
+            icon.paintIcon(null, g, 0, 0);
+            g.dispose();
+
+            // Convertir la imagen a un arreglo de bytes
+            try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
+                ImageIO.write(bufferedImage, "jpg", baos);
+                baos.flush();
+                photo = baos.toByteArray();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+            }
+        }
+        
+        ConnectDB.insertProduction(productionType, idCategory, title, duration, synopsis, null, 2008, photo);
+        System.out.println("ingresado");    }//GEN-LAST:event_personEditorSubmitBtnActionPerformed
+
+    private void personEditorClearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorClearBtnActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_personEditorClearBtnActionPerformed
+
+    private void personEditorAddPActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorAddPActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_personEditorAddPActionPerformed
 
     /**
      * @param args the command line arguments

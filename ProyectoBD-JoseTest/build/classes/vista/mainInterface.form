@@ -3633,6 +3633,9 @@
                   </Border>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="personEditorClearBtnActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="personEditorSubmitBtn">
               <Properties>
@@ -3652,6 +3655,9 @@
                   </Border>
                 </Property>
               </Properties>
+              <Events>
+                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="personEditorSubmitBtnActionPerformed"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="personEditorUsernameTag">
               <Properties>
@@ -4248,6 +4254,9 @@
               </Border>
             </Property>
           </Properties>
+          <Events>
+            <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="personEditorAddPActionPerformed"/>
+          </Events>
         </Component>
         <Component class="javax.swing.JButton" name="personEditorAddRel">
           <Properties>

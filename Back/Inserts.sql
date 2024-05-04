@@ -42,15 +42,15 @@ BEGIN
     );
 
     IF v_StoredPassword IS NOT NULL AND v_EncryptedPassword = v_StoredPassword THEN
-        -- Las contraseñas coinciden
+        -- Las contrase as coinciden
         p_Result := 1; 
     ELSE
-        -- Las contraseñas no coinciden
+        -- Las contrase as no coinciden
         p_Result := 0; 
     END IF;
 EXCEPTION
     WHEN NO_DATA_FOUND THEN
-        -- No se encontró el usuario
+        -- No se encontr  el usuario
         p_Result := -1; 
     WHEN OTHERS THEN
         -- Error
@@ -212,3 +212,70 @@ END InsertProduction;
 
 
 SELECT * FROM Administrator;
+
+
+CREATE OR REPLACE PROCEDURE UpdatePerson (
+    p_id IN NUMBER,
+    p_FirstName IN VARCHAR2, 
+    p_MiddleName IN VARCHAR2 DEFAULT NULL, 
+    p_LastName IN VARCHAR2, 
+    p_SecondSurname IN VARCHAR2 DEFAULT NULL, 
+    p_Biography IN VARCHAR2, 
+    p_Birthdate IN DATE, 
+    p_Height IN NUMBER DEFAULT NULL, 
+    p_Photo IN BLOB DEFAULT NULL, 
+    p_Trivia IN VARCHAR2 DEFAULT NULL, 
+    p_idDistrict IN NUMBER
+) AS
+BEGIN
+    UPDATE Person 
+    SET 
+        FirstName = p_FirstName,
+        MiddleName = p_MiddleName,
+        LastName = p_LastName,
+        SecondSurname = p_SecondSurname,
+        Biography = p_Biography,
+        Birthdate = p_Birthdate,
+        Height = p_Height,
+        Photo = p_Photo,
+        Trivia = p_Trivia,
+        idDistrict = p_idDistrict
+    WHERE id = p_id;
+    
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        RAISE;
+END UpdatePerson;
+
+
+CREATE OR REPLACE PROCEDURE UpdateProduction (
+    p_id IN NUMBER,
+    p_idCategory IN NUMBER,
+    p_Title IN VARCHAR2,
+    p_Duration IN NUMBER,
+    p_Synopsis IN VARCHAR2,
+    p_Trailer IN VARCHAR2,
+    p_ReleaseYear IN NUMBER,
+    p_Photo IN BLOB
+) AS
+BEGIN
+    UPDATE Production 
+    SET 
+        idCategory = p_idCategory,
+        Title = p_Title,
+        Duration = p_Duration,
+        Synopsis = p_Synopsis,
+        Trailer = p_Trailer,
+        ReleaseYear = p_ReleaseYear,
+        Photo = p_Photo
+    WHERE id = p_id;
+    
+    COMMIT;
+EXCEPTION
+    WHEN OTHERS THEN
+        ROLLBACK;
+        RAISE;
+END UpdateProduction;
+

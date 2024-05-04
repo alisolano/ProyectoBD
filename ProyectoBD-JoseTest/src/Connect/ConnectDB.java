@@ -11,6 +11,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import javax.lang.model.util.Types;
 import oracle.jdbc.OracleTypes;
@@ -25,7 +26,7 @@ public class ConnectDB {
     private static Map<String, Integer> nationalityIdMap = new HashMap<>();
 
     public static void InsertUserSys(String firstName, String middleName, 
-                                    String lastName, String secondSurname, int idNumber, String email, 
+                                    String lastName, String secondSurname, int idNumber, Date birthdate, String email, 
                                     int phoneNumber, String username, String password, 
                                     int idDistrict, int idNationality, int idGender, int idType) throws SQLException {
         String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
@@ -40,7 +41,7 @@ public class ConnectDB {
         stmt.setString(3, lastName);
         stmt.setString(4, secondSurname);
         stmt.setInt(5, idNumber);
-        stmt.setNull(6, java.sql.Types.DATE); 
+        stmt.setDate(6, (java.sql.Date) birthdate); 
         stmt.setNull(7, java.sql.Types.BLOB); 
         stmt.setString(8, email);
         stmt.setInt(9, phoneNumber);

@@ -8,7 +8,10 @@ import Connect.ConnectDB;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import vista.InfoWindow;
@@ -29,7 +32,7 @@ public class SigninWindow extends javax.swing.JFrame {
     public String username, password, email, name, secondName, lastNames, secondLastNames, address, birthdate, 
                   gender ,idType, nationality, country, region, district;
     public int phone, idNum, realgender, realidtype, realidDistrict, realidnationality;
-    
+    public Date realBirthdate;
     // Do not touch uwu
     public java.awt.Container mainContainer;
     public java.awt.CardLayout mainLayout;
@@ -853,6 +856,13 @@ public class SigninWindow extends javax.swing.JFrame {
             idType = (String)idTypeCB.getSelectedItem();
             
             
+            SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");
+            try {
+                realBirthdate = dateFormat.parse(birthdate);
+            } catch (ParseException ex) {
+                Logger.getLogger(SigninWindow.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
             realgender = (int) genderCB.getSelectedIndex();
             realgender = realgender + 1;
             System.out.println("el genero es" + realgender);
@@ -917,7 +927,7 @@ public class SigninWindow extends javax.swing.JFrame {
             region = (String) regionCB.getSelectedItem();
             district = (String) districtCB.getSelectedItem();
             address = addressTxt.getText();
-            
+           
            realidDistrict = (int) districtCB.getSelectedIndex();
            realidDistrict = realidDistrict + 1;
            System.out.println("La distrito es" + realidDistrict);
@@ -926,8 +936,9 @@ public class SigninWindow extends javax.swing.JFrame {
            realidnationality = realidnationality + 1;
            System.out.println("La nacionanlidad es" + realidnationality);
            
+
         try {
-            ConnectDB.InsertUserSys(name, secondName, lastNames, secondLastNames, idNum, email, phone, username, password,
+            ConnectDB.InsertUserSys(name, secondName, lastNames, secondLastNames, idNum, null, email, phone, username, password,
                     realidDistrict, realidnationality, realgender, realidtype);
         } catch (SQLException ex) {
             Logger.getLogger(SigninWindow.class.getName()).log(Level.SEVERE, null, ex);
