@@ -7,10 +7,14 @@ package vista;
 import Connect.ConnectDB;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -1062,7 +1066,14 @@ public class SigninWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_next1Bttn1ActionPerformed
 
     private void chooseBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseBttnActionPerformed
-        // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setFileFilter(new FileNameExtensionFilter("Image Files", "jpg", "png", "gif", "jpeg"));
+        int returnValue = fileChooser.showOpenDialog(this);
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            ImageIcon imageIcon = new ImageIcon(selectedFile.getAbsolutePath());
+            chooseBttn.setIcon(imageIcon);
+        }
     }//GEN-LAST:event_chooseBttnActionPerformed
 
     private void deleteBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBttnActionPerformed

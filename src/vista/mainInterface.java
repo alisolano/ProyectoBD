@@ -4,10 +4,14 @@
  */
 package vista;
 import Connect.ConnectDB;
+import java.io.File;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
 /**
  *
  * @author Leo
@@ -4344,7 +4348,15 @@ public class mainInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_mainLogin1ActionPerformed
 
     private void personEditorSelectBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorSelectBtnActionPerformed
-        // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setFileFilter(new FileNameExtensionFilter("Image Files", "jpg", "png", "gif", "jpeg"));
+        int returnValue = fileChooser.showOpenDialog(this);
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            ImageIcon imageIcon = new ImageIcon(selectedFile.getAbsolutePath());
+            personEditorClearPicBtn1.setIcon(imageIcon);
+        }
+        
     }//GEN-LAST:event_personEditorSelectBtnActionPerformed
 
     private void personEditorClearPicBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorClearPicBtnActionPerformed
@@ -4497,7 +4509,14 @@ public class mainInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_releaseDateFormattedTxtFocusGained
 
     private void personEditorSelectBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorSelectBtn1ActionPerformed
-        // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setFileFilter(new FileNameExtensionFilter("Image Files", "jpg", "png", "gif", "jpeg"));
+        int returnValue = fileChooser.showOpenDialog(this);
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            ImageIcon imageIcon = new ImageIcon(selectedFile.getAbsolutePath());
+            personEditorClearPicBtn1.setIcon(imageIcon);
+        }
     }//GEN-LAST:event_personEditorSelectBtn1ActionPerformed
 
     private void personEditorClearPicBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorClearPicBtn1ActionPerformed
