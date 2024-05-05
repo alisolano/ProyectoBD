@@ -7,10 +7,17 @@ package vista;
 import Connect.ConnectDB;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.io.File;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.swing.ImageIcon;
+import javax.swing.JFileChooser;
+import javax.swing.filechooser.FileNameExtensionFilter;
 
 /**
  *
@@ -26,7 +33,9 @@ public class SigninWindow extends javax.swing.JFrame {
     public String username, password, email, name, secondName, lastNames, secondLastNames, address, birthdate, 
                   gender ,idType, nationality, country, region, district;
     public int phone, idNum, realgender, realidtype, realidDistrict, realidnationality;
-    
+    public Date realBirthdate;
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");    
+
     // Do not touch uwu
     public java.awt.Container mainContainer;
     public java.awt.CardLayout mainLayout;
@@ -110,7 +119,7 @@ public class SigninWindow extends javax.swing.JFrame {
             });
             
         } catch (SQLException ex) {
-            Logger.getLogger(InfoWindow.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
         
     }
@@ -450,7 +459,6 @@ public class SigninWindow extends javax.swing.JFrame {
         genderCB.setBackground(new java.awt.Color(237, 204, 111));
         genderCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
         genderCB.setForeground(new java.awt.Color(48, 89, 138));
-        genderCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         genderCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
         genderCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -462,10 +470,15 @@ public class SigninWindow extends javax.swing.JFrame {
         birthdateFormattedTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
         birthdateFormattedTxt.setForeground(new java.awt.Color(48, 89, 138));
         birthdateFormattedTxt.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
-        birthdateFormattedTxt.setToolTipText("DD/MM/YYYY");
+        birthdateFormattedTxt.setToolTipText("DD/MM/YY");
         birthdateFormattedTxt.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 birthdateFormattedTxtFocusGained(evt);
+            }
+        });
+        birthdateFormattedTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                birthdateFormattedTxtActionPerformed(evt);
             }
         });
 
@@ -610,7 +623,6 @@ public class SigninWindow extends javax.swing.JFrame {
         nationCB.setBackground(new java.awt.Color(237, 204, 111));
         nationCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
         nationCB.setForeground(new java.awt.Color(48, 89, 138));
-        nationCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         nationCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
 
         jLabel15.setBackground(new java.awt.Color(210, 235, 255));
@@ -648,19 +660,16 @@ public class SigninWindow extends javax.swing.JFrame {
         countryCB.setBackground(new java.awt.Color(237, 204, 111));
         countryCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
         countryCB.setForeground(new java.awt.Color(48, 89, 138));
-        countryCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         countryCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
 
         regionCB.setBackground(new java.awt.Color(237, 204, 111));
         regionCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
         regionCB.setForeground(new java.awt.Color(48, 89, 138));
-        regionCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         regionCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
 
         districtCB.setBackground(new java.awt.Color(237, 204, 111));
         districtCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
         districtCB.setForeground(new java.awt.Color(48, 89, 138));
-        districtCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         districtCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
 
         backBttn2.setBackground(new java.awt.Color(237, 204, 111));
@@ -956,6 +965,7 @@ public class SigninWindow extends javax.swing.JFrame {
             realgender = (int) genderCB.getSelectedIndex();
             realgender = realgender + 1;
             System.out.println("el genero es" + realgender);
+            System.out.println("Sirvio, btw Fecha" + realBirthdate);
 
             realidtype = (int) idTypeCB.getSelectedIndex();
             realidtype = realidtype + 1;
@@ -1040,9 +1050,19 @@ public class SigninWindow extends javax.swing.JFrame {
             realidnationality = (int) nationCB.getSelectedIndex();
             realidnationality = realidnationality + 1;
             System.out.println("La nacionanlidad es" + realidnationality);
+            
+        /* 
+        try {
+            realBirthdate = dateFormat.parse(birthdate);
+            dateFormat.applyPattern("dd/MM/yyyy");
+            Date fechaFormateada = dateFormat.format(realBirthdate);
+            System.out.println("Sirvio, btw Fecha realbirth" + realBirthdate + "o tmb" + birthdate);
+            System.out.println("Fecha formateada: " + fechaFormateada);
+        } catch (ParseException e) {
+                e.printStackTrace();        }     */       
 
             try {
-                ConnectDB.InsertUserSys(name, secondName, lastNames, secondLastNames, idNum, email, phone, username, password,
+                ConnectDB.InsertUserSys(name, secondName, lastNames, secondLastNames, idNum, birthdate, email, phone, username, password,
                     realidDistrict, realidnationality, realgender, realidtype);
             } catch (SQLException ex) {
                 Logger.getLogger(SigninWindow.class.getName()).log(Level.SEVERE, null, ex);
@@ -1062,12 +1082,23 @@ public class SigninWindow extends javax.swing.JFrame {
     }//GEN-LAST:event_next1Bttn1ActionPerformed
 
     private void chooseBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_chooseBttnActionPerformed
-        // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setFileFilter(new FileNameExtensionFilter("Image Files", "jpg", "png", "gif", "jpeg"));
+        int returnValue = fileChooser.showOpenDialog(this);
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            ImageIcon imageIcon = new ImageIcon(selectedFile.getAbsolutePath());
+            pfpLbl.setIcon(imageIcon);
+        }
     }//GEN-LAST:event_chooseBttnActionPerformed
 
     private void deleteBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBttnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_deleteBttnActionPerformed
+
+    private void birthdateFormattedTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_birthdateFormattedTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_birthdateFormattedTxtActionPerformed
 
     /**
      * @param args the command line arguments
