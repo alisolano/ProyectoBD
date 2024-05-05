@@ -11,6 +11,7 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
+import javax.swing.JOptionPane;
 import javax.swing.filechooser.FileNameExtensionFilter;
 /**
  *
@@ -4407,15 +4408,23 @@ public class mainInterface extends javax.swing.JFrame {
     biography = personEditorName.getText();
     trivia = personEditorName.getText();
     birthdate = personEditorBirthdate.getText();
-    Height = Integer.parseInt(personEditorHeight.getText());
+    String heightText = personEditorHeight.getText();
     idDistrict = (int) personEditorDistrictCB.getSelectedIndex();
     idDistrict = idDistrict + 1;
     System.out.println("La distrito es" + idDistrict);
-    
-        try {     
-            ConnectDB.InsertPerson(firstName, middleName, lastName, secondSurname, biography, birthdate, Height, trivia, idDistrict);
-        } catch (SQLException ex) {
-            Logger.getLogger(mainInterface.class.getName()).log(Level.SEVERE, null, ex);
+        if (firstName.isEmpty() || lastName.isEmpty() || biography.isEmpty() || trivia.isEmpty() || birthdate.isEmpty() || heightText.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor complete todos los campos.");
+        } else {
+            // Continuar con la inserción de persona
+            try {
+                int height = Integer.parseInt(heightText);
+                ConnectDB.InsertPerson(firstName, middleName, lastName, secondSurname, biography, birthdate, height, trivia, idDistrict);
+                System.out.println("Persona insertada exitosamente");
+            } catch (SQLException ex) {
+                Logger.getLogger(mainInterface.class.getName()).log(Level.SEVERE, null, ex);
+            } catch (NumberFormatException ex) {
+                JOptionPane.showMessageDialog(null, "La altura debe ser un número válido.");
+            }
         }
     }//GEN-LAST:event_personEditorSubmitBtnActionPerformed
 
@@ -4473,11 +4482,18 @@ public class mainInterface extends javax.swing.JFrame {
         synopsis = productionEditorStoryline.getText();
         idCategory = (int) productionEditorGenreCB.getSelectedIndex() + 1;
         String durationText = productionEditorPlaytime.getText();
-        duration = Integer.parseInt(durationText);
         String releaseText = productionEditorRelease.getText();
         releaseYear = Integer.parseInt(releaseText);
-        ConnectDB.insertProduction(productionType, idCategory, title, duration, synopsis, null, releaseYear, null);
-        System.out.println("ingresado");
+       
+        if (productionType.isEmpty() || title.isEmpty() || synopsis.isEmpty() || durationText.isEmpty() || releaseText.isEmpty()) {
+            JOptionPane.showMessageDialog(null, "Por favor complete todos los campos.");
+        } else {
+            // Continuar con la inserción de producción
+            duration = Integer.parseInt(durationText);
+            releaseYear = Integer.parseInt(releaseText);
+            ConnectDB.insertProduction(productionType, idCategory, title, duration, synopsis, null, releaseYear, null);
+            System.out.println("ingresado");
+        }
     }//GEN-LAST:event_personEditorSubmitBtn1ActionPerformed
 
     private void LogOutBttn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_LogOutBttn1ActionPerformed
@@ -4545,7 +4561,9 @@ public class mainInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_prodVReturnBtnActionPerformed
 
     private void prodVReturnBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_prodVReturnBtn1ActionPerformed
-        // TODO add your handling code here:
+        javax.swing.JFrame newFrame = new mainInterface();
+        java.awt.CardLayout mainLayout = (java.awt.CardLayout) this.getContentPane().getLayout();
+        mainLayout.show(this.getContentPane(), "adminGUI");
     }//GEN-LAST:event_prodVReturnBtn1ActionPerformed
 
     private void personEditorClearBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorClearBtn1ActionPerformed
