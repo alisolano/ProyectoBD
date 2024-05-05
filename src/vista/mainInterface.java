@@ -4469,7 +4469,7 @@ public class mainInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_personEditorReturnBtnActionPerformed
 
     private void userEditorClearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userEditorClearBtnActionPerformed
-        userEditorCleaner();
+
     }//GEN-LAST:event_userEditorClearBtnActionPerformed
 
     private void userEditorSubmitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userEditorSubmitBtnActionPerformed
