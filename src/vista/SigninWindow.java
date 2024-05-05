@@ -459,7 +459,6 @@ public class SigninWindow extends javax.swing.JFrame {
         genderCB.setBackground(new java.awt.Color(237, 204, 111));
         genderCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
         genderCB.setForeground(new java.awt.Color(48, 89, 138));
-        genderCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         genderCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
         genderCB.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -624,7 +623,6 @@ public class SigninWindow extends javax.swing.JFrame {
         nationCB.setBackground(new java.awt.Color(237, 204, 111));
         nationCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
         nationCB.setForeground(new java.awt.Color(48, 89, 138));
-        nationCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         nationCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
 
         jLabel15.setBackground(new java.awt.Color(210, 235, 255));
@@ -662,19 +660,16 @@ public class SigninWindow extends javax.swing.JFrame {
         countryCB.setBackground(new java.awt.Color(237, 204, 111));
         countryCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
         countryCB.setForeground(new java.awt.Color(48, 89, 138));
-        countryCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         countryCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
 
         regionCB.setBackground(new java.awt.Color(237, 204, 111));
         regionCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
         regionCB.setForeground(new java.awt.Color(48, 89, 138));
-        regionCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         regionCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
 
         districtCB.setBackground(new java.awt.Color(237, 204, 111));
         districtCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
         districtCB.setForeground(new java.awt.Color(48, 89, 138));
-        districtCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         districtCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
 
         backBttn2.setBackground(new java.awt.Color(237, 204, 111));
@@ -1093,7 +1088,7 @@ public class SigninWindow extends javax.swing.JFrame {
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             File selectedFile = fileChooser.getSelectedFile();
             ImageIcon imageIcon = new ImageIcon(selectedFile.getAbsolutePath());
-            chooseBttn.setIcon(imageIcon);
+            pfpLbl.setIcon(imageIcon);
         }
     }//GEN-LAST:event_chooseBttnActionPerformed
 
