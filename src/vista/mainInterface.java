@@ -4160,10 +4160,6 @@ public class mainInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_mainLoginActionPerformed
 
     private void adminPanelBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_adminPanelBttnActionPerformed
-        // TODO add your handling code here:
-        javax.swing.JFrame newFrame = new mainInterface();
-        java.awt.CardLayout mainLayout = (java.awt.CardLayout) this.getContentPane().getLayout();
-        mainLayout.show(this.getContentPane(), "adminGUI");
 
     }//GEN-LAST:event_adminPanelBttnActionPerformed
 
