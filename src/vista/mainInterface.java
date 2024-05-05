@@ -19,8 +19,8 @@ import javax.swing.filechooser.FileNameExtensionFilter;
 
 public class mainInterface extends javax.swing.JFrame {
     
-    public String firstName, middleName, lastName, secondSurname, biography, trivia;
-    public int birthdate, Height, idDistrict;
+    public String firstName, middleName, lastName, secondSurname, biography, trivia, birthdate;
+    public int Height, idDistrict;
     /**
      * Creates new form mainInterface
      */
@@ -2485,7 +2485,7 @@ public class mainInterface extends javax.swing.JFrame {
         personEditorBirthdate.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
         personEditorBirthdate.setForeground(new java.awt.Color(201, 198, 145));
         personEditorBirthdate.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
-        personEditorBirthdate.setToolTipText("DD/MM/YYYY");
+        personEditorBirthdate.setToolTipText("DD/MM/YY");
 
         jLabel27.setBackground(new java.awt.Color(210, 235, 255));
         jLabel27.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -4378,14 +4378,14 @@ public class mainInterface extends javax.swing.JFrame {
     secondSurname = personEditorSecondSurname.getText();
     biography = personEditorName.getText();
     trivia = personEditorName.getText();
-    birthdate = Integer.parseInt(personEditorBirthdate.getText());
+    birthdate = personEditorBirthdate.getText();
     Height = Integer.parseInt(personEditorHeight.getText());
     idDistrict = (int) personEditorDistrictCB.getSelectedIndex();
     idDistrict = idDistrict + 1;
     System.out.println("La distrito es" + idDistrict);
     
         try {     
-            ConnectDB.InsertPerson(firstName, middleName, lastName, secondSurname, biography, Height, trivia, idDistrict);
+            ConnectDB.InsertPerson(firstName, middleName, lastName, secondSurname, biography, birthdate, Height, trivia, idDistrict);
         } catch (SQLException ex) {
             Logger.getLogger(mainInterface.class.getName()).log(Level.SEVERE, null, ex);
         }

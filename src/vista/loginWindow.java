@@ -73,6 +73,11 @@ public class loginWindow extends javax.swing.JFrame {
         usernameText.setForeground(new java.awt.Color(48, 89, 138));
         usernameText.setToolTipText("");
         usernameText.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+        usernameText.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                usernameTextActionPerformed(evt);
+            }
+        });
 
         jLabel2.setBackground(new java.awt.Color(210, 235, 255));
         jLabel2.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
@@ -190,6 +195,10 @@ public class loginWindow extends javax.swing.JFrame {
         this.setVisible(false);
         new mainInterface().setVisible(true);
     }//GEN-LAST:event_formWindowClosing
+
+    private void usernameTextActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_usernameTextActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_usernameTextActionPerformed
 
     /**
      * @param args the command line arguments

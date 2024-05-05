@@ -11,6 +11,7 @@ import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.List;
 import javax.lang.model.util.Types;
 import oracle.jdbc.OracleTypes;
@@ -25,7 +26,7 @@ public class ConnectDB {
     private static Map<String, Integer> nationalityIdMap = new HashMap<>();
 
     public static void InsertUserSys(String firstName, String middleName, 
-                                    String lastName, String secondSurname, int idNumber, String email, 
+                                    String lastName, String secondSurname, int idNumber, String birthdate, String email, 
                                     int phoneNumber, String username, String password, 
                                     int idDistrict, int idNationality, int idGender, int idType) throws SQLException {
         String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
@@ -40,7 +41,7 @@ public class ConnectDB {
         stmt.setString(3, lastName);
         stmt.setString(4, secondSurname);
         stmt.setInt(5, idNumber);
-        stmt.setNull(6, java.sql.Types.DATE); 
+        stmt.setString(6, birthdate); 
         stmt.setNull(7, java.sql.Types.BLOB); 
         stmt.setString(8, email);
         stmt.setInt(9, phoneNumber);
@@ -57,7 +58,7 @@ public class ConnectDB {
     }
     
     public static void InsertUserSysAdministrator(String firstName, String middleName, 
-                                    String lastName, String secondSurname, int idNumber, String email, 
+                                    String lastName, String secondSurname, int idNumber, String birthdate, String email, 
                                     int phoneNumber, String username, String password, 
                                     int idDistrict, int idNationality, int idGender, int idType) throws SQLException {
         String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
@@ -72,7 +73,7 @@ public class ConnectDB {
         stmt.setString(3, lastName);
         stmt.setString(4, secondSurname);
         stmt.setInt(5, idNumber);
-        stmt.setNull(6, java.sql.Types.DATE); 
+        stmt.setString(6, birthdate); 
         stmt.setNull(7, java.sql.Types.BLOB); 
         stmt.setString(8, email);
         stmt.setInt(9, phoneNumber);
@@ -89,7 +90,7 @@ public class ConnectDB {
     }
     
     public static void InsertPerson(String p_FirstName, String p_MiddleName, String p_LastName,
-                                    String p_SecondSurname, String p_Biography, int p_Height,
+                                    String p_SecondSurname, String p_Biography, String p_birthdate, int p_Height,
                                     String p_Trivia, int p_idDistrict) throws SQLException {
             
         String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
@@ -104,7 +105,7 @@ public class ConnectDB {
         stmt.setString(3, p_LastName);
         stmt.setString(4, p_SecondSurname);
         stmt.setString(5, p_Biography);
-        stmt.setNull(6, java.sql.Types.DATE); 
+        stmt.setString(6, p_birthdate); 
         stmt.setFloat(7, p_Height);
         stmt.setNull(8, java.sql.Types.BLOB); 
         stmt.setString(9, p_Trivia);
@@ -116,7 +117,7 @@ public class ConnectDB {
     
     
     public static void updatePerson(int p_id, String p_FirstName, String p_MiddleName, 
-                                    String p_LastName, String p_SecondSurname, String p_Biography, 
+                                    String p_LastName, String p_SecondSurname, String p_Biography, String p_birthdate, 
                                     Float p_Height, String p_Trivia, 
                                     int p_idDistrict) throws SQLException {
         
@@ -133,7 +134,7 @@ public class ConnectDB {
         stmt.setString(4, p_LastName);
         stmt.setString(5, p_SecondSurname);
         stmt.setString(6, p_Biography);
-        stmt.setNull(7, java.sql.Types.DATE); 
+        stmt.setString(7, p_birthdate); 
         stmt.setFloat(8, p_Height);
         stmt.setNull(9, java.sql.Types.BLOB); 
         stmt.setString(10, p_Trivia);

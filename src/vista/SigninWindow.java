@@ -9,7 +9,10 @@ import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.File;
 import java.sql.SQLException;
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
@@ -30,7 +33,9 @@ public class SigninWindow extends javax.swing.JFrame {
     public String username, password, email, name, secondName, lastNames, secondLastNames, address, birthdate, 
                   gender ,idType, nationality, country, region, district;
     public int phone, idNum, realgender, realidtype, realidDistrict, realidnationality;
-    
+    public Date realBirthdate;
+    SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");    
+
     // Do not touch uwu
     public java.awt.Container mainContainer;
     public java.awt.CardLayout mainLayout;
@@ -466,10 +471,15 @@ public class SigninWindow extends javax.swing.JFrame {
         birthdateFormattedTxt.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
         birthdateFormattedTxt.setForeground(new java.awt.Color(48, 89, 138));
         birthdateFormattedTxt.setFormatterFactory(new javax.swing.text.DefaultFormatterFactory(new javax.swing.text.DateFormatter(new java.text.SimpleDateFormat("dd/MM/yyyy"))));
-        birthdateFormattedTxt.setToolTipText("DD/MM/YYYY");
+        birthdateFormattedTxt.setToolTipText("DD/MM/YY");
         birthdateFormattedTxt.addFocusListener(new java.awt.event.FocusAdapter() {
             public void focusGained(java.awt.event.FocusEvent evt) {
                 birthdateFormattedTxtFocusGained(evt);
+            }
+        });
+        birthdateFormattedTxt.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                birthdateFormattedTxtActionPerformed(evt);
             }
         });
 
@@ -960,6 +970,7 @@ public class SigninWindow extends javax.swing.JFrame {
             realgender = (int) genderCB.getSelectedIndex();
             realgender = realgender + 1;
             System.out.println("el genero es" + realgender);
+            System.out.println("Sirvio, btw Fecha" + realBirthdate);
 
             realidtype = (int) idTypeCB.getSelectedIndex();
             realidtype = realidtype + 1;
@@ -1044,9 +1055,19 @@ public class SigninWindow extends javax.swing.JFrame {
             realidnationality = (int) nationCB.getSelectedIndex();
             realidnationality = realidnationality + 1;
             System.out.println("La nacionanlidad es" + realidnationality);
+            
+        /* 
+        try {
+            realBirthdate = dateFormat.parse(birthdate);
+            dateFormat.applyPattern("dd/MM/yyyy");
+            Date fechaFormateada = dateFormat.format(realBirthdate);
+            System.out.println("Sirvio, btw Fecha realbirth" + realBirthdate + "o tmb" + birthdate);
+            System.out.println("Fecha formateada: " + fechaFormateada);
+        } catch (ParseException e) {
+                e.printStackTrace();        }     */       
 
             try {
-                ConnectDB.InsertUserSys(name, secondName, lastNames, secondLastNames, idNum, email, phone, username, password,
+                ConnectDB.InsertUserSys(name, secondName, lastNames, secondLastNames, idNum, birthdate, email, phone, username, password,
                     realidDistrict, realidnationality, realgender, realidtype);
             } catch (SQLException ex) {
                 Logger.getLogger(SigninWindow.class.getName()).log(Level.SEVERE, null, ex);
@@ -1079,6 +1100,10 @@ public class SigninWindow extends javax.swing.JFrame {
     private void deleteBttnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteBttnActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_deleteBttnActionPerformed
+
+    private void birthdateFormattedTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_birthdateFormattedTxtActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_birthdateFormattedTxtActionPerformed
 
     /**
      * @param args the command line arguments
