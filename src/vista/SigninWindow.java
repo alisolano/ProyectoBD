@@ -119,7 +119,7 @@ public class SigninWindow extends javax.swing.JFrame {
             });
             
         } catch (SQLException ex) {
-            Logger.getLogger(InfoWindow.class.getName()).log(Level.SEVERE, null, ex);
+            
         }
         
     }
