@@ -384,7 +384,7 @@ public class ConnectDB {
         boolean result = false;
 
         try (Connection con = DriverManager.getConnection(host, uName, uPass)) {
-            CallableStatement stmt = con.prepareCall("{call VerifyUserPassword(?, ?, ?)}");
+            CallableStatement stmt = con.prepareCall("{call ComparePasswords(?, ?, ?)}");
             stmt.setString(1, username);
             stmt.setString(2, password);
             stmt.registerOutParameter(3, java.sql.Types.NUMERIC);

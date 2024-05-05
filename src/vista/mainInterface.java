@@ -74,6 +74,53 @@ public class mainInterface extends javax.swing.JFrame {
         imageChooser = new javax.swing.JFrame();
         jPanel17 = new javax.swing.JPanel();
         jFileChooser1 = new javax.swing.JFileChooser();
+        mainPanel = new javax.swing.JPanel();
+        menuBar = new javax.swing.JPanel();
+        mainSearch = new javax.swing.JTextField();
+        mainSearchButton = new javax.swing.JButton();
+        mainLogin = new javax.swing.JButton();
+        mainPanelTitle1 = new javax.swing.JLabel();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel1 = new javax.swing.JPanel();
+        filmPic = new javax.swing.JPanel();
+        FilmTitle1 = new javax.swing.JLabel();
+        f1s1 = new javax.swing.JLabel();
+        f1s2 = new javax.swing.JLabel();
+        f1s3 = new javax.swing.JLabel();
+        f2s4 = new javax.swing.JLabel();
+        f2s5 = new javax.swing.JLabel();
+        jPanel3 = new javax.swing.JPanel();
+        filmPic2 = new javax.swing.JPanel();
+        FilmTitle2 = new javax.swing.JLabel();
+        f1s4 = new javax.swing.JLabel();
+        f1s5 = new javax.swing.JLabel();
+        f1s6 = new javax.swing.JLabel();
+        f2s6 = new javax.swing.JLabel();
+        f2s7 = new javax.swing.JLabel();
+        jPanel4 = new javax.swing.JPanel();
+        filmPic3 = new javax.swing.JPanel();
+        FilmTitle3 = new javax.swing.JLabel();
+        f1s7 = new javax.swing.JLabel();
+        f1s8 = new javax.swing.JLabel();
+        f1s9 = new javax.swing.JLabel();
+        f2s8 = new javax.swing.JLabel();
+        f2s9 = new javax.swing.JLabel();
+        jPanel5 = new javax.swing.JPanel();
+        filmPic4 = new javax.swing.JPanel();
+        FilmTitle4 = new javax.swing.JLabel();
+        f1s10 = new javax.swing.JLabel();
+        f1s11 = new javax.swing.JLabel();
+        f1s12 = new javax.swing.JLabel();
+        f2s10 = new javax.swing.JLabel();
+        f2s11 = new javax.swing.JLabel();
+        jPanel6 = new javax.swing.JPanel();
+        filmPic5 = new javax.swing.JPanel();
+        FilmTitle5 = new javax.swing.JLabel();
+        f1s13 = new javax.swing.JLabel();
+        f1s14 = new javax.swing.JLabel();
+        f1s15 = new javax.swing.JLabel();
+        f2s12 = new javax.swing.JLabel();
+        f2s13 = new javax.swing.JLabel();
         loggedMain = new javax.swing.JPanel();
         menuBar4 = new javax.swing.JPanel();
         mainSearch1 = new javax.swing.JTextField();
@@ -123,53 +170,6 @@ public class mainInterface extends javax.swing.JFrame {
         f2s22 = new javax.swing.JLabel();
         f2s23 = new javax.swing.JLabel();
         adminPanelBttn = new javax.swing.JButton();
-        mainPanel = new javax.swing.JPanel();
-        menuBar = new javax.swing.JPanel();
-        mainSearch = new javax.swing.JTextField();
-        mainSearchButton = new javax.swing.JButton();
-        mainLogin = new javax.swing.JButton();
-        mainPanelTitle1 = new javax.swing.JLabel();
-        jPanel7 = new javax.swing.JPanel();
-        jPanel1 = new javax.swing.JPanel();
-        filmPic = new javax.swing.JPanel();
-        FilmTitle1 = new javax.swing.JLabel();
-        f1s1 = new javax.swing.JLabel();
-        f1s2 = new javax.swing.JLabel();
-        f1s3 = new javax.swing.JLabel();
-        f2s4 = new javax.swing.JLabel();
-        f2s5 = new javax.swing.JLabel();
-        jPanel3 = new javax.swing.JPanel();
-        filmPic2 = new javax.swing.JPanel();
-        FilmTitle2 = new javax.swing.JLabel();
-        f1s4 = new javax.swing.JLabel();
-        f1s5 = new javax.swing.JLabel();
-        f1s6 = new javax.swing.JLabel();
-        f2s6 = new javax.swing.JLabel();
-        f2s7 = new javax.swing.JLabel();
-        jPanel4 = new javax.swing.JPanel();
-        filmPic3 = new javax.swing.JPanel();
-        FilmTitle3 = new javax.swing.JLabel();
-        f1s7 = new javax.swing.JLabel();
-        f1s8 = new javax.swing.JLabel();
-        f1s9 = new javax.swing.JLabel();
-        f2s8 = new javax.swing.JLabel();
-        f2s9 = new javax.swing.JLabel();
-        jPanel5 = new javax.swing.JPanel();
-        filmPic4 = new javax.swing.JPanel();
-        FilmTitle4 = new javax.swing.JLabel();
-        f1s10 = new javax.swing.JLabel();
-        f1s11 = new javax.swing.JLabel();
-        f1s12 = new javax.swing.JLabel();
-        f2s10 = new javax.swing.JLabel();
-        f2s11 = new javax.swing.JLabel();
-        jPanel6 = new javax.swing.JPanel();
-        filmPic5 = new javax.swing.JPanel();
-        FilmTitle5 = new javax.swing.JLabel();
-        f1s13 = new javax.swing.JLabel();
-        f1s14 = new javax.swing.JLabel();
-        f1s15 = new javax.swing.JLabel();
-        f2s12 = new javax.swing.JLabel();
-        f2s13 = new javax.swing.JLabel();
         productionEditor = new javax.swing.JPanel();
         menuBar3 = new javax.swing.JPanel();
         personEditorReturnBtn1 = new javax.swing.JButton();
@@ -570,6 +570,452 @@ public class mainInterface extends javax.swing.JFrame {
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         getContentPane().setLayout(new java.awt.CardLayout());
+
+        mainPanel.setBackground(new java.awt.Color(226, 121, 59));
+
+        menuBar.setBackground(new java.awt.Color(68, 51, 41));
+
+        mainSearch.setBackground(new java.awt.Color(254, 249, 217));
+        mainSearch.setFont(new java.awt.Font("Gadugi", 0, 14)); // NOI18N
+        mainSearch.setForeground(new java.awt.Color(201, 198, 145));
+        mainSearch.setText("jTextField1");
+        mainSearch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 2));
+
+        mainSearchButton.setBackground(new java.awt.Color(254, 249, 217));
+        mainSearchButton.setForeground(new java.awt.Color(201, 198, 145));
+        mainSearchButton.setText("X");
+        mainSearchButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 2));
+
+        mainLogin.setBackground(new java.awt.Color(68, 51, 41));
+        mainLogin.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
+        mainLogin.setForeground(new java.awt.Color(254, 249, 217));
+        mainLogin.setText("Log in");
+        mainLogin.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                mainLoginActionPerformed(evt);
+            }
+        });
+
+        javax.swing.GroupLayout menuBarLayout = new javax.swing.GroupLayout(menuBar);
+        menuBar.setLayout(menuBarLayout);
+        menuBarLayout.setHorizontalGroup(
+            menuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(menuBarLayout.createSequentialGroup()
+                .addGap(170, 170, 170)
+                .addComponent(mainSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 643, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(mainSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+            .addGroup(menuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuBarLayout.createSequentialGroup()
+                    .addContainerGap(1000, Short.MAX_VALUE)
+                    .addComponent(mainLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addContainerGap()))
+        );
+        menuBarLayout.setVerticalGroup(
+            menuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuBarLayout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(menuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(mainSearch, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                    .addComponent(mainSearchButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addContainerGap())
+            .addGroup(menuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuBarLayout.createSequentialGroup()
+                    .addContainerGap(8, Short.MAX_VALUE)
+                    .addComponent(mainLogin)
+                    .addContainerGap(8, Short.MAX_VALUE)))
+        );
+
+        mainPanelTitle1.setFont(new java.awt.Font("Gadugi", 1, 48)); // NOI18N
+        mainPanelTitle1.setForeground(new java.awt.Color(254, 249, 217));
+        mainPanelTitle1.setText("Top 5 films");
+
+        jPanel7.setBackground(new java.awt.Color(226, 121, 59));
+        jPanel7.setLayout(new java.awt.GridLayout(1, 0));
+
+        jPanel1.setBackground(new java.awt.Color(226, 121, 59));
+        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jPanel1.setToolTipText("");
+
+        filmPic.setBackground(new java.awt.Color(68, 51, 41));
+
+        javax.swing.GroupLayout filmPicLayout = new javax.swing.GroupLayout(filmPic);
+        filmPic.setLayout(filmPicLayout);
+        filmPicLayout.setHorizontalGroup(
+            filmPicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        filmPicLayout.setVerticalGroup(
+            filmPicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 296, Short.MAX_VALUE)
+        );
+
+        FilmTitle1.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        FilmTitle1.setForeground(new java.awt.Color(254, 249, 217));
+        FilmTitle1.setText("Title 1");
+
+        f1s1.setText("f1s1");
+
+        f1s2.setText("f1s2");
+
+        f1s3.setText("f1s3");
+
+        f2s4.setText("f1s4");
+
+        f2s5.setText("f1s5");
+
+        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
+        jPanel1.setLayout(jPanel1Layout);
+        jPanel1Layout.setHorizontalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addComponent(f1s1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f1s2)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f1s3)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f2s4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f2s5))
+                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(filmPic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(FilmTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        jPanel1Layout.setVerticalGroup(
+            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(filmPic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(FilmTitle1)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(f1s1)
+                    .addComponent(f1s2)
+                    .addComponent(f1s3)
+                    .addComponent(f2s4)
+                    .addComponent(f2s5))
+                .addContainerGap())
+        );
+
+        jPanel7.add(jPanel1);
+
+        jPanel3.setBackground(new java.awt.Color(226, 121, 59));
+        jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jPanel3.setToolTipText("");
+
+        filmPic2.setBackground(new java.awt.Color(68, 51, 41));
+
+        javax.swing.GroupLayout filmPic2Layout = new javax.swing.GroupLayout(filmPic2);
+        filmPic2.setLayout(filmPic2Layout);
+        filmPic2Layout.setHorizontalGroup(
+            filmPic2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        filmPic2Layout.setVerticalGroup(
+            filmPic2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 296, Short.MAX_VALUE)
+        );
+
+        FilmTitle2.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        FilmTitle2.setForeground(new java.awt.Color(254, 249, 217));
+        FilmTitle2.setText("Title 1");
+
+        f1s4.setText("f1s1");
+
+        f1s5.setText("f1s2");
+
+        f1s6.setText("f1s3");
+
+        f2s6.setText("f1s4");
+
+        f2s7.setText("f1s5");
+
+        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
+        jPanel3.setLayout(jPanel3Layout);
+        jPanel3Layout.setHorizontalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel3Layout.createSequentialGroup()
+                        .addComponent(f1s4)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f1s5)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f1s6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f2s6)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f2s7))
+                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(filmPic2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(FilmTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        jPanel3Layout.setVerticalGroup(
+            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(filmPic2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(FilmTitle2)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(f1s4)
+                    .addComponent(f1s5)
+                    .addComponent(f1s6)
+                    .addComponent(f2s6)
+                    .addComponent(f2s7))
+                .addContainerGap())
+        );
+
+        jPanel7.add(jPanel3);
+
+        jPanel4.setBackground(new java.awt.Color(226, 121, 59));
+        jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jPanel4.setToolTipText("");
+
+        filmPic3.setBackground(new java.awt.Color(68, 51, 41));
+
+        javax.swing.GroupLayout filmPic3Layout = new javax.swing.GroupLayout(filmPic3);
+        filmPic3.setLayout(filmPic3Layout);
+        filmPic3Layout.setHorizontalGroup(
+            filmPic3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        filmPic3Layout.setVerticalGroup(
+            filmPic3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 296, Short.MAX_VALUE)
+        );
+
+        FilmTitle3.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        FilmTitle3.setForeground(new java.awt.Color(254, 249, 217));
+        FilmTitle3.setText("Title 1");
+
+        f1s7.setText("f1s1");
+
+        f1s8.setText("f1s2");
+
+        f1s9.setText("f1s3");
+
+        f2s8.setText("f1s4");
+
+        f2s9.setText("f1s5");
+
+        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
+        jPanel4.setLayout(jPanel4Layout);
+        jPanel4Layout.setHorizontalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addComponent(f1s7)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f1s8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f1s9)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f2s8)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f2s9))
+                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(filmPic3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(FilmTitle3, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        jPanel4Layout.setVerticalGroup(
+            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel4Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(filmPic3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(FilmTitle3)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(f1s7)
+                    .addComponent(f1s8)
+                    .addComponent(f1s9)
+                    .addComponent(f2s8)
+                    .addComponent(f2s9))
+                .addContainerGap())
+        );
+
+        jPanel7.add(jPanel4);
+
+        jPanel5.setBackground(new java.awt.Color(226, 121, 59));
+        jPanel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jPanel5.setToolTipText("");
+
+        filmPic4.setBackground(new java.awt.Color(68, 51, 41));
+
+        javax.swing.GroupLayout filmPic4Layout = new javax.swing.GroupLayout(filmPic4);
+        filmPic4.setLayout(filmPic4Layout);
+        filmPic4Layout.setHorizontalGroup(
+            filmPic4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        filmPic4Layout.setVerticalGroup(
+            filmPic4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 296, Short.MAX_VALUE)
+        );
+
+        FilmTitle4.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        FilmTitle4.setForeground(new java.awt.Color(254, 249, 217));
+        FilmTitle4.setText("Title 1");
+
+        f1s10.setText("f1s1");
+
+        f1s11.setText("f1s2");
+
+        f1s12.setText("f1s3");
+
+        f2s10.setText("f1s4");
+
+        f2s11.setText("f1s5");
+
+        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
+        jPanel5.setLayout(jPanel5Layout);
+        jPanel5Layout.setHorizontalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel5Layout.createSequentialGroup()
+                        .addComponent(f1s10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f1s11)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f1s12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f2s10)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f2s11))
+                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(filmPic4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(FilmTitle4, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        jPanel5Layout.setVerticalGroup(
+            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel5Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(filmPic4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(FilmTitle4)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(f1s10)
+                    .addComponent(f1s11)
+                    .addComponent(f1s12)
+                    .addComponent(f2s10)
+                    .addComponent(f2s11))
+                .addContainerGap())
+        );
+
+        jPanel7.add(jPanel5);
+
+        jPanel6.setBackground(new java.awt.Color(226, 121, 59));
+        jPanel6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
+        jPanel6.setToolTipText("");
+
+        filmPic5.setBackground(new java.awt.Color(68, 51, 41));
+
+        javax.swing.GroupLayout filmPic5Layout = new javax.swing.GroupLayout(filmPic5);
+        filmPic5.setLayout(filmPic5Layout);
+        filmPic5Layout.setHorizontalGroup(
+            filmPic5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        filmPic5Layout.setVerticalGroup(
+            filmPic5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 296, Short.MAX_VALUE)
+        );
+
+        FilmTitle5.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
+        FilmTitle5.setForeground(new java.awt.Color(254, 249, 217));
+        FilmTitle5.setText("Title 1");
+
+        f1s13.setText("f1s1");
+
+        f1s14.setText("f1s2");
+
+        f1s15.setText("f1s3");
+
+        f2s12.setText("f1s4");
+
+        f2s13.setText("f1s5");
+
+        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
+        jPanel6.setLayout(jPanel6Layout);
+        jPanel6Layout.setHorizontalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel6Layout.createSequentialGroup()
+                        .addComponent(f1s13)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f1s14)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f1s15)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f2s12)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(f2s13))
+                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                        .addComponent(filmPic5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(FilmTitle5, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap())
+        );
+        jPanel6Layout.setVerticalGroup(
+            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(jPanel6Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(filmPic5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(FilmTitle5)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(f1s13)
+                    .addComponent(f1s14)
+                    .addComponent(f1s15)
+                    .addComponent(f2s12)
+                    .addComponent(f2s13))
+                .addContainerGap())
+        );
+
+        jPanel7.add(jPanel6);
+
+        javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
+        mainPanel.setLayout(mainPanelLayout);
+        mainPanelLayout.setHorizontalGroup(
+            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(menuBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
+            .addGroup(mainPanelLayout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(mainPanelTitle1)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+        mainPanelLayout.setVerticalGroup(
+            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(mainPanelLayout.createSequentialGroup()
+                .addComponent(menuBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(41, 41, 41)
+                .addComponent(mainPanelTitle1)
+                .addGap(18, 18, 18)
+                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE))
+        );
+
+        getContentPane().add(mainPanel, "mainPanel");
 
         loggedMain.setBackground(new java.awt.Color(226, 121, 59));
 
@@ -1043,452 +1489,6 @@ public class mainInterface extends javax.swing.JFrame {
         );
 
         getContentPane().add(loggedMain, "loggedMain");
-
-        mainPanel.setBackground(new java.awt.Color(226, 121, 59));
-
-        menuBar.setBackground(new java.awt.Color(68, 51, 41));
-
-        mainSearch.setBackground(new java.awt.Color(254, 249, 217));
-        mainSearch.setFont(new java.awt.Font("Gadugi", 0, 14)); // NOI18N
-        mainSearch.setForeground(new java.awt.Color(201, 198, 145));
-        mainSearch.setText("jTextField1");
-        mainSearch.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 2));
-
-        mainSearchButton.setBackground(new java.awt.Color(254, 249, 217));
-        mainSearchButton.setForeground(new java.awt.Color(201, 198, 145));
-        mainSearchButton.setText("X");
-        mainSearchButton.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 2));
-
-        mainLogin.setBackground(new java.awt.Color(68, 51, 41));
-        mainLogin.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
-        mainLogin.setForeground(new java.awt.Color(254, 249, 217));
-        mainLogin.setText("Log in");
-        mainLogin.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                mainLoginActionPerformed(evt);
-            }
-        });
-
-        javax.swing.GroupLayout menuBarLayout = new javax.swing.GroupLayout(menuBar);
-        menuBar.setLayout(menuBarLayout);
-        menuBarLayout.setHorizontalGroup(
-            menuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(menuBarLayout.createSequentialGroup()
-                .addGap(170, 170, 170)
-                .addComponent(mainSearch, javax.swing.GroupLayout.PREFERRED_SIZE, 643, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(mainSearchButton, javax.swing.GroupLayout.PREFERRED_SIZE, 62, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(menuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuBarLayout.createSequentialGroup()
-                    .addContainerGap(1000, Short.MAX_VALUE)
-                    .addComponent(mainLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 194, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addContainerGap()))
-        );
-        menuBarLayout.setVerticalGroup(
-            menuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuBarLayout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(menuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(mainSearch, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
-                    .addComponent(mainSearchButton, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addContainerGap())
-            .addGroup(menuBarLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, menuBarLayout.createSequentialGroup()
-                    .addContainerGap(8, Short.MAX_VALUE)
-                    .addComponent(mainLogin)
-                    .addContainerGap(8, Short.MAX_VALUE)))
-        );
-
-        mainPanelTitle1.setFont(new java.awt.Font("Gadugi", 1, 48)); // NOI18N
-        mainPanelTitle1.setForeground(new java.awt.Color(254, 249, 217));
-        mainPanelTitle1.setText("Top 5 films");
-
-        jPanel7.setBackground(new java.awt.Color(226, 121, 59));
-        jPanel7.setLayout(new java.awt.GridLayout(1, 0));
-
-        jPanel1.setBackground(new java.awt.Color(226, 121, 59));
-        jPanel1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        jPanel1.setToolTipText("");
-
-        filmPic.setBackground(new java.awt.Color(68, 51, 41));
-
-        javax.swing.GroupLayout filmPicLayout = new javax.swing.GroupLayout(filmPic);
-        filmPic.setLayout(filmPicLayout);
-        filmPicLayout.setHorizontalGroup(
-            filmPicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        filmPicLayout.setVerticalGroup(
-            filmPicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 296, Short.MAX_VALUE)
-        );
-
-        FilmTitle1.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        FilmTitle1.setForeground(new java.awt.Color(254, 249, 217));
-        FilmTitle1.setText("Title 1");
-
-        f1s1.setText("f1s1");
-
-        f1s2.setText("f1s2");
-
-        f1s3.setText("f1s3");
-
-        f2s4.setText("f1s4");
-
-        f2s5.setText("f1s5");
-
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(f1s1)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f1s2)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f1s3)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f2s4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f2s5))
-                    .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(filmPic, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(FilmTitle1, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(filmPic, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(FilmTitle1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(f1s1)
-                    .addComponent(f1s2)
-                    .addComponent(f1s3)
-                    .addComponent(f2s4)
-                    .addComponent(f2s5))
-                .addContainerGap())
-        );
-
-        jPanel7.add(jPanel1);
-
-        jPanel3.setBackground(new java.awt.Color(226, 121, 59));
-        jPanel3.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        jPanel3.setToolTipText("");
-
-        filmPic2.setBackground(new java.awt.Color(68, 51, 41));
-
-        javax.swing.GroupLayout filmPic2Layout = new javax.swing.GroupLayout(filmPic2);
-        filmPic2.setLayout(filmPic2Layout);
-        filmPic2Layout.setHorizontalGroup(
-            filmPic2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        filmPic2Layout.setVerticalGroup(
-            filmPic2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 296, Short.MAX_VALUE)
-        );
-
-        FilmTitle2.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        FilmTitle2.setForeground(new java.awt.Color(254, 249, 217));
-        FilmTitle2.setText("Title 1");
-
-        f1s4.setText("f1s1");
-
-        f1s5.setText("f1s2");
-
-        f1s6.setText("f1s3");
-
-        f2s6.setText("f1s4");
-
-        f2s7.setText("f1s5");
-
-        javax.swing.GroupLayout jPanel3Layout = new javax.swing.GroupLayout(jPanel3);
-        jPanel3.setLayout(jPanel3Layout);
-        jPanel3Layout.setHorizontalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel3Layout.createSequentialGroup()
-                        .addComponent(f1s4)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f1s5)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f1s6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f2s6)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f2s7))
-                    .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(filmPic2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(FilmTitle2, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-        jPanel3Layout.setVerticalGroup(
-            jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(filmPic2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(FilmTitle2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(f1s4)
-                    .addComponent(f1s5)
-                    .addComponent(f1s6)
-                    .addComponent(f2s6)
-                    .addComponent(f2s7))
-                .addContainerGap())
-        );
-
-        jPanel7.add(jPanel3);
-
-        jPanel4.setBackground(new java.awt.Color(226, 121, 59));
-        jPanel4.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        jPanel4.setToolTipText("");
-
-        filmPic3.setBackground(new java.awt.Color(68, 51, 41));
-
-        javax.swing.GroupLayout filmPic3Layout = new javax.swing.GroupLayout(filmPic3);
-        filmPic3.setLayout(filmPic3Layout);
-        filmPic3Layout.setHorizontalGroup(
-            filmPic3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        filmPic3Layout.setVerticalGroup(
-            filmPic3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 296, Short.MAX_VALUE)
-        );
-
-        FilmTitle3.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        FilmTitle3.setForeground(new java.awt.Color(254, 249, 217));
-        FilmTitle3.setText("Title 1");
-
-        f1s7.setText("f1s1");
-
-        f1s8.setText("f1s2");
-
-        f1s9.setText("f1s3");
-
-        f2s8.setText("f1s4");
-
-        f2s9.setText("f1s5");
-
-        javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
-        jPanel4.setLayout(jPanel4Layout);
-        jPanel4Layout.setHorizontalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addComponent(f1s7)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f1s8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f1s9)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f2s8)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f2s9))
-                    .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(filmPic3, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(FilmTitle3, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-        jPanel4Layout.setVerticalGroup(
-            jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel4Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(filmPic3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(FilmTitle3)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(f1s7)
-                    .addComponent(f1s8)
-                    .addComponent(f1s9)
-                    .addComponent(f2s8)
-                    .addComponent(f2s9))
-                .addContainerGap())
-        );
-
-        jPanel7.add(jPanel4);
-
-        jPanel5.setBackground(new java.awt.Color(226, 121, 59));
-        jPanel5.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        jPanel5.setToolTipText("");
-
-        filmPic4.setBackground(new java.awt.Color(68, 51, 41));
-
-        javax.swing.GroupLayout filmPic4Layout = new javax.swing.GroupLayout(filmPic4);
-        filmPic4.setLayout(filmPic4Layout);
-        filmPic4Layout.setHorizontalGroup(
-            filmPic4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        filmPic4Layout.setVerticalGroup(
-            filmPic4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 296, Short.MAX_VALUE)
-        );
-
-        FilmTitle4.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        FilmTitle4.setForeground(new java.awt.Color(254, 249, 217));
-        FilmTitle4.setText("Title 1");
-
-        f1s10.setText("f1s1");
-
-        f1s11.setText("f1s2");
-
-        f1s12.setText("f1s3");
-
-        f2s10.setText("f1s4");
-
-        f2s11.setText("f1s5");
-
-        javax.swing.GroupLayout jPanel5Layout = new javax.swing.GroupLayout(jPanel5);
-        jPanel5.setLayout(jPanel5Layout);
-        jPanel5Layout.setHorizontalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel5Layout.createSequentialGroup()
-                        .addComponent(f1s10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f1s11)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f1s12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f2s10)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f2s11))
-                    .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(filmPic4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(FilmTitle4, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-        jPanel5Layout.setVerticalGroup(
-            jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel5Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(filmPic4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(FilmTitle4)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(f1s10)
-                    .addComponent(f1s11)
-                    .addComponent(f1s12)
-                    .addComponent(f2s10)
-                    .addComponent(f2s11))
-                .addContainerGap())
-        );
-
-        jPanel7.add(jPanel5);
-
-        jPanel6.setBackground(new java.awt.Color(226, 121, 59));
-        jPanel6.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.LOWERED));
-        jPanel6.setToolTipText("");
-
-        filmPic5.setBackground(new java.awt.Color(68, 51, 41));
-
-        javax.swing.GroupLayout filmPic5Layout = new javax.swing.GroupLayout(filmPic5);
-        filmPic5.setLayout(filmPic5Layout);
-        filmPic5Layout.setHorizontalGroup(
-            filmPic5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        filmPic5Layout.setVerticalGroup(
-            filmPic5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 296, Short.MAX_VALUE)
-        );
-
-        FilmTitle5.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
-        FilmTitle5.setForeground(new java.awt.Color(254, 249, 217));
-        FilmTitle5.setText("Title 1");
-
-        f1s13.setText("f1s1");
-
-        f1s14.setText("f1s2");
-
-        f1s15.setText("f1s3");
-
-        f2s12.setText("f1s4");
-
-        f2s13.setText("f1s5");
-
-        javax.swing.GroupLayout jPanel6Layout = new javax.swing.GroupLayout(jPanel6);
-        jPanel6.setLayout(jPanel6Layout);
-        jPanel6Layout.setHorizontalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel6Layout.createSequentialGroup()
-                        .addComponent(f1s13)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f1s14)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f1s15)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f2s12)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(f2s13))
-                    .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                        .addComponent(filmPic5, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(FilmTitle5, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap())
-        );
-        jPanel6Layout.setVerticalGroup(
-            jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel6Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(filmPic5, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(FilmTitle5)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(f1s13)
-                    .addComponent(f1s14)
-                    .addComponent(f1s15)
-                    .addComponent(f2s12)
-                    .addComponent(f2s13))
-                .addContainerGap())
-        );
-
-        jPanel7.add(jPanel6);
-
-        javax.swing.GroupLayout mainPanelLayout = new javax.swing.GroupLayout(mainPanel);
-        mainPanel.setLayout(mainPanelLayout);
-        mainPanelLayout.setHorizontalGroup(
-            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(menuBar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-            .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE)
-            .addGroup(mainPanelLayout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(mainPanelTitle1)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-        mainPanelLayout.setVerticalGroup(
-            mainPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(mainPanelLayout.createSequentialGroup()
-                .addComponent(menuBar, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(41, 41, 41)
-                .addComponent(mainPanelTitle1)
-                .addGap(18, 18, 18)
-                .addComponent(jPanel7, javax.swing.GroupLayout.DEFAULT_SIZE, 431, Short.MAX_VALUE))
-        );
-
-        getContentPane().add(mainPanel, "mainPanel");
 
         productionEditor.setBackground(new java.awt.Color(226, 121, 59));
 
