@@ -132,6 +132,7 @@ public class mainInterface extends javax.swing.JFrame {
         jPanel7 = new javax.swing.JPanel();
         jPanel1 = new javax.swing.JPanel();
         filmPic = new javax.swing.JPanel();
+        titlePic1Lbl = new javax.swing.JLabel();
         FilmTitle1 = new javax.swing.JLabel();
         f1s1 = new javax.swing.JLabel();
         f1s2 = new javax.swing.JLabel();
@@ -140,6 +141,7 @@ public class mainInterface extends javax.swing.JFrame {
         f2s5 = new javax.swing.JLabel();
         jPanel3 = new javax.swing.JPanel();
         filmPic2 = new javax.swing.JPanel();
+        title2PicLbl = new javax.swing.JLabel();
         FilmTitle2 = new javax.swing.JLabel();
         f1s4 = new javax.swing.JLabel();
         f1s5 = new javax.swing.JLabel();
@@ -148,6 +150,7 @@ public class mainInterface extends javax.swing.JFrame {
         f2s7 = new javax.swing.JLabel();
         jPanel4 = new javax.swing.JPanel();
         filmPic3 = new javax.swing.JPanel();
+        title3PicLbl = new javax.swing.JLabel();
         FilmTitle3 = new javax.swing.JLabel();
         f1s7 = new javax.swing.JLabel();
         f1s8 = new javax.swing.JLabel();
@@ -156,6 +159,7 @@ public class mainInterface extends javax.swing.JFrame {
         f2s9 = new javax.swing.JLabel();
         jPanel5 = new javax.swing.JPanel();
         filmPic4 = new javax.swing.JPanel();
+        title4PicLbl = new javax.swing.JLabel();
         FilmTitle4 = new javax.swing.JLabel();
         f1s10 = new javax.swing.JLabel();
         f1s11 = new javax.swing.JLabel();
@@ -164,6 +168,7 @@ public class mainInterface extends javax.swing.JFrame {
         f2s11 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         filmPic5 = new javax.swing.JPanel();
+        title5PicLbl = new javax.swing.JLabel();
         FilmTitle5 = new javax.swing.JLabel();
         f1s13 = new javax.swing.JLabel();
         f1s14 = new javax.swing.JLabel();
@@ -693,11 +698,11 @@ public class mainInterface extends javax.swing.JFrame {
         filmPic.setLayout(filmPicLayout);
         filmPicLayout.setHorizontalGroup(
             filmPicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(titlePic1Lbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         filmPicLayout.setVerticalGroup(
             filmPicLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 296, Short.MAX_VALUE)
+            .addComponent(titlePic1Lbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
         );
 
         FilmTitle1.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
@@ -765,11 +770,11 @@ public class mainInterface extends javax.swing.JFrame {
         filmPic2.setLayout(filmPic2Layout);
         filmPic2Layout.setHorizontalGroup(
             filmPic2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(title2PicLbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         filmPic2Layout.setVerticalGroup(
             filmPic2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 296, Short.MAX_VALUE)
+            .addComponent(title2PicLbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
         );
 
         FilmTitle2.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
@@ -837,11 +842,11 @@ public class mainInterface extends javax.swing.JFrame {
         filmPic3.setLayout(filmPic3Layout);
         filmPic3Layout.setHorizontalGroup(
             filmPic3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(title3PicLbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         filmPic3Layout.setVerticalGroup(
             filmPic3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 296, Short.MAX_VALUE)
+            .addComponent(title3PicLbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
         );
 
         FilmTitle3.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
@@ -909,11 +914,11 @@ public class mainInterface extends javax.swing.JFrame {
         filmPic4.setLayout(filmPic4Layout);
         filmPic4Layout.setHorizontalGroup(
             filmPic4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(title4PicLbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         filmPic4Layout.setVerticalGroup(
             filmPic4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 296, Short.MAX_VALUE)
+            .addComponent(title4PicLbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
         );
 
         FilmTitle4.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
@@ -981,11 +986,11 @@ public class mainInterface extends javax.swing.JFrame {
         filmPic5.setLayout(filmPic5Layout);
         filmPic5Layout.setHorizontalGroup(
             filmPic5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
+            .addComponent(title5PicLbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         filmPic5Layout.setVerticalGroup(
             filmPic5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 296, Short.MAX_VALUE)
+            .addComponent(title5PicLbl, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 296, Short.MAX_VALUE)
         );
 
         FilmTitle5.setFont(new java.awt.Font("Gadugi", 1, 24)); // NOI18N
@@ -4949,6 +4954,11 @@ public class mainInterface extends javax.swing.JFrame {
     private javax.swing.JButton return2main;
     private javax.swing.JButton return2main1;
     private javax.swing.JPanel searchResults;
+    private javax.swing.JLabel title2PicLbl;
+    private javax.swing.JLabel title3PicLbl;
+    private javax.swing.JLabel title4PicLbl;
+    private javax.swing.JLabel title5PicLbl;
+    private javax.swing.JLabel titlePic1Lbl;
     private javax.swing.JPanel userEditor;
     private javax.swing.JTextArea userEditorAddress;
     private javax.swing.JFormattedTextField userEditorBirthdate;

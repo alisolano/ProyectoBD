@@ -290,7 +290,6 @@ public class SigninWindow extends javax.swing.JFrame {
         idTypeCB.setBackground(new java.awt.Color(237, 204, 111));
         idTypeCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
         idTypeCB.setForeground(new java.awt.Color(48, 89, 138));
-        idTypeCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         idTypeCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
 
         jLabel9.setBackground(new java.awt.Color(210, 235, 255));
@@ -1088,7 +1087,9 @@ public class SigninWindow extends javax.swing.JFrame {
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             File selectedFile = fileChooser.getSelectedFile();
             ImageIcon imageIcon = new ImageIcon(selectedFile.getAbsolutePath());
-            pfpLbl.setIcon(imageIcon);
+            ImageIcon pfpIcon = new ImageIcon(imageIcon.getImage().getScaledInstance(175, 175, java.awt.Image.SCALE_DEFAULT));
+            pfpLbl.setText("");
+            pfpLbl.setIcon(pfpIcon);
         }
     }//GEN-LAST:event_chooseBttnActionPerformed
 
