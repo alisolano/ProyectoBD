@@ -5,9 +5,13 @@
 package vista;
 
 import Connect.ConnectDB;
+import java.awt.Graphics;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -15,6 +19,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.filechooser.FileNameExtensionFilter;
@@ -34,6 +40,7 @@ public class SigninWindow extends javax.swing.JFrame {
                   gender ,idType, nationality, country, region, district;
     public int phone, idNum, realgender, realidtype, realidDistrict, realidnationality;
     public Date realBirthdate;
+    public byte[] photo;
     SimpleDateFormat dateFormat = new SimpleDateFormat("dd/MM/yyyy");    
 
     // Do not touch uwu
@@ -291,6 +298,11 @@ public class SigninWindow extends javax.swing.JFrame {
         idTypeCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
         idTypeCB.setForeground(new java.awt.Color(48, 89, 138));
         idTypeCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
+        idTypeCB.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                idTypeCBActionPerformed(evt);
+            }
+        });
 
         jLabel9.setBackground(new java.awt.Color(210, 235, 255));
         jLabel9.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
@@ -1049,10 +1061,25 @@ public class SigninWindow extends javax.swing.JFrame {
             realidnationality = (int) nationCB.getSelectedIndex();
             realidnationality = realidnationality + 1;
             System.out.println("La nacionanlidad es" + realidnationality);
-             
+            Icon icon = pfpLbl.getIcon();
+                byte[] photo = null;
+                if (icon instanceof ImageIcon) {
+                    BufferedImage bufferedImage = new BufferedImage(icon.getIconWidth(), icon.getIconHeight(), BufferedImage.TYPE_INT_RGB);
+                    Graphics g = bufferedImage.createGraphics();
+                    icon.paintIcon(null, g, 0, 0);
+                    g.dispose();
 
+                    try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
+                        ImageIO.write(bufferedImage, "jpg", baos);
+                        baos.flush();
+                        photo = baos.toByteArray();
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+                
             try {
-                ConnectDB.InsertUserSys(name, secondName, lastNames, secondLastNames, idNum, birthdate, email, phone, username, password,
+                ConnectDB.InsertUserSys(name, secondName, lastNames, secondLastNames, idNum, birthdate, photo, email, phone, username, password,
                     realidDistrict, realidnationality, realgender, realidtype);
             } catch (SQLException ex) {
                 Logger.getLogger(SigninWindow.class.getName()).log(Level.SEVERE, null, ex);
@@ -1089,6 +1116,10 @@ public class SigninWindow extends javax.swing.JFrame {
     private void birthdateFormattedTxtActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_birthdateFormattedTxtActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_birthdateFormattedTxtActionPerformed
+
+    private void idTypeCBActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_idTypeCBActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_idTypeCBActionPerformed
 
     /**
      * @param args the command line arguments

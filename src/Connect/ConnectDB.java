@@ -26,7 +26,7 @@ public class ConnectDB {
     private static Map<String, Integer> nationalityIdMap = new HashMap<>();
 
     public static void InsertUserSys(String firstName, String middleName, 
-                                    String lastName, String secondSurname, int idNumber, String birthdate, String email, 
+                                    String lastName, String secondSurname, int idNumber, String birthdate, byte[] photo, String email, 
                                     int phoneNumber, String username, String password, 
                                     int idDistrict, int idNationality, int idGender, int idType) throws SQLException {
         String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
@@ -42,7 +42,8 @@ public class ConnectDB {
         stmt.setString(4, secondSurname);
         stmt.setInt(5, idNumber);
         stmt.setString(6, birthdate); 
-        stmt.setNull(7, java.sql.Types.BLOB); 
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(photo);
+        stmt.setBinaryStream(7, inputStream, photo.length);
         stmt.setString(8, email);
         stmt.setInt(9, phoneNumber);
         stmt.setString(10, username);
@@ -58,7 +59,7 @@ public class ConnectDB {
     }
     
     public static void InsertUserSysAdministrator(String firstName, String middleName, 
-                                    String lastName, String secondSurname, int idNumber, String birthdate, String email, 
+                                    String lastName, String secondSurname, int idNumber, String birthdate, byte[] photo, String email, 
                                     int phoneNumber, String username, String password, 
                                     int idDistrict, int idNationality, int idGender, int idType) throws SQLException {
         String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
@@ -74,7 +75,8 @@ public class ConnectDB {
         stmt.setString(4, secondSurname);
         stmt.setInt(5, idNumber);
         stmt.setString(6, birthdate); 
-        stmt.setNull(7, java.sql.Types.BLOB); 
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(photo);
+        stmt.setBinaryStream(7, inputStream, photo.length);
         stmt.setString(8, email);
         stmt.setInt(9, phoneNumber);
         stmt.setString(10, username);
@@ -90,7 +92,7 @@ public class ConnectDB {
     }
     
     public static void InsertPerson(String p_FirstName, String p_MiddleName, String p_LastName,
-                                    String p_SecondSurname, String p_Biography, String p_birthdate, int p_Height,
+                                    String p_SecondSurname, String p_Biography, String p_birthdate, int p_Height, byte[] photo,
                                     String p_Trivia, int p_idDistrict) throws SQLException {
             
         String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
@@ -107,7 +109,8 @@ public class ConnectDB {
         stmt.setString(5, p_Biography);
         stmt.setString(6, p_birthdate); 
         stmt.setFloat(7, p_Height);
-        stmt.setNull(8, java.sql.Types.BLOB); 
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(photo);
+        stmt.setBinaryStream(8, inputStream, photo.length);
         stmt.setString(9, p_Trivia);
         stmt.setInt(10, p_idDistrict);
 
@@ -118,7 +121,7 @@ public class ConnectDB {
     
     public static void updatePerson(int p_id, String p_FirstName, String p_MiddleName, 
                                     String p_LastName, String p_SecondSurname, String p_Biography, String p_birthdate, 
-                                    Float p_Height, String p_Trivia, 
+                                    Float p_Height, byte[] photo, String p_Trivia, 
                                     int p_idDistrict) throws SQLException {
         
         String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
@@ -136,7 +139,8 @@ public class ConnectDB {
         stmt.setString(6, p_Biography);
         stmt.setString(7, p_birthdate); 
         stmt.setFloat(8, p_Height);
-        stmt.setNull(9, java.sql.Types.BLOB); 
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(photo);
+        stmt.setBinaryStream(9, inputStream, photo.length);
         stmt.setString(10, p_Trivia);
         stmt.setInt(11, p_idDistrict);
 
@@ -147,7 +151,7 @@ public class ConnectDB {
     
     public static void updateProduction(int p_id, int p_idCategory, String p_Title, 
                                          int p_Duration, String p_Synopsis, String p_Trailer, 
-                                         int p_ReleaseYear) throws SQLException {
+                                         int p_ReleaseYear, byte[] photo) throws SQLException {
         
         String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
         String uName = "proyectoDBA";
@@ -163,7 +167,8 @@ public class ConnectDB {
         stmt.setString(5, p_Synopsis);
         stmt.setString(6, p_Trailer);
         stmt.setInt(7, p_ReleaseYear);
-        stmt.setNull(8, java.sql.Types.BLOB); 
+        ByteArrayInputStream inputStream = new ByteArrayInputStream(photo);
+        stmt.setBinaryStream(8, inputStream, photo.length);
 
         stmt.execute();
         stmt.close();

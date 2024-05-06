@@ -4,12 +4,20 @@
  */
 package vista;
 import Connect.ConnectDB;
+import java.awt.Graphics;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+import java.awt.image.BufferedImage;
+import java.io.ByteArrayOutputStream;
 import java.io.File;
+import java.io.IOException;
 import java.sql.SQLException;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import javax.imageio.ImageIO;
+import javax.swing.Icon;
 import javax.swing.ImageIcon;
 import javax.swing.JFileChooser;
 import javax.swing.JOptionPane;
@@ -24,22 +32,83 @@ public class mainInterface extends javax.swing.JFrame {
     public String firstName, middleName, lastName, secondSurname, biography, trivia, birthdate;
     public int Height, idDistrict;
     
-
+    public String username, password, email, name, secondName, lastNames, secondLastNames, address, 
+                  gender ,idType, nationality, country, region, district;
+    public int phone, idNum, realgender, realidtype, realidDistrict, realidnationality;
+    public Date realBirthdate;
+    public byte[] photo;
+    
     /**
      * Creates new form mainInterface
      */
     public mainInterface() {
         initComponents();
         try {
-       ArrayList<String> categories = ConnectDB.getCategory();
-       for (String category : categories) {
-           productionEditorGenreCB.addItem(category);
+        ArrayList<String> categories = ConnectDB.getCategory();
+        for (String category : categories) {
+            productionEditorGenreCB.addItem(category);
+        }
+        ArrayList<String> genders = ConnectDB.getGender();
+        for (String gender : genders) {
+            userEditorGenderCB.addItem(gender);
+            personEditorGenderCB.addItem(gender);
+        }
+        ArrayList<String> idType = ConnectDB.getIdtype();
+        for (String id : idType) {
+            userEditorIdTypeCB.addItem(id);
+    }
+        ArrayList<String> Nationalities = ConnectDB.getNationality();
+        for (String country : Nationalities) {
+             userEditorNationalityCB.addItem(country);
+             personEditorNationCB.addItem(country);
+        }
+        ArrayList<String> Countries = ConnectDB.getCountry();
+        for (String country : Countries) {
+            userEditorCountryCB.addItem(country);
+            personEditorBirthplaceCB.addItem(country);
+        }
+        userEditorCountryCB.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                userEditorRegionCB.removeAllItems();
+
+                country = (String) userEditorCountryCB.getSelectedItem();
+                System.out.println(country);
+                try {
+                    ArrayList<String> States = ConnectDB.getStates(country);
+                            for (String state : States) {
+                                userEditorRegionCB.addItem(state);
+                            }
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
             }
+        });
+
+        userEditorRegionCB.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                // Limpiar los elementos actuales del ComboBox 6
+                userEditorDistrictCB.removeAllItems();
+
+                // Obtener el elemento seleccionado por el usuario
+                region = (String) userEditorRegionCB.getSelectedItem();
+                System.out.println(region);
+                try {
+                    ArrayList<String> districts = ConnectDB.getDistricts(region);
+                    for (String district : districts) {
+                        userEditorDistrictCB.addItem(district);
+                    }
+                    System.out.println("" + districts);
+                } catch (SQLException ex) {
+                    ex.printStackTrace();
+                }
+            }
+        });
         } catch (SQLException ex) {
-            
+            JOptionPane.showMessageDialog(null, "Hubo un error", "Error", JOptionPane.ERROR_MESSAGE);
         }
     }
-    
     public void userEditorCleaner(){
         userEditorUsername.setText("");
         userEditorAddress.setText("");
@@ -239,7 +308,6 @@ public class mainInterface extends javax.swing.JFrame {
         personEditorAddP1 = new javax.swing.JButton();
         personEditorAddRel1 = new javax.swing.JButton();
         personEditorAddTrivia1 = new javax.swing.JButton();
-        filmPic1 = new javax.swing.JPanel();
         jLabel41 = new javax.swing.JLabel();
         productionEditorCategoryCB = new javax.swing.JComboBox<>();
         productionEditorGenreCB = new javax.swing.JComboBox<>();
@@ -250,6 +318,7 @@ public class mainInterface extends javax.swing.JFrame {
         productionEditorPlaytime = new javax.swing.JTextField();
         productionEditorLinkTrailer = new javax.swing.JButton();
         productionEditorRelease = new javax.swing.JTextField();
+        filmPic1 = new javax.swing.JLabel();
         userEditor = new javax.swing.JPanel();
         menuBar1 = new javax.swing.JPanel();
         userEditorReturnBtn = new javax.swing.JButton();
@@ -299,6 +368,7 @@ public class mainInterface extends javax.swing.JFrame {
         userEditorSecondSurname = new javax.swing.JTextField();
         jPanel20 = new javax.swing.JPanel();
         jCheckBox1 = new javax.swing.JCheckBox();
+        jLabel36 = new javax.swing.JLabel();
         personEditor = new javax.swing.JPanel();
         menuBar2 = new javax.swing.JPanel();
         personEditorReturnBtn = new javax.swing.JButton();
@@ -331,7 +401,6 @@ public class mainInterface extends javax.swing.JFrame {
         jScrollPane3 = new javax.swing.JScrollPane();
         personEditorBio = new javax.swing.JTextArea();
         jLabel33 = new javax.swing.JLabel();
-        jPanel2 = new javax.swing.JPanel();
         personEditorSelectBtn = new javax.swing.JButton();
         personEditorClearPicBtn = new javax.swing.JButton();
         personEditorAddP = new javax.swing.JButton();
@@ -339,6 +408,7 @@ public class mainInterface extends javax.swing.JFrame {
         personEditorAddTrivia = new javax.swing.JButton();
         personEditorSecondSurname = new javax.swing.JTextField();
         jLabel22 = new javax.swing.JLabel();
+        pfpLbl12 = new javax.swing.JLabel();
         searchResults = new javax.swing.JPanel();
         menuBar5 = new javax.swing.JPanel();
         mainSearch2 = new javax.swing.JTextField();
@@ -1684,19 +1754,6 @@ public class mainInterface extends javax.swing.JFrame {
         personEditorAddTrivia1.setText("Add picture");
         personEditorAddTrivia1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
 
-        filmPic1.setBackground(new java.awt.Color(68, 51, 41));
-
-        javax.swing.GroupLayout filmPic1Layout = new javax.swing.GroupLayout(filmPic1);
-        filmPic1.setLayout(filmPic1Layout);
-        filmPic1Layout.setHorizontalGroup(
-            filmPic1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 201, Short.MAX_VALUE)
-        );
-        filmPic1Layout.setVerticalGroup(
-            filmPic1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 296, Short.MAX_VALUE)
-        );
-
         jLabel41.setBackground(new java.awt.Color(210, 235, 255));
         jLabel41.setFont(new java.awt.Font("Gadugi", 1, 14)); // NOI18N
         jLabel41.setForeground(new java.awt.Color(254, 249, 217));
@@ -1761,6 +1818,9 @@ public class mainInterface extends javax.swing.JFrame {
         productionEditorRelease.setToolTipText("");
         productionEditorRelease.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(201, 198, 145), 4));
 
+        filmPic1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        filmPic1.setText("pfp pic");
+
         javax.swing.GroupLayout productionEditorLayout = new javax.swing.GroupLayout(productionEditor);
         productionEditor.setLayout(productionEditorLayout);
         productionEditorLayout.setHorizontalGroup(
@@ -1797,15 +1857,15 @@ public class mainInterface extends javax.swing.JFrame {
                             .addComponent(jScrollPane4))))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                 .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                    .addComponent(personEditorAddP2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                    .addComponent(personEditorAddP2, javax.swing.GroupLayout.DEFAULT_SIZE, 495, Short.MAX_VALUE)
                     .addComponent(personEditorAddRel1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(personEditorAddP1, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addGroup(productionEditorLayout.createSequentialGroup()
                         .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(personEditorSelectBtn1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(personEditorClearPicBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 267, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addComponent(filmPic1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(filmPic1, javax.swing.GroupLayout.DEFAULT_SIZE, 222, Short.MAX_VALUE))
                     .addComponent(personEditorAddTrivia1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
                 .addContainerGap())
         );
@@ -1817,12 +1877,14 @@ public class mainInterface extends javax.swing.JFrame {
                 .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(productionEditorLayout.createSequentialGroup()
                         .addGroup(productionEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(filmPic1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGroup(productionEditorLayout.createSequentialGroup()
                                 .addComponent(personEditorSelectBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addGap(30, 30, 30)
-                                .addComponent(personEditorClearPicBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addGap(43, 43, 43)
+                                .addComponent(personEditorClearPicBtn1, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(115, 115, 115))
+                            .addGroup(productionEditorLayout.createSequentialGroup()
+                                .addComponent(filmPic1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)))
                         .addComponent(personEditorAddP1, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(personEditorAddP2, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
@@ -2296,12 +2358,15 @@ public class mainInterface extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(jPanel8, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(userEditorLayout.createSequentialGroup()
-                        .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                        .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                 .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
                                 .addComponent(jLabel11, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
-                            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(jLabel14, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 133, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(userEditorLayout.createSequentialGroup()
+                                .addGap(6, 6, 6)
+                                .addComponent(jLabel36, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
                         .addGap(18, 18, 18)
                         .addGroup(userEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                             .addComponent(jPanel20, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2402,7 +2467,10 @@ public class mainInterface extends javax.swing.JFrame {
                         .addGap(44, 44, 44)
                         .addComponent(jLabel15, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(jLabel36, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(0, 0, Short.MAX_VALUE)))
                 .addContainerGap())
         );
 
@@ -2617,17 +2685,6 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel33.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel33.setText("Biography");
 
-        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
-        jPanel2.setLayout(jPanel2Layout);
-        jPanel2Layout.setHorizontalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 222, Short.MAX_VALUE)
-        );
-        jPanel2Layout.setVerticalGroup(
-            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
         personEditorSelectBtn.setBackground(new java.awt.Color(68, 51, 41));
         personEditorSelectBtn.setFont(new java.awt.Font("Gadugi", 1, 20)); // NOI18N
         personEditorSelectBtn.setForeground(new java.awt.Color(254, 249, 217));
@@ -2679,6 +2736,9 @@ public class mainInterface extends javax.swing.JFrame {
         jLabel22.setForeground(new java.awt.Color(254, 249, 217));
         jLabel22.setHorizontalAlignment(javax.swing.SwingConstants.TRAILING);
         jLabel22.setText("Second Surname");
+
+        pfpLbl12.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        pfpLbl12.setText("pfp pic");
 
         javax.swing.GroupLayout personEditorLayout = new javax.swing.GroupLayout(personEditor);
         personEditor.setLayout(personEditorLayout);
@@ -2752,8 +2812,8 @@ public class mainInterface extends javax.swing.JFrame {
                         .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(personEditorSelectBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                             .addComponent(personEditorClearPicBtn, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(18, 18, 18)
+                        .addComponent(pfpLbl12, javax.swing.GroupLayout.PREFERRED_SIZE, 274, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addComponent(jScrollPane3)
                     .addComponent(personEditorAddP, javax.swing.GroupLayout.DEFAULT_SIZE, 486, Short.MAX_VALUE)
                     .addComponent(personEditorAddRel, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
@@ -2764,8 +2824,8 @@ public class mainInterface extends javax.swing.JFrame {
             personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(personEditorLayout.createSequentialGroup()
                 .addComponent(menuBar2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
-                .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(personEditorLayout.createSequentialGroup()
                         .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addGroup(personEditorLayout.createSequentialGroup()
@@ -2796,8 +2856,8 @@ public class mainInterface extends javax.swing.JFrame {
                                 .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                                     .addComponent(personEditorHeight, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addComponent(jLabel21, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))))
-                    .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                    .addComponent(pfpLbl12, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                 .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(personEditorLayout.createSequentialGroup()
                         .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -2805,7 +2865,7 @@ public class mainInterface extends javax.swing.JFrame {
                             .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
                                 .addComponent(jLabel23, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                                 .addComponent(personEditorGenderCB, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 12, Short.MAX_VALUE)
                         .addGroup(personEditorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                             .addComponent(jLabel28, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addComponent(personEditorNationCB, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
@@ -2828,11 +2888,11 @@ public class mainInterface extends javax.swing.JFrame {
                     .addGroup(personEditorLayout.createSequentialGroup()
                         .addComponent(jScrollPane3, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(personEditorAddP, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                        .addComponent(personEditorAddP, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(personEditorAddRel, javax.swing.GroupLayout.DEFAULT_SIZE, 38, Short.MAX_VALUE)
+                        .addComponent(personEditorAddRel, javax.swing.GroupLayout.DEFAULT_SIZE, 40, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(personEditorAddTrivia, javax.swing.GroupLayout.DEFAULT_SIZE, 39, Short.MAX_VALUE)))
+                        .addComponent(personEditorAddTrivia, javax.swing.GroupLayout.DEFAULT_SIZE, 41, Short.MAX_VALUE)))
                 .addGap(26, 26, 26))
         );
 
@@ -4386,7 +4446,7 @@ public class mainInterface extends javax.swing.JFrame {
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             File selectedFile = fileChooser.getSelectedFile();
             ImageIcon imageIcon = new ImageIcon(selectedFile.getAbsolutePath());
-            personEditorClearPicBtn1.setIcon(imageIcon);
+            pfpLbl12.setIcon(imageIcon);
         }
         
     }//GEN-LAST:event_personEditorSelectBtnActionPerformed
@@ -4400,7 +4460,14 @@ public class mainInterface extends javax.swing.JFrame {
     }//GEN-LAST:event_userEditorClearPicBtnActionPerformed
 
     private void userEditorSelectPicBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userEditorSelectPicBtnActionPerformed
-        // TODO add your handling code here:
+        JFileChooser fileChooser = new JFileChooser();
+        fileChooser.setFileFilter(new FileNameExtensionFilter("Image Files", "jpg", "png", "gif", "jpeg"));
+        int returnValue = fileChooser.showOpenDialog(this);
+        if (returnValue == JFileChooser.APPROVE_OPTION) {
+            File selectedFile = fileChooser.getSelectedFile();
+            ImageIcon imageIcon = new ImageIcon(selectedFile.getAbsolutePath());
+            pfpLbl.setIcon(imageIcon);
+        }
     }//GEN-LAST:event_userEditorSelectPicBtnActionPerformed
 
     private void personEditorSubmitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorSubmitBtnActionPerformed
@@ -4415,13 +4482,33 @@ public class mainInterface extends javax.swing.JFrame {
     idDistrict = (int) personEditorDistrictCB.getSelectedIndex();
     idDistrict = idDistrict + 1;
     System.out.println("La distrito es" + idDistrict);
+    
+    Icon icon = pfpLbl.getIcon();
+    byte[] photo = null;
+        if (icon instanceof ImageIcon) {
+            BufferedImage bufferedImage = new BufferedImage(icon.getIconWidth(), icon.getIconHeight(), BufferedImage.TYPE_INT_RGB);
+            Graphics g = bufferedImage.createGraphics();
+            icon.paintIcon(null, g, 0, 0);
+            g.dispose();
+
+            try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
+                ImageIO.write(bufferedImage, "jpg", baos);
+                baos.flush();
+                photo = baos.toByteArray();
+            } catch (IOException ex) {
+                ex.printStackTrace();
+                }
+            }
+    
+    
+    
         if (firstName.isEmpty() || lastName.isEmpty() || biography.isEmpty() || trivia.isEmpty() || birthdate.isEmpty() || heightText.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Por favor complete todos los campos.");
         } else {
             // Continuar con la inserción de persona
             try {
                 int height = Integer.parseInt(heightText);
-                ConnectDB.InsertPerson(firstName, middleName, lastName, secondSurname, biography, birthdate, height, trivia, idDistrict);
+                ConnectDB.InsertPerson(firstName, middleName, lastName, secondSurname, biography, birthdate, height, photo, trivia, idDistrict);
                 System.out.println("Persona insertada exitosamente");
             } catch (SQLException ex) {
                 Logger.getLogger(mainInterface.class.getName()).log(Level.SEVERE, null, ex);
@@ -4539,72 +4626,118 @@ public class mainInterface extends javax.swing.JFrame {
         }
     }
     
-    private void userEditorSubmitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userEditorSubmitBtnActionPerformed
-        String name = userEditorName.getText();
-        String secondName = userEditorSecondName.getText();
-        String lastNames = userEditorSurname.getText();
-        String secondLastNames = userEditorSecondSurname.getText();
-        String idNumStr = userEditorIdNum.getText();
-        String birthdate = userEditorBirthdate.getText();
-        String email = userEditorEmail.getText();
-        String phoneStr = userEditorPhone.getText();
-        String username = userEditorUsername.getText();
-        String password = userEditorPassword.getText();
-        int realidDistrict = userEditorDistrictCB.getSelectedIndex() + 1;
-        int realidnationality = userEditorNationalityCB.getSelectedIndex() + 1;
-        int realgender = userEditorGenderCB.getSelectedIndex() + 1;
-        int realidtype = userEditorIdTypeCB.getSelectedIndex() + 1;
-
-        // Verificar campos vacíos
-        if (name.isEmpty() || secondName.isEmpty() || lastNames.isEmpty() || secondLastNames.isEmpty() ||
-            idNumStr.isEmpty() || birthdate.isEmpty() || email.isEmpty() || phoneStr.isEmpty() ||
-            username.isEmpty() || password.isEmpty()) {
-            // Mostrar mensaje de error
-            JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios. Por favor, complete todos los campos antes de continuar.", "Error", JOptionPane.ERROR_MESSAGE);
-        } else {
-            // Todos los campos están llenos, continuar con la inserción
-            
-            
-            if (jCheckBox1.isSelected()) {
-                try {
-                    int idNum = Integer.parseInt(idNumStr);
-                    int phone = Integer.parseInt(phoneStr);
-
-                    // Llamada a la función InsertUserSys
-                    ConnectDB.InsertUserSysAdministrator(name, secondName, lastNames, secondLastNames, idNum, birthdate, email, phone,
-                                             username, password, realidDistrict, realidnationality, realgender, realidtype);
-                } catch (NumberFormatException e) {
-                    // Manejar el caso en que idNum o phone no sean números
-                    JOptionPane.showMessageDialog(null, "El campo de ID o teléfono debe ser un número válido.", "Error", JOptionPane.ERROR_MESSAGE);
-                } catch (SQLException ex) {
-                    // Manejar otras excepciones SQL si es necesario
-                    ex.printStackTrace();
-                    JOptionPane.showMessageDialog(null, "Error al intentar insertar el usuario en la base de datos.", "Error", JOptionPane.ERROR_MESSAGE);
-                }  
-                
-            } else {
-                try {
-                    int idNum = Integer.parseInt(idNumStr);
-                    int phone = Integer.parseInt(phoneStr);
-
-                    // Llamada a la función InsertUserSys
-                    ConnectDB.InsertUserSys(name, secondName, lastNames, secondLastNames, idNum, birthdate, email, phone,
-                                             username, password, realidDistrict, realidnationality, realgender, realidtype);
-                } catch (NumberFormatException e) {
-                    // Manejar el caso en que idNum o phone no sean números
-                    JOptionPane.showMessageDialog(null, "El campo de ID o teléfono debe ser un número válido.", "Error", JOptionPane.ERROR_MESSAGE);
-                } catch (SQLException ex) {
-                    // Manejar otras excepciones SQL si es necesario
-                    ex.printStackTrace();
-                    JOptionPane.showMessageDialog(null, "Error al intentar insertar el usuario en la base de datos.", "Error", JOptionPane.ERROR_MESSAGE);
-                }  
-            }
-
-            
-
+    private boolean check(){
+        try {
+            idNum = Integer.parseInt(userEditorIdNum.getText());
+        } catch (Exception e) {
+            userEditorIdNum.setText("Id Number field must be filled");
         }
+        if(!userEditorPassword.getText().equals(userEditorPasswordConf.getText()))
+        {
+            jLabel36.setText("Passwords do not match ");
+            return false;
+            //jLabel5.setForeground(new java.awt.Color(226,122,55));    
+        } else if(userEditorPassword.getText().equals("")
+            || userEditorUsername.getText().equals("")
+            || userEditorEmail.getText().equals("")
+            || userEditorIdNum.getText().equals(""))
+        {
+            jLabel36.setText("No field can be left empty ");
+            return false;
+            //jLabel36.setForeground(new java.awt.Color(226,122,55));
+           
+        }
+        try {
+            if (userExists(userEditorUsername.getText())) {
+                jLabel36.setText("Username already taken ");
+                username = "";
+                return false;
+            } 
+        } catch (SQLException ex) {
+            // Manejar la excepciÃ³n
+            ex.printStackTrace();
+            jLabel36.setText("Error checking username availability");
+            return false;
+        }
+        return true;
+    }
+    
+    private void userEditorSubmitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userEditorSubmitBtnActionPerformed
+        String idNumStr = userEditorIdNum.getText();
+        String phoneStr = userEditorPhone.getText();
 
+            jLabel36.setText("");
+            if (!check()){
+                JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios. Por favor, complete todos los campos antes de continuar.", "Error", JOptionPane.ERROR_MESSAGE);
+            } else {
+                username = userEditorUsername.getText();
+                nationality = (String) userEditorNationalityCB.getSelectedItem();
+                country = (String) userEditorCountryCB.getSelectedItem();
+                region = (String) userEditorRegionCB.getSelectedItem();
+                district = (String) userEditorDistrictCB.getSelectedItem();
+                address = userEditorAddress.getText();
+                firstName = userEditorName.getText();
+                lastName = userEditorSurname.getText();
+                secondSurname = userEditorSecondSurname.getText();
+                middleName = userEditorSecondName.getText();
+                idNum = Integer.parseInt(userEditorIdNum.getText());
+                birthdate = userEditorBirthdate.getText();
+                String email = userEditorEmail.getText();
+                int realgender = (int) userEditorGenderCB.getSelectedIndex();
+                realgender = realgender + 1;
+                int realidtype = (int) userEditorIdTypeCB.getSelectedIndex();
+                realidtype = realidtype + 1;
+                int phone = Integer.parseInt(userEditorPhone.getText());
 
+                int realidDistrict = (int) userEditorDistrictCB.getSelectedIndex();
+                realidDistrict = realidDistrict + 1;
+                System.out.println("La distrito es" + realidDistrict);
+
+                int realidnationality = (int) userEditorNationalityCB.getSelectedIndex();
+                realidnationality = realidnationality + 1;
+                System.out.println("La nacionanlidad es" + realidnationality);
+                Icon icon = pfpLbl.getIcon();
+                
+                byte[] photo = null;
+                if (icon instanceof ImageIcon) {
+                    BufferedImage bufferedImage = new BufferedImage(icon.getIconWidth(), icon.getIconHeight(), BufferedImage.TYPE_INT_RGB);
+                    Graphics g = bufferedImage.createGraphics();
+                    icon.paintIcon(null, g, 0, 0);
+                    g.dispose();
+
+                    try (ByteArrayOutputStream baos = new ByteArrayOutputStream()) {
+                        ImageIO.write(bufferedImage, "jpg", baos);
+                        baos.flush();
+                        photo = baos.toByteArray();
+                    } catch (IOException ex) {
+                        ex.printStackTrace();
+                    }
+                }
+
+                if (jCheckBox1.isSelected()){
+                    try {
+                        ConnectDB.InsertUserSysAdministrator(firstName, middleName, lastName, secondSurname, idNum, birthdate, photo, email, phone, username, password,
+                                realidDistrict, realidnationality, realgender, realidtype);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(mainInterface.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                } else{
+                    try {
+                        ConnectDB.InsertUserSys(firstName, middleName, lastName, secondSurname, idNum, birthdate, photo, email, phone, username, password,
+                                realidDistrict, realidnationality, realgender, realidtype);
+                    } catch (SQLException ex) {
+                        Logger.getLogger(mainInterface.class.getName()).log(Level.SEVERE, null, ex);
+                    }
+                }
+            System.out.println("vista.mainInterface.userEditorSubmitBtnActionPerformed()");
+            }
+        
+        
+        
+        
+        
+        
+        
     }//GEN-LAST:event_userEditorSubmitBtnActionPerformed
 
     private void personEditorAddP1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorAddP1ActionPerformed
@@ -4622,7 +4755,7 @@ public class mainInterface extends javax.swing.JFrame {
         if (returnValue == JFileChooser.APPROVE_OPTION) {
             File selectedFile = fileChooser.getSelectedFile();
             ImageIcon imageIcon = new ImageIcon(selectedFile.getAbsolutePath());
-            personEditorClearPicBtn1.setIcon(imageIcon);
+            filmPic1.setIcon(imageIcon);
         }
     }//GEN-LAST:event_personEditorSelectBtn1ActionPerformed
 
@@ -4816,7 +4949,7 @@ public class mainInterface extends javax.swing.JFrame {
     private javax.swing.JLabel f2s8;
     private javax.swing.JLabel f2s9;
     private javax.swing.JPanel filmPic;
-    private javax.swing.JPanel filmPic1;
+    private javax.swing.JLabel filmPic1;
     private javax.swing.JPanel filmPic10;
     private javax.swing.JPanel filmPic11;
     private javax.swing.JPanel filmPic12;
@@ -4870,6 +5003,7 @@ public class mainInterface extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel32;
     private javax.swing.JLabel jLabel33;
     private javax.swing.JLabel jLabel34;
+    private javax.swing.JLabel jLabel36;
     private javax.swing.JLabel jLabel39;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel41;
@@ -4901,7 +5035,6 @@ public class mainInterface extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel17;
     private javax.swing.JPanel jPanel18;
     private javax.swing.JPanel jPanel19;
-    private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
     private javax.swing.JPanel jPanel23;
@@ -5010,6 +5143,7 @@ public class mainInterface extends javax.swing.JFrame {
     private javax.swing.JScrollPane personVRelsScroll;
     private javax.swing.JPanel personVisualiser;
     private javax.swing.JLabel pfpLbl;
+    private javax.swing.JLabel pfpLbl12;
     private javax.swing.JList<String> popUpList;
     private javax.swing.JComboBox<String> popUpRoleCB;
     private javax.swing.JButton popUpSearchBttn;
