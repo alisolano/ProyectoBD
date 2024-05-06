@@ -4,6 +4,7 @@
  */
 package proyecto1bd;
 import Connect.ConnectDB;
+import vista.mainInterface;
 import java.sql.SQLException;
 /**
  *
@@ -15,6 +16,8 @@ public class Proyecto1BD {
      * @param args the command line arguments
      */
     public static void main(String[] args) throws SQLException {
+        vista.mainInterface finalInterface = new vista.mainInterface();
+        
         ConnectDB.getCategory();
         ConnectDB.getGender();
         ConnectDB.getIdtype();

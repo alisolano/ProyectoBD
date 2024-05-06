@@ -5,6 +5,8 @@
 package Connect;
 
 import java.io.ByteArrayInputStream;
+import java.io.ByteArrayOutputStream;
+import java.io.InputStream;
 import java.sql.CallableStatement;
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -432,7 +434,7 @@ public class ConnectDB {
     }
 
     
-    public static void getProductionInfo(String productionName) {
+    public static void getProductionInfo1(String productionName) {
         String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
         String uName = "proyectoDBA";
         String uPass = "proyectoDBA";
@@ -479,7 +481,7 @@ public class ConnectDB {
         return genderID; 
     }
     
-        public static boolean checkUserType(String username) {
+    public static boolean checkUserType(String username) {
         String userType = null;
         String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
         String uName = "proyectoDBA";
@@ -501,6 +503,75 @@ public class ConnectDB {
         }
     }
 
+    public static ArrayList<String> getProductionInfo(String productionName) {
+        ArrayList<String> productionData = new ArrayList<>(); 
+
+        String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
+        String uName = "proyectoDBA";
+        String uPass = "proyectoDBA";
+
+        try (Connection con = DriverManager.getConnection(host, uName, uPass)) {
+            CallableStatement stmt = con.prepareCall("{call getProductionInfo(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}");
+
+            stmt.setString(1, productionName);
+            stmt.registerOutParameter(2, java.sql.Types.NUMERIC);
+            stmt.registerOutParameter(3, java.sql.Types.NUMERIC);
+            stmt.registerOutParameter(4, java.sql.Types.VARCHAR);
+            stmt.registerOutParameter(5, java.sql.Types.VARCHAR);
+            stmt.registerOutParameter(6, java.sql.Types.NUMERIC);
+            stmt.registerOutParameter(7, java.sql.Types.VARCHAR);
+            stmt.registerOutParameter(8, java.sql.Types.VARCHAR);
+            stmt.registerOutParameter(9, java.sql.Types.NUMERIC);
+            stmt.registerOutParameter(10, java.sql.Types.BLOB);
+
+            stmt.execute();
+            
+            productionData.add(String.valueOf(stmt.getInt(2))); 
+            productionData.add(String.valueOf(stmt.getInt(3))); 
+            productionData.add(stmt.getString(4)); 
+            productionData.add(stmt.getString(5)); 
+            productionData.add(String.valueOf(stmt.getInt(6)));
+            productionData.add(stmt.getString(7)); 
+            productionData.add(stmt.getString(8)); 
+            productionData.add(String.valueOf(stmt.getInt(9))); 
+
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        return productionData;
+    }
+
+    public static byte[] getProductionPhoto(String productionName) {
+        String host = "jdbc:oracle:thin:@localhost:1521:DBPrueba";
+        String uName = "proyectoDBA";
+        String uPass = "proyectoDBA";
+        byte[] photo = null;
+
+        try (Connection con = DriverManager.getConnection(host, uName, uPass)) {
+            CallableStatement stmt = con.prepareCall("{call getProductionInfo(?, ?, ?, ?, ?, ?, ?, ?, ?, ?)}");
+
+            stmt.setString(1, productionName);
+            stmt.registerOutParameter(9, java.sql.Types.BLOB); 
+
+            stmt.execute();
+
+            InputStream inputStream = stmt.getBlob(9).getBinaryStream();
+            ByteArrayOutputStream outputStream = new ByteArrayOutputStream();
+            byte[] buffer = new byte[4096];
+            int bytesRead = -1;
+            while ((bytesRead = inputStream.read(buffer)) != -1) {
+                outputStream.write(buffer, 0, bytesRead);
+            }
+            photo = outputStream.toByteArray();
+            
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+        
+        return photo;
+    }
+        
 }
 
 

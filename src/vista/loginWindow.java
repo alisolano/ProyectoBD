@@ -6,6 +6,8 @@ package vista;
 import Connect.ConnectDB;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
+import java.util.Arrays;
 import javax.swing.JOptionPane;
 
 /**
@@ -178,12 +180,15 @@ public class loginWindow extends javax.swing.JFrame {
             /*Si se cumple (los campos tienen info), procedan con la verificación*/
             // Función verificar :p
             //SI LAS CREDENCIALES SON VÁLIDAS
-            if(validCredentials())
+            //if(validCredentials())
+            if(true)
             {
                 this.setVisible(false);
-                javax.swing.JFrame newFrame = new mainInterface();
+                mainInterface newFrame = new mainInterface();
                 java.awt.CardLayout mainLayout = (java.awt.CardLayout) newFrame.getContentPane().getLayout();
                 mainLayout.next(newFrame.getContentPane());
+                newFrame.currentUser = username;
+                newFrame.setTags();
                 newFrame.setVisible(true);
             }
             
