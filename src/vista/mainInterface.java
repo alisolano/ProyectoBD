@@ -7,6 +7,7 @@ import Connect.ConnectDB;
 import java.io.File;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.Date;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.ImageIcon;
@@ -22,6 +23,8 @@ public class mainInterface extends javax.swing.JFrame {
     
     public String firstName, middleName, lastName, secondSurname, biography, trivia, birthdate;
     public int Height, idDistrict;
+    
+
     /**
      * Creates new form mainInterface
      */
@@ -4526,10 +4529,82 @@ public class mainInterface extends javax.swing.JFrame {
     private void userEditorClearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userEditorClearBtnActionPerformed
         userEditorCleaner();
     }//GEN-LAST:event_userEditorClearBtnActionPerformed
-
+    
+    public boolean userExists(String Username) throws SQLException
+    {
+        if (!ConnectDB.checkUsernameAvailability(Username)){
+        return true;
+        } else{
+            return false;
+        }
+    }
+    
     private void userEditorSubmitBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userEditorSubmitBtnActionPerformed
-        // TODO add your handling code here:
-        System.out.println("vista.mainInterface.userEditorSubmitBtnActionPerformed()");
+        String name = userEditorName.getText();
+        String secondName = userEditorSecondName.getText();
+        String lastNames = userEditorSurname.getText();
+        String secondLastNames = userEditorSecondSurname.getText();
+        String idNumStr = userEditorIdNum.getText();
+        String birthdate = userEditorBirthdate.getText();
+        String email = userEditorEmail.getText();
+        String phoneStr = userEditorPhone.getText();
+        String username = userEditorUsername.getText();
+        String password = userEditorPassword.getText();
+        int realidDistrict = userEditorDistrictCB.getSelectedIndex() + 1;
+        int realidnationality = userEditorNationalityCB.getSelectedIndex() + 1;
+        int realgender = userEditorGenderCB.getSelectedIndex() + 1;
+        int realidtype = userEditorIdTypeCB.getSelectedIndex() + 1;
+
+        // Verificar campos vacíos
+        if (name.isEmpty() || secondName.isEmpty() || lastNames.isEmpty() || secondLastNames.isEmpty() ||
+            idNumStr.isEmpty() || birthdate.isEmpty() || email.isEmpty() || phoneStr.isEmpty() ||
+            username.isEmpty() || password.isEmpty()) {
+            // Mostrar mensaje de error
+            JOptionPane.showMessageDialog(null, "Todos los campos son obligatorios. Por favor, complete todos los campos antes de continuar.", "Error", JOptionPane.ERROR_MESSAGE);
+        } else {
+            // Todos los campos están llenos, continuar con la inserción
+            
+            
+            if (jCheckBox1.isSelected()) {
+                try {
+                    int idNum = Integer.parseInt(idNumStr);
+                    int phone = Integer.parseInt(phoneStr);
+
+                    // Llamada a la función InsertUserSys
+                    ConnectDB.InsertUserSysAdministrator(name, secondName, lastNames, secondLastNames, idNum, birthdate, email, phone,
+                                             username, password, realidDistrict, realidnationality, realgender, realidtype);
+                } catch (NumberFormatException e) {
+                    // Manejar el caso en que idNum o phone no sean números
+                    JOptionPane.showMessageDialog(null, "El campo de ID o teléfono debe ser un número válido.", "Error", JOptionPane.ERROR_MESSAGE);
+                } catch (SQLException ex) {
+                    // Manejar otras excepciones SQL si es necesario
+                    ex.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "Error al intentar insertar el usuario en la base de datos.", "Error", JOptionPane.ERROR_MESSAGE);
+                }  
+                
+            } else {
+                try {
+                    int idNum = Integer.parseInt(idNumStr);
+                    int phone = Integer.parseInt(phoneStr);
+
+                    // Llamada a la función InsertUserSys
+                    ConnectDB.InsertUserSys(name, secondName, lastNames, secondLastNames, idNum, birthdate, email, phone,
+                                             username, password, realidDistrict, realidnationality, realgender, realidtype);
+                } catch (NumberFormatException e) {
+                    // Manejar el caso en que idNum o phone no sean números
+                    JOptionPane.showMessageDialog(null, "El campo de ID o teléfono debe ser un número válido.", "Error", JOptionPane.ERROR_MESSAGE);
+                } catch (SQLException ex) {
+                    // Manejar otras excepciones SQL si es necesario
+                    ex.printStackTrace();
+                    JOptionPane.showMessageDialog(null, "Error al intentar insertar el usuario en la base de datos.", "Error", JOptionPane.ERROR_MESSAGE);
+                }  
+            }
+
+            
+
+        }
+
+
     }//GEN-LAST:event_userEditorSubmitBtnActionPerformed
 
     private void personEditorAddP1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_personEditorAddP1ActionPerformed

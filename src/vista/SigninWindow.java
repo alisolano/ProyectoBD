@@ -290,7 +290,6 @@ public class SigninWindow extends javax.swing.JFrame {
         idTypeCB.setBackground(new java.awt.Color(237, 204, 111));
         idTypeCB.setFont(new java.awt.Font("Gadugi", 1, 12)); // NOI18N
         idTypeCB.setForeground(new java.awt.Color(48, 89, 138));
-        idTypeCB.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
         idTypeCB.setBorder(new javax.swing.border.LineBorder(new java.awt.Color(210, 235, 255), 4, true));
 
         jLabel9.setBackground(new java.awt.Color(210, 235, 255));
@@ -1050,16 +1049,7 @@ public class SigninWindow extends javax.swing.JFrame {
             realidnationality = (int) nationCB.getSelectedIndex();
             realidnationality = realidnationality + 1;
             System.out.println("La nacionanlidad es" + realidnationality);
-            
-        /* 
-        try {
-            realBirthdate = dateFormat.parse(birthdate);
-            dateFormat.applyPattern("dd/MM/yyyy");
-            Date fechaFormateada = dateFormat.format(realBirthdate);
-            System.out.println("Sirvio, btw Fecha realbirth" + realBirthdate + "o tmb" + birthdate);
-            System.out.println("Fecha formateada: " + fechaFormateada);
-        } catch (ParseException e) {
-                e.printStackTrace();        }     */       
+             
 
             try {
                 ConnectDB.InsertUserSys(name, secondName, lastNames, secondLastNames, idNum, birthdate, email, phone, username, password,
