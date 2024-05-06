@@ -4483,7 +4483,6 @@ public class mainInterface extends javax.swing.JFrame {
         idCategory = (int) productionEditorGenreCB.getSelectedIndex() + 1;
         String durationText = productionEditorPlaytime.getText();
         String releaseText = productionEditorRelease.getText();
-        releaseYear = Integer.parseInt(releaseText);
        
         if (productionType.isEmpty() || title.isEmpty() || synopsis.isEmpty() || durationText.isEmpty() || releaseText.isEmpty()) {
             JOptionPane.showMessageDialog(null, "Por favor complete todos los campos.");
